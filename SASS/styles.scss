@@ -1,0 +1,55 @@
+//COLORS
+$deep-forest: #5c6c72;
+$slate-blue: #b3bfbf;
+$charcoal-black: #151f20;
+$golden-yellow: #fba105;
+$burnt-orange: #cc6506;
+
+//OVERFLOW
+@mixin overflow($value) {overflow: $value;}
+@mixin overflow-x($value) {overflow-x: $value;}
+@mixin overflow-y($value) {overflow-y: $value;}
+//POSITIONS
+@mixin position($position) {position: $position;}
+@mixin relative {position: relative;}
+@mixin absolute {position: absolute;}
+@mixin fixed {position: fixed;}
+@mixin sticky {position: sticky;}
+//DISPLAY
+@mixin display($value) {display: $value;}
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin align-items($value) {align-items: $value;}
+@mixin justify-content($value) {justify-content: $value;}
+@mixin flex-direction($value){
+    flex-direction: $value;
+};
+@mixin z-index($value) {z-index: $value;}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: 500; 
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700; 
+}
+
+@mixin ClashDisplay {
+    font-family: "Clash Display", sans-serif;
+}
+
+//TEXT
+@mixin text-align {
+    text-align: center;
+}
+@mixin font-size($size) {font-size: $size;}
+@mixin font-weight($weight) {font-weight: $weight;}
