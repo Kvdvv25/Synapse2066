@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 //COLORS
 $deep-forest: #5c6c72;
 $slate-blue: #b3bfbf;
@@ -29,6 +31,11 @@ $burnt-orange: #cc6506;
 };
 @mixin z-index($value) {z-index: $value;}
 
+
+//TEXT
+@mixin text-align {text-align: center;}
+@mixin font-size($size) {font-size: $size;}
+@mixin font-weight($weight) {font-weight: $weight;}
 @font-face {
     font-family: "Clash Display";
     src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff') format('woff');
@@ -43,13 +50,16 @@ $burnt-orange: #cc6506;
     font-weight: 700; 
 }
 
-@mixin ClashDisplay {
-    font-family: "Clash Display", sans-serif;
+@mixin ClashDisplay {font-family: "Clash Display", sans-serif;}
+@mixin Fredoka {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
 }
-
-//TEXT
-@mixin text-align {
-    text-align: center;
+@font-face {
+    font-family: "CyberPunk";
+    src: url('/fonts/CyberpunkStyle/cyberpunk_style_light.woff2') format('woff');
+    font-style: normal;
+    font-weight: 300; 
 }
-@mixin font-size($size) {font-size: $size;}
-@mixin font-weight($weight) {font-weight: $weight;}
+@mixin CyberPunk{font-family: "CyberPunk", sans-serif;}

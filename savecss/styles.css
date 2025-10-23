@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 @font-face {
   font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
@@ -9,4 +10,10 @@
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
+}
+@font-face {
+  font-family: "CyberPunk";
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
+  font-style: normal;
+  font-weight: 300;
 }/*# sourceMappingURL=styles.css.map */
