@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/savecss/forms.css">
+    <link rel="stylesheet" href="/savecss/clash-display.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="bgSection"></div>
+        <section class="contentSection">
+            <div class="filmTitle">
+                <h1>Synapse 2066</h1>
+                <div class="shapes">
+                    <div class="vl"></div>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="contentBox">
+                <div class="titleBox descrBox">
+                    <p class="formTitle">Free Premiere Tickets</p>
+                    <button class="btn_icon"><i class="fa-solid fa-xmark fa-xl"></i></button>
+                </div>
+                <div class="detailsBox descrBox">
+                    <div id="location" class="details">
+                        <p>Location:&nbsp</p>
+                        <p>SAE House, 297 Kingsland Rd, London E8 4DD</p>
+                    </div>
+                    <div id="date" class="details">
+                        <p>Date:&nbsp</p>
+                        <p>12/12/25</p>
+                    </div>
+                </div>
+
+                <div class="infoBox">
+                    <div class="instructionTexts">
+                        <p>Please enter your information and add one ticket for each guest:</p>
+                    </div>
+                    <form action="">
+                        <div class="form">
+                            <div class="userInfo formPart">
+                                <div class="nameBox formBox">
+                                    <label class="labelUser" for="name">Name:</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div class="emailBox formBox">
+                                    <label class="labelUser" for="email">Email:</label>
+                                    <input type="email" name="email" id="email">
+                                </div>
+                            </div>
+                            <div class="tickets formPart">
+                                <div class="ticketBox formBox">
+                                    <label  class="labelUser" for="ticket">Number of Tickets:</label>
+                                    <input type="number" name="ticket" id="ticket">
+                                </div>
+                            </div>
+                        </div>  
+                        <button type="button" class="btn_primary" id="confirmBtn">Confirm</button>
+                    </form>
+                    </div>
+
+                </div>
+        </section>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/cfd313fcca.js" crossorigin="anonymous"></script>
+</html>

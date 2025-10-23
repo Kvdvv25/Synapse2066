@@ -1,0 +1,316 @@
+@import 'styles';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+//Background
+.bgSection{
+    width: 100vw;
+    height: 100vh;
+    background: url('/images/background_comingsoon.jpg') center;
+    background-size: cover;
+    filter: brightness(50%);
+    position: relative;
+}
+
+//Content
+section{
+    width: 100vw;
+    height: 100vh;
+    @include center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    
+}
+
+//Synapse title
+h1{
+    @include font-size($fs-title);
+    margin-bottom: 2vh;
+    font-family: $font-synapse;
+    
+    @media (max-width: 768px) {
+        @include font-size($fs-title-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-title-mobile);
+    }
+}
+
+//Shapes between title and form
+.shapes{
+    @include center;
+    margin-top: 5vh;
+
+}
+
+
+.vl{
+    border-left: $line;
+    height: 10vh;
+    position: absolute;
+
+}
+
+.dot{
+    @include dot;
+    position: absolute;
+    @media (max-width: 768px) {
+       margin-bottom: 3vh;    }
+    
+    @media (max-width: 480px) {
+        margin-bottom: 5vh;   }
+}
+
+//Form
+.contentBox{
+    width: 60%;
+    min-height: 30%;
+    backdrop-filter: blur(10px);
+    background-color: $black-translucent;
+    border-radius: 20px;
+    margin: 5vh 0;
+
+    @media (max-width: 768px) {
+        border-radius: 10px;
+        width: 80vw;
+        min-height: 30%;
+        margin: 2vh 0;
+    }
+    
+    @media (max-width: 480px) {
+        width: 90vw;
+        min-height: 30%;
+        margin: 0;
+    }
+}
+
+.formTitle{
+    @include font-size($fs-h2);
+    font-family: $font-title;
+
+    @media (max-width: 768px) {
+        @include font-size($fs-h2-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-h2-mobile);
+    }
+}
+
+.titleBox{
+    padding: 0.6vw 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: $line;
+
+    @media (max-width: 768px) {
+        padding: 1.5vw;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 2.5vw 4vw;
+    }
+}
+
+.descrBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: $line;
+}
+
+.detailsBox{
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    
+    @media (max-width: 480px) {
+        flex-direction: column;}
+}
+
+#location{
+    @media (max-width: 768px) {
+        text-align: right;
+        border-bottom: $line;
+    }
+    
+    @media (max-width: 480px) {
+        border-bottom: $line;
+        padding: 2.5vw 4vw;
+    }
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.6vw 1vw;
+
+    @media (max-width: 768px) {
+        padding: 1.5vw 2vw;
+    }
+}
+
+#date{
+    border-left: $line;
+    @media (max-width: 768px) {
+        border-left: none;
+    }
+    
+    @media (max-width: 480px) {
+        border-left: none;
+        padding: 2.5vw 4vw;
+    } 
+}
+
+
+.infoBox{
+    padding: 1vw;
+    line-height: 1.5em;
+
+    @media (max-width: 768px) {
+        padding: 2vw;
+    } 
+    
+    @media (max-width: 480px) {
+        padding: 2.5vw 4vw;
+    } 
+}  
+
+p{
+    font-family: $font-body;
+    @include font-size($fs-body);
+
+    @media (max-width: 768px) {
+        @include font-size($fs-body-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-body-mobile);
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1vw;
+
+    @media (max-width: 768px) {
+        margin-right: 0;
+        width: 100%;
+    }
+    
+}
+
+.formPart:first-child{
+    width: 70%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.formPart:last-child{
+    width: 30%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.tickets{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"]{
+    background-color:transparent;
+    border: none;
+    width: 100%;
+    padding: 0 1vw;
+}
+
+input[type="number"]{
+    background-color: transparent;
+    border: none;
+    width: 30%;
+}
+
+.labelUser{
+    font-family: $font-body;
+    min-width: 30%;
+    @include font-size($fs-body);
+    @media (max-width: 768px) {
+        @include font-size($fs-body-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-body-mobile);
+    }
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox{
+    width: 100%;
+    border-left: $line;
+    border-right: $line;
+    padding: 1vh 2vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.instructionTexts{
+    @include font-size($fs-body);
+    line-height: normal;
+    @media (max-width: 480px) {
+        margin-top: 1vh;
+    }
+}
+
+.nameBox{
+    width: 100%;
+    margin-top: 2vh;
+    border-radius: 10px 10px 0 0 ;
+    border-top: $line;
+}
+
+.emailBox{
+    border-bottom: $line;
+    border-top: $line;
+    border-radius: 0 0 10px 10px ;
+}
+
+.ticketBox{
+    margin-top: 2vh;
+    border-radius: 10px;
+    border: $line;
+    display: flex;
+    justify-content: space-between;
+}
+

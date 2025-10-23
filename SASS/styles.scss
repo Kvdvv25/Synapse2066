@@ -4,6 +4,16 @@ $slate-blue: #b3bfbf;
 $charcoal-black: #151f20;
 $golden-yellow: #fba105;
 $burnt-orange: #cc6506;
+$black-translucent: rgba(26, 26, 26, 0.347);
+
+//Shapes
+$line: 1px solid $slate-blue;
+@mixin dot{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: $slate-blue;
+    border-radius: 50%;
+}
 
 //OVERFLOW
 @mixin overflow($value) {overflow: $value;}
@@ -29,6 +39,13 @@ $burnt-orange: #cc6506;
 };
 @mixin z-index($value) {z-index: $value;}
 
+//Fonts
+@import url('/savecss/clash-display.css');
+$font-synapse: 'Cyberpunk';
+$font-title: 'ClashDisplay-Medium';
+$font-body: "Fredoka-Light";
+
+
 @font-face {
     font-family: "Clash Display";
     src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff') format('woff');
@@ -47,9 +64,78 @@ $burnt-orange: #cc6506;
     font-family: "Clash Display", sans-serif;
 }
 
+@font-face {
+    font-family: 'Cyberpunk';
+    src: url('../fonts/cyberpunk_style_light.woff2') format('woff2');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
 //TEXT
 @mixin text-align {
     text-align: center;
 }
-@mixin font-size($size) {font-size: $size;}
 @mixin font-weight($weight) {font-weight: $weight;}
+
+//Font-sizes desktop
+$fs-title: 4rem;
+$fs-h1: 2rem;
+$fs-h2: 1.5rem;
+$fs-body: 1.15rem;
+$fs-btn: 1rem;
+
+//Font-sizes tablet
+$fs-title-tablet: 3.5rem;
+$fs-h1-tablet: 1.8rem;
+$fs-h2-tablet: 1.3rem;
+$fs-body-tablet: 1.1rem;
+$fs-btn-tablet: 1rem;
+
+//Font-sizes mobile
+$fs-title-mobile: 2.5rem;
+$fs-h1-mobile: 1.6rem;
+$fs-h2-mobile: 1.15rem;
+$fs-body-mobile: 1rem;
+$fs-btn-mobile: 0.95rem;
+
+@mixin font-size($size) {font-size: $size;}
+
+//Buttons
+@mixin button-base{
+    font-family: 'ClashDisplay-Medium';
+    border-radius: 30px;
+    @include font-size($fs-btn);
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+
+    @media (max-width: 768px) {
+        @include font-size($fs-btn-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-btn-mobile);
+    }
+}
+
+    //primary button with border
+    .btn_primary{
+        @include button-base;
+        padding: 1vh 5vh;
+        border: $line;
+        margin: 2vh auto;
+        
+    }
+
+    //secondary button no border
+    .btn_secondary{
+        @include button-base;
+        padding: 1vh 5vh;
+    }
+
+    //icon button
+    .btn_icon{
+        @include button-base;
+    }
