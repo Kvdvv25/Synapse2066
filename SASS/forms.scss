@@ -11,7 +11,8 @@
 .bgSection{
     width: 100vw;
     height: 100vh;
-    background: url('/images/background_comingsoon.jpg') center;
+    background-color: rgb(47, 47, 47);
+    background: url('../images/background_comingsoon.jpg') center;
     background-size: cover;
     filter: brightness(50%);
     position: relative;
@@ -41,6 +42,21 @@ h1{
     @media (max-width: 480px) {
         @include font-size($fs-title-mobile);
     }
+}
+
+h2{
+    @include font-size($fs-h2);
+    font-family: $font-title;
+    margin-bottom: 1vh;
+
+    @media (max-width: 768px) {
+        @include font-size($fs-h2-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-h2-mobile);
+    }
+
 }
 
 //Shapes between title and form
@@ -312,5 +328,20 @@ form{
     border: $line;
     display: flex;
     justify-content: space-between;
+}
+
+.error_message{
+    color: black;
+    font-family: $font-body;
+    margin-top: 1vh;
+    font-size: $fs-body;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-left: 10px solid rgb(255, 53, 53);
+}
+
+.fa-triangle-exclamation{
+    margin-right: 0.5vw;
 }
 

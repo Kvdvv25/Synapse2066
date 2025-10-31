@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/savecss/forms.css">
-    <link rel="stylesheet" href="/savecss/clash-display.css">
+    <title>Ticket Reservation</title>
+    <link rel="stylesheet" href="savecss/forms.css">
+    <link rel="stylesheet" href="savecss/clash-display.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
@@ -14,6 +14,8 @@
     <main>
         <div class="bgSection"></div>
         <section class="contentSection">
+
+            <!-- BIG TITLE -->
             <div class="filmTitle">
                 <h1>Synapse 2066</h1>
                 <div class="shapes">
@@ -21,11 +23,16 @@
                     <span class="dot"></span>
                 </div>
             </div>
+
             <div class="contentBox">
+
+                <!-- TITLE -->
                 <div class="titleBox descrBox">
                     <p class="formTitle">Free Premiere Tickets</p>
                     <button class="btn_icon"><i class="fa-solid fa-xmark fa-xl"></i></button>
                 </div>
+
+                <!-- EVENT DETAILS -->
                 <div class="detailsBox descrBox">
                     <div id="location" class="details">
                         <p>Location:&nbsp</p>
@@ -41,7 +48,11 @@
                     <div class="instructionTexts">
                         <p>Please enter your information and add one ticket for each guest:</p>
                     </div>
-                    <form action="">
+
+                    <!-- FORM -->
+                    <form action="PHP/tickets_reservations.php" method="post">
+
+                        <!-- INPUT FIELDS -->
                         <div class="form">
                             <div class="userInfo formPart">
                                 <div class="nameBox formBox">
@@ -55,12 +66,14 @@
                             </div>
                             <div class="tickets formPart">
                                 <div class="ticketBox formBox">
-                                    <label  class="labelUser" for="ticket">Number of Tickets:</label>
-                                    <input type="number" name="ticket" id="ticket">
+                                    <label  class="labelUser" for="numberOfTickets">Number of Tickets:</label>
+                                    <input type="number" name="numberOfTickets" id="numberOfTickets" min="1" max="40">
                                 </div>
                             </div>
                         </div>  
-                        <button type="button" class="btn_primary" id="confirmBtn">Confirm</button>
+
+                        <!-- VALIDATION BUTTON -->
+                        <button type="submit" class="btn_primary" id="confirmBtn" name="confirmBtn">Confirm</button>
                     </form>
                     </div>
 

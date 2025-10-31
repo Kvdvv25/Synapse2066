@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/savecss/forms.css">
+    <title>Newsletter Form</title>
+    <link rel="stylesheet" href="savecss/forms.css">
     <link rel="stylesheet" href="/savecss/clash-display.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,8 @@
     <main>
         <div class="bgSection"></div>
         <section class="contentSection">
+
+            <!-- BIG TITLE -->
             <div class="filmTitle">
                 <h1>Synapse 2066</h1>
                 <div class="shapes">
@@ -21,16 +23,23 @@
                     <span class="dot"></span>
                 </div>
             </div>
+
             <div class="contentBox">
+
+                <!-- TITLE -->
                 <div class="titleBox">
                     <p class="formTitle">Join our newsletter</p>
                     <button class="btn_icon"><i class="fa-solid fa-xmark fa-xl"></i></button>
                 </div>
+
+                <!-- SMALL DESCRIPTION -->
                 <div class="infoBox">
                     <div class="instructionTexts">
                         <p>Receive updates, premium insights and behind-the-scenes footage! <br> Please provide your information:</p>
-                    </div>                    <form action="">
+                    </div>  
                     
+                    <!-- FORM -->
+                    <form action="PHP/newsletter_registration.php" method="post">
                             <div class="nameBox formBox">
                                 <label class="labelUser" for="name">Name:</label>
                                 <input type="text" name="name" id="name">
@@ -39,9 +48,9 @@
                                 <label class="labelUser" for="email">Email:</label>
                                 <input type="email" name="email" id="email">
                             </div>
-    
-                            <button class="btn_primary" type="button" id="subscribeBtn">Subscribe</button>
-                        
+                            
+                            <!-- VALIDATION BUTTON -->
+                            <button class="btn_primary" type="submit" id="subscribeBtn" name="subscribeBtn">Subscribe</button>
                     </form>
                 </div>
 

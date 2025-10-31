@@ -1,13 +1,13 @@
-@import url("/savecss/clash-display.css");
+@import url("../savecss/clash-display.css");
 @font-face {
   font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
+  src: url("../fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
+  src: url("../fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
@@ -92,7 +92,8 @@
 .bgSection {
   width: 100vw;
   height: 100vh;
-  background: url("/images/background_comingsoon.jpg") center;
+  background-color: rgb(47, 47, 47);
+  background: url("../images/background_comingsoon.jpg") center;
   background-size: cover;
   filter: brightness(50%);
   position: relative;
@@ -122,6 +123,22 @@ h1 {
 @media (max-width: 480px) {
   h1 {
     font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "ClashDisplay-Medium";
+  margin-bottom: 1vh;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.15rem;
   }
 }
 
@@ -425,4 +442,19 @@ form {
   border: 1px solid #b3bfbf;
   display: flex;
   justify-content: space-between;
+}
+
+.error_message {
+  color: black;
+  font-family: "Fredoka-Light";
+  margin-top: 1vh;
+  font-size: 1.15rem;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-left: 10px solid rgb(255, 53, 53);
+}
+
+.fa-triangle-exclamation {
+  margin-right: 0.5vw;
 }/*# sourceMappingURL=forms.css.map */
