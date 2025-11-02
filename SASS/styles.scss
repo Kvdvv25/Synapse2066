@@ -4,6 +4,8 @@ $slate-blue: #b3bfbf;
 $charcoal-black: #151f20;
 $golden-yellow: #fba105;
 $burnt-orange: #cc6506;
+$blue: #1e6da1;
+$red: #b21b1b;
 $black: #151515;
 $white: #fff;
 $white-transparent: #ffffff99;
@@ -45,6 +47,12 @@ $grey-transparent : #646464a4;
     src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff') format('woff');
     font-style: normal;
     font-weight: 700; 
+}
+@font-face {
+    font-family: 'Monaco';
+    src: url('/fonts/Monaco/Monaco.ttf');
+    font-style: normal;
+    font-weight: 500;
 }
 
 @mixin ClashDisplay {
