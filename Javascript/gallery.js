@@ -22,23 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (window.innerWidth > 575) {
     galleryImages.forEach((item) => {
-      item.addEventListener("click", () => {
-        if (gallery.firstElementChild === item) {
-          return;
+      item.addEventListener("click", (e) => {
+        if (e.target !== galleryImages[0]) {
+          [e.target.src, galleryImages[0].src] = [
+            galleryImages[0].src,
+            e.target.src,
+          ];
         }
-
-        item.classList.add("fade-out");
-
-        item.addEventListener(
-          "animationend",
-          () => {
-            gallery.prepend(item);
-            item.classList.remove("fade-out");
-            item.classList.add("fade-in");
-            setTimeout(() => item.classList.remove("fade-in"), 500);
-          },
-          { once: true }
-        );
       });
     });
   }
