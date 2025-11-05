@@ -64,6 +64,12 @@ a {
   font-style: normal;
   font-weight: 700;
 }
+@font-face {
+  font-family: "Monaco";
+  src: url("/fonts/Monaco/Monaco.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
 body {
   background: #151515;
   height: 100vh;

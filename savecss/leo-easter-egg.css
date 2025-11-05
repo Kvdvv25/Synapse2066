@@ -209,6 +209,9 @@ body {
 .terminal-main__text .red {
   color: #b21b1b;
 }
+.terminal-main__text:last-child {
+  padding-bottom: 10px;
+}
 .terminal-main__wrapper {
   display: flex;
 }

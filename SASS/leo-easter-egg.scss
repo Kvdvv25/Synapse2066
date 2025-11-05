@@ -114,7 +114,9 @@ body {
             & .red {
                 color: $red;
             }
-            
+            &:last-child {
+                padding-bottom: 10px;
+            }
         }
         &__wrapper {
             display: flex;
