@@ -162,3 +162,19 @@ window.addEventListener("resize", () => {
 // Init
 document.documentElement.style.setProperty("--radius", `${radius}px`);
 updatePositions();
+
+// For Test
+if (typeof window !== "undefined") {
+  window.updatePositions = updatePositions;
+  window.updateBackground = updateBackground;
+  window.rotateWheel = rotateWheel;
+  window.mobileMenu = mobileMenu;
+}
+if (typeof module !== "undefined") {
+  module.exports = {
+    updatePositions,
+    updateBackground,
+    rotateWheel,
+    mobileMenu,
+  };
+}

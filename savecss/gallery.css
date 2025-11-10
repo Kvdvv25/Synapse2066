@@ -89,13 +89,14 @@ body {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #fff;
 }
 
 body {
   display: flex;
   height: 100vh;
+  font-family: "Clash Display", sans-serif;
 }
 
 .header {
