@@ -46,7 +46,7 @@ h1{
 
 h2{
     @include font-size($fs-h2);
-    font-family: $font-title;
+    @include heading_style;
     margin-bottom: 1vh;
 
     @media (max-width: 768px) {
@@ -109,7 +109,7 @@ h2{
 
 .formTitle{
     @include font-size($fs-h2);
-    font-family: $font-title;
+    @include heading_style;
 
     @media (max-width: 768px) {
         @include font-size($fs-h2-tablet);
@@ -330,7 +330,8 @@ form{
     justify-content: space-between;
 }
 
-.error_message{
+//the php one
+.error_message, .error_name, .error_email, .error_number{
     color: black;
     font-family: $font-body;
     margin-top: 1vh;
@@ -341,7 +342,33 @@ form{
     border-left: 10px solid rgb(255, 53, 53);
 }
 
+.hidden{
+    display: none;
+}
+
 .fa-triangle-exclamation{
     margin-right: 0.5vw;
 }
 
+
+
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid $grey-transparent;
+    border-top-color: $white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

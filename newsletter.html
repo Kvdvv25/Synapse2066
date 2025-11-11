@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter Form</title>
     <link rel="stylesheet" href="savecss/forms.css">
-    <link rel="stylesheet" href="/savecss/clash-display.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -29,7 +26,7 @@
                 <!-- TITLE -->
                 <div class="titleBox">
                     <p class="formTitle">Join our newsletter</p>
-                    <button class="btn_icon"><i class="fa-solid fa-xmark fa-xl"></i></button>
+                    <button class="btn_icon"><a href="/pre-launch.html"><i class="fa-solid fa-xmark fa-xl"></i></a></button>
                 </div>
 
                 <!-- SMALL DESCRIPTION -->
@@ -38,8 +35,8 @@
                         <p>Receive updates, premium insights and behind-the-scenes footage! <br> Please provide your information:</p>
                     </div>  
                     
-                    <!-- FORM -->
-                    <form action="PHP/newsletter_registration.php" method="post">
+                    <!-- FORM USED FOR PHP -->
+                    <form action="PHP/newsletter_registration.php" method="post" id="newsletter_form">
                             <div class="nameBox formBox">
                                 <label class="labelUser" for="name">Name:</label>
                                 <input type="text" name="name" id="name">
