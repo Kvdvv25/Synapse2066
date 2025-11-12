@@ -1,0 +1,22 @@
+// @use 'reset.scss';
+@use 'styles.scss' as *;
+
+body {
+  background: $black;
+  height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.navigation {
+    padding: 20px 0;
+    position: fixed;
+    left: 30px;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $white;
+}
