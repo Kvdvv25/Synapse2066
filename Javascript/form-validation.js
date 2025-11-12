@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 if(response.ok){
                     console.log('Fetch successful');
                     setTimeout(function(){
-                        window.location.href='/success-msg.html';
+                        window.location.href='/success_msg.html';
                     }, 2000)
                 } else{
                     console.log('Error', result.error);
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
             catch (error){
                 console.error('Error', error);
-                alert('Error');
+    
             }
         }
     })
