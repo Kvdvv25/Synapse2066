@@ -13,6 +13,16 @@ $black: #151515;
 $white: #fff;
 $white-transparent: #ffffff99;
 $grey-transparent : #646464a4;
+$black-translucent: rgba(26, 26, 26, 0.347);
+
+//Shapes
+$line: 1px solid $slate-blue;
+@mixin dot{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: $slate-blue;
+    border-radius: 50%;
+}
 
 //OVERFLOW
 @mixin overflow($value) {overflow: $value;}
@@ -38,6 +48,37 @@ $grey-transparent : #646464a4;
 };
 @mixin z-index($value) {z-index: $value;}
 @mixin border-radius($value){border-radius: $value;}
+
+//Font-sizes desktop
+$fs-title: 4rem;
+$fs-h1: 2.6rem;
+$fs-h2: 1.5rem;
+$fs-body: 1.15rem;
+$fs-btn: 1rem;
+
+//Font-sizes tablet
+$fs-title-tablet: 3.5rem;
+$fs-h1-tablet: 1.8rem;
+$fs-h2-tablet: 1.3rem;
+$fs-body-tablet: 1.1rem;
+$fs-btn-tablet: 1rem;
+
+//Font-sizes mobile
+$fs-title-mobile: 2.5rem;
+$fs-h1-mobile: 1.6rem;
+$fs-h2-mobile: 1.15rem;
+$fs-body-mobile: 1rem;
+$fs-btn-mobile: 0.95rem;
+
+//Fonts
+$font-synapse: 'Cyberpunk';
+$font-title: 'ClashDisplay-Medium';
+$font-body: "Fredoka-Light";
+
+@mixin heading_style{
+    @include ClashDisplay;
+    font-weight: 500;
+}
 
 //TEXT
 @mixin text-align {text-align: center;}
