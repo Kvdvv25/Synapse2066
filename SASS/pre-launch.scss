@@ -588,7 +588,7 @@ body {
         }
         
         .timeline::before {
-            left: 20%;
+            left: 15%;
             transform: none;
         }
         
@@ -596,7 +596,7 @@ body {
             padding: 7px 12px;
             @include font-size(0.7rem);
             gap: 0.4rem;
-            max-width: 90%;
+            max-width: 80%;
         }
         
         .coming-soon-badge {
@@ -610,7 +610,7 @@ body {
         }
         //Dot
         .timeline-dot {
-            left: 20%;
+            left: 15%;
             transform: translateX(-50%);
         }
         
@@ -635,8 +635,8 @@ body {
         // Coming Soon - horizontal line
         .timeline-item:nth-child(1)::after {
             display: block !important;
-            width: calc(80% - 130px);
-            left: 20%;
+            width: calc(80% - 118px);
+            left: 15%;
             right: auto;
             top: 0.6rem;
         }
@@ -645,7 +645,7 @@ body {
         .timeline-item:nth-child(2)::after {
             display: block !important;
             width: calc(80% - 120px);
-            left: 20%;
+            left: 15%;
             right: auto;
         }
         
@@ -653,7 +653,7 @@ body {
         .timeline-item:nth-child(3)::after {
             display: block !important;
             width: calc(80% - 120px);
-            left: 20%;
+            left: 15%;
             right: auto;
         }
         
@@ -744,7 +744,7 @@ body {
         .trailer-video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             background: #000;
             border-radius: 12px;
             overflow: hidden;
