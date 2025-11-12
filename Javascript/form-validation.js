@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', function(){
             }
 
             // fetching backend: send-email
+            console.log(JSON.stringify({
+                        name:userName,
+                        email:userEmail,
+                        numberOfTickets:userTickets
+                    }))
             try{
                 const response = await fetch('/.netlify/functions/send-email', {
                     method: 'POST',
@@ -71,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function(){
             }
             catch (error){
                 console.error('Error', error);
-    
             }
         }
     })
