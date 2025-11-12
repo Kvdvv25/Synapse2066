@@ -9,33 +9,33 @@ let isScrolling = false;
 
 const content = [
   {
-    title: "Synopsis",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "Explore Synopsis →",
+    title: "Synapsis",
+    text: "Learn more about Synapse`s storyline",
+    button: "Learn about the film →",
     link: "#1",
   },
   {
-    title: "CAST",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "Explore Cast →",
+    title: "Cast",
+    text: "Explore the film`s characters, who they are and which actors bring them to life",
+    button: "Explore the Characters →",
     link: "cast.html",
   },
   {
-    title: "CREW",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "Explore Crew →",
+    title: "Production Team",
+    text: "Explore the individual profile introducing the members of our filming team",
+    button: "Discover the team →",
     link: "productionteam.html",
   },
   {
     title: "Gallery",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
+    text: "Explore the gallery with film poster and much more",
     button: "See Gallery →",
     link: "gallery.html",
   },
   {
     title: "Company",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "See Title 5 →",
+    text: "Explore the Synapse Corporation - the tech giant behind the neural implants that promise to change everything for better with the chip",
+    button: "See the Company Details →",
     link: "#5",
   },
 ];

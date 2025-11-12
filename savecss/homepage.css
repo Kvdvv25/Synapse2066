@@ -242,6 +242,37 @@ body {
   font-family: "Clash Display";
 }
 
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.navigation .logo {
+  display: inline-block;
+  margin: 3rem 4rem;
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #efeded;
+  transition: opacity 0.3s ease;
+}
+.navigation .logo:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1024px) {
+  .navigation .logo {
+    margin: 2rem 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .navigation .logo {
+    margin: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+}
+
 .background-layer {
   position: fixed;
   top: 0;

@@ -12,6 +12,41 @@ body {
   padding: 0;
   @include ClashDisplay;
 }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+  .logo  {
+    display: inline-block;
+    margin: 3rem 4rem;
+    @include CyberPunk;
+    @include font-size(1.8rem);
+    @include font-weight(500);
+    text-decoration: none;
+    color: #efeded;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .logo {
+      margin: 2rem 3rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      margin: 1.5rem 2rem;
+      font-size: 1.5rem;
+    }
+  }
+}
 .background-layer {
   position: fixed;
   top: 0;
@@ -50,6 +85,8 @@ body {
     transform: translate(-50%, -50%);
     z-index: -1;
   }
+
+
   
   @media (min-width: 1440px) {
     left: -5%;
@@ -111,15 +148,15 @@ body {
 }
 
 .text {
-  color: $white;
-  width: 50%;
-  margin-left: 50%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
+    color: $white;
+    width: 50%;
+    margin-left: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
     & .title {
       font-size: 2rem;
       margin-bottom: 30px;
