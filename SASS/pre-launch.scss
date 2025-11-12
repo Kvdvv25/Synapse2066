@@ -241,32 +241,8 @@ body {
         }
     }
 
-    // Second item (Link to Kickstarter) - DESKTOP RIGHT
+    // Second item (Watch the Trailer) - DESKTOP RIGHT
     .timeline-item:nth-child(2)::after {
-        @include display(block);
-        width: calc(50% - 1rem);
-        left: 50%;
-        right: auto;
-        
-        @media (max-width: 1024px) {
-            width: calc(50% - 20px);
-        }
-        
-        @media (max-width: 768px) {
-            width: calc(50% - 130px);
-        }
-        
-        @media (max-width: 480px) {
-            width: calc(50% - 110px);
-        }
-        
-        @media (max-width: 375px) {
-            width: calc(50% - 95px);
-        }
-    }
-
-    // Third item (Watch the Trailer) - DESKTOP RIGHT
-    .timeline-item:nth-child(3)::after {
         @include display(block);
         width: calc(50% - 120px);
         left: 50%;
@@ -289,51 +265,27 @@ body {
         }
     }
 
-    // Fourth item (Free Premiere Tickets)
-    .timeline-item:nth-child(4)::after {
+    // Third item (Free Premiere Tickets) - DESKTOP RIGHT
+    .timeline-item:nth-child(3)::after {
         @include display(block);
-        width: calc(50% - 180px);
-        right: 50%;
-        left: auto;
-        
-        @media (max-width: 1024px) {
-            width: calc(50% - 140px);
-        }
-        
-        @media (max-width: 768px) {
-            width: calc(50% - 130px);
-        }
-        
-        @media (max-width: 480px) {
-            width: calc(50% - 115px);
-        }
-        
-        @media (max-width: 375px) {
-            width: calc(50% - 100px);
-        }
-    }
-
-    // Fifth item (Get Updates) - DESKTOP RIGHT
-    .timeline-item:nth-child(5)::after {
-        @include display(block);
-        width: calc(50% - 80px);
+        width: calc(50% - 120px);
         left: 50%;
         right: auto;
         
         @media (max-width: 1024px) {
-            width: calc(50% - 50px);
+            width: calc(50% - 80px);
         }
         
         @media (max-width: 768px) {
-            width: calc(50% - 100px);
+            width: calc(50% - 120px);
         }
         
         @media (max-width: 480px) {
-            width: calc(50% - 85px);
+            width: calc(50% - 105px);
         }
         
         @media (max-width: 375px) {
-            width: calc(50% - 75px);
+            width: calc(50% - 90px);
         }
     }
 
@@ -408,28 +360,8 @@ body {
         }
     }
 
-    // Second item (Link to Kickstarter)
+    // (Watch the Trailer)
     .timeline-item:nth-child(2) .timeline-content {
-        margin-left: auto;
-        font-family: $font-body;
-        margin-right: 0.5rem;
-        
-        @media (max-width: 1024px) {
-            margin-right: 1rem;
-        }
-        
-        @media (max-width: 768px) {
-            margin-left: auto;
-            margin-right: 10px;
-        }
-        
-        @media (max-width: 480px) {
-            margin-right: 5px;
-        }
-    }
-
-    // Third item (Watch the Trailer)
-    .timeline-item:nth-child(3) .timeline-content {
         margin-left: auto;
         font-family: $font-body;
         margin-right: 7rem;
@@ -448,43 +380,23 @@ body {
         }
     }
 
-    // Fourth item (Free Premiere Tickets)
-    .timeline-item:nth-child(4) .timeline-content {
-        margin-right: auto;
-        font-family: $font-body;
-        margin-left: 8rem;
-        
-        @media (max-width: 1024px) {
-            margin-left: 8rem;
-        }
-        
-        @media (max-width: 768px) {
-            margin-right: auto;
-            margin-left: 10px;
-        }
-        
-        @media (max-width: 480px) {
-            margin-left: -10px;
-        }
-    }
-
-    // Fifth item (Get Updates)
-    .timeline-item:nth-child(5) .timeline-content {
-        font-family: $font-body;
+    // Free Premiere Tickets
+    .timeline-item:nth-child(3) .timeline-content {
         margin-left: auto;
-        margin-right: 5rem;
+        font-family: $font-body;
+        margin-right: 7rem;
         
         @media (max-width: 1024px) {
-            margin-right: 3rem;
+            margin-right: 4rem;
         }
         
         @media (max-width: 768px) {
             margin-left: auto;
-            margin-right: 10px;
+            margin-right: 1rem;
         }
         
         @media (max-width: 480px) {
-            margin-right: 5px;
+            margin-right: -10px;
         }
     }
 
@@ -633,19 +545,11 @@ body {
         }
         
         .timeline-item:nth-child(2) .timeline-content {
-            margin-right: 2rem;
+            margin-right: 4rem;
         }
         
         .timeline-item:nth-child(3) .timeline-content {
             margin-right: 4rem;
-        }
-        
-        .timeline-item:nth-child(4) .timeline-content {
-            margin-left: 6rem;
-        }
-        
-        .timeline-item:nth-child(5) .timeline-content {
-            margin-right: 2rem;
         }
     }
 }
@@ -661,8 +565,8 @@ body {
     }
 }
 
-// iPhone SE and smaller
-@media (max-width: 340px) {
+// 340 and smaller - timeline on the left
+@media (max-width: 360px) {
     .container {
         padding: 25px 10px;
     }
@@ -670,46 +574,94 @@ body {
     .content-wrapper {
         .title-section {
             .title {
-                @include font-size(1.2rem);
+                @include font-size(2.5rem);
             }
             
             .subtitle {
-                @include font-size(0.8rem);
+                @include font-size(1rem);
+                margin-bottom: 1.6rem;
             }
         }
         
         .timeline {
-            gap: 2rem;
+            gap: 2.5rem;
+        }
+        
+        .timeline::before {
+            left: 20%;
+            transform: none;
         }
         
         .timeline-content {
             padding: 7px 12px;
-            @include font-size(0.6rem);
+            @include font-size(0.7rem);
             gap: 0.4rem;
-            max-width: 140px;
+            max-width: 90%;
         }
         
         .coming-soon-badge {
-            @include font-size(0.6rem);
+            @include font-size(0.7rem);
             padding: 6px 10px;
         }
         
         .countdown {
-            @include font-size(0.7rem);
+            @include font-size(0.8rem);
+            font-weight: 300;
+        }
+        //Dot
+        .timeline-dot {
+            left: 20%;
+            transform: translateX(-50%);
         }
         
+        // First item dot 
+        .timeline-item:nth-child(1) .timeline-dot {
+            top: 0.3rem;
+        }
+        
+        // Coming Soon Badge - position on the right
+        .coming-soon-wrapper {
+            margin-left: auto;
+            margin-right: 10px;
+            position: relative;
+            top: -0.15rem;
+        }
+        
+    
+        .coming-soon-badge::after {
+            display: none;
+        }
+        
+        // Coming Soon - horizontal line
         .timeline-item:nth-child(1)::after {
-            width: calc(50% - 70px);
+            display: block !important;
+            width: calc(80% - 130px);
+            left: 20%;
+            right: auto;
+            top: 0.6rem;
         }
         
-        .timeline-item:nth-child(2)::after,
-        .timeline-item:nth-child(3)::after,
-        .timeline-item:nth-child(5)::after {
-            width: calc(50% - 80px);
+        // Watch the Trailer - horizontal line 
+        .timeline-item:nth-child(2)::after {
+            display: block !important;
+            width: calc(80% - 120px);
+            left: 20%;
+            right: auto;
         }
         
-        .timeline-item:nth-child(4)::after {
-            width: calc(50% - 85px);
+        // Free Premiere Tickets - horizontal line
+        .timeline-item:nth-child(3)::after {
+            display: block !important;
+            width: calc(80% - 120px);
+            left: 20%;
+            right: auto;
+        }
+        
+        // Position all content buttons on the right side (including Coming Soon)
+        .timeline-item:nth-child(2) .timeline-content,
+        .timeline-item:nth-child(3) .timeline-content {
+            margin-left: auto;
+            margin-right: 10px;
         }
     }
 }
