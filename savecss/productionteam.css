@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "CyberPunk";
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Clash Display";
+  background-color: #0c1111;
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 400px;
+  background-image: url(/images/Cast/cast_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.sidebar .sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.sidebar .sidebar-header .logo h1 {
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #efeded;
+}
+.sidebar .sidebar-header .updates-section {
+  position: relative;
+}
+.sidebar .sidebar-header .updates-section .updates-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.132);
+  border: none;
+  border-radius: 8px;
+  color: #efeded;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: "Clash Display";
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.sidebar .sidebar-header .updates-section .updates-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.sidebar .sidebar-header .updates-section .updates-btn .dropdown-text {
+  color: #b3bfbf;
+}
+.sidebar .sidebar-header .updates-section .updates-btn svg {
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+.sidebar .sidebar-header .updates-section .updates-btn.active svg {
+  transform: rotate(180deg);
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown.show {
+  max-height: 500px;
+  opacity: 1;
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-item {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-item .update-title {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #efeded;
+  font-family: "Clash Display";
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-item .update-date {
+  font-size: 0.85rem;
+  color: #b3bfbf;
+  font-weight: 300;
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-link {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #efeded;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-link:hover svg {
+  transform: translateX(3px);
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-link span {
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-family: "Clash Display";
+}
+.sidebar .sidebar-header .updates-section .updates-dropdown .update-link svg {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+.sidebar .nav-menu {
+  position: relative;
+  margin-top: auto;
+}
+.sidebar .nav-menu::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.sidebar .nav-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.sidebar .nav-menu ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+.sidebar .nav-menu ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+.sidebar .nav-menu ul li a {
+  display: block;
+  padding: 0.4rem 0;
+  color: #b3bfbf;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.sidebar .nav-menu ul li a:hover {
+  color: #b3bfbf;
+}
+.sidebar .nav-menu ul li.active::before {
+  background: #efeded;
+  border-color: #efeded;
+}
+.sidebar .nav-menu ul li.active > a {
+  color: #efeded;
+  font-weight: 500;
+}
+.sidebar .nav-menu ul li .submenu {
+  margin-top: 0.5rem;
+  margin-left: 0;
+  gap: 0.25rem;
+  padding-left: -10px;
+  position: relative;
+}
+.sidebar .nav-menu ul li .submenu::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.sidebar .nav-menu ul li .submenu li {
+  padding-left: 1rem;
+}
+.sidebar .nav-menu ul li .submenu li::before {
+  display: none;
+}
+.sidebar .nav-menu ul li .submenu li a {
+  font-size: 0.9rem;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  position: relative;
+}
+.sidebar .nav-menu ul li .submenu li.active a {
+  color: #efeded;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 3rem 4rem;
+  margin-left: 400px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.main-content .content-header {
+  margin-bottom: 1rem;
+}
+.main-content .content-header .section-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #b3bfbf;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-content .content-header .section-title::after {
+  margin-top: 13px;
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.349);
+}
+.main-content .team-section .team-heading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+  color: white;
+}
+.main-content .team-section .team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.team-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+}
+.team-card:hover .team-image img {
+  transform: scale(1.05);
+}
+.team-card:hover .team-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+.team-card .team-image {
+  width: 100%;
+  height: 350px;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+.team-card .team-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.team-card .team-info {
+  font-family: "Clash Display";
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.team-card .team-info .team-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  font-size: 1rem;
+  color: #efeded;
+  font-family: "Clash Display";
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.team-card .team-info .team-name .team-link {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.team-card .team-info .team-name .team-link img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+}
+.team-card .team-info .team-name .team-link:hover img {
+  opacity: 1;
+  transform: translateX(3px);
+}
+.team-card .team-info .team-descr {
+  font-family: "Clash Display";
+  font-weight: 200;
+  padding-left: 1.2rem;
+  color: #efeded;
+  position: relative;
+}
+.team-card .team-info .team-descr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 20px;
+  margin-left: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.349);
+}
+.team-card .team-info .team-descr .team-Name {
+  font-size: 0.9rem;
+  color: #efeded;
+  font-weight: 200;
+}
+
+.general-enquiries {
+  font-family: "Clash Display";
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.349);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+}
+.general-enquiries .enquiries-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.general-enquiries .enquiries-wrapper .enquiries-label {
+  font-size: 1.1rem;
+  color: #b3bfbf;
+  font-weight: 400;
+  min-width: 200px;
+  flex-shrink: 0;
+}
+.general-enquiries .enquiries-wrapper .enquiries-links {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  flex: 1;
+}
+.general-enquiries .enquiries-wrapper .enquiries-links .enquiry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #efeded;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.general-enquiries .enquiries-wrapper .enquiries-links .enquiry-link:hover {
+  color: #fff;
+  gap: 1rem;
+}
+.general-enquiries .enquiries-wrapper .enquiries-links .enquiry-link:hover i {
+  transform: translate(2px, -2px);
+}
+.general-enquiries .enquiries-wrapper .enquiries-links .enquiry-link i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.explore-next {
+  font-family: "Clash Display";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.explore-next .explore-text {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #efeded;
+  gap: 2rem;
+  flex: 1;
+}
+.explore-next .explore-text::after {
+  content: "";
+  margin-top: 13px;
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.349);
+}
+.explore-next .explore-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #efeded;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: "Clash Display";
+  font-weight: 200;
+  transition: gap 0.3s ease;
+  flex-shrink: 0;
+}
+.explore-next .explore-link:hover {
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .character-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow: visible;
+    overflow-x: hidden;
+  }
+  .container {
+    flex-direction: column;
+    max-height: none;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+    height: auto;
+  }
+  .main-content {
+    padding: 2rem 1.5rem;
+    margin-left: 0;
+    height: auto;
+    overflow-y: visible;
+  }
+  .main-content .characters-section .characters-heading {
+    font-size: 2rem;
+  }
+  .character-grid {
+    display: block;
+  }
+  .general-enquiries .enquiries-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .general-enquiries .enquiries-wrapper .enquiries-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .explore-next {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=productionteam.css.map */

@@ -6,6 +6,13 @@ $slate-blue: #b3bfbf;
 $charcoal-black: #151f20;
 $golden-yellow: #fba105;
 $burnt-orange: #cc6506;
+$charcoal-black1: #0c1111;
+$blue: #1e6da1;
+$red: #b21b1b;
+$black: #151515;
+$white: #fff;
+$white-transparent: #ffffff99;
+$grey-transparent : #646464a4;
 
 //OVERFLOW
 @mixin overflow($value) {overflow: $value;}
@@ -30,7 +37,7 @@ $burnt-orange: #cc6506;
     flex-direction: $value;
 };
 @mixin z-index($value) {z-index: $value;}
-
+@mixin border-radius($value){border-radius: $value;}
 
 //TEXT
 @mixin text-align {text-align: center;}
@@ -42,7 +49,12 @@ $burnt-orange: #cc6506;
     font-style: normal;
     font-weight: 500; 
 }
-
+@font-face {
+    font-family: "Clash Display";
+    src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: 200; 
+}
 @font-face {
     font-family: "Clash Display";
     src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff') format('woff');
@@ -50,7 +62,7 @@ $burnt-orange: #cc6506;
     font-weight: 700; 
 }
 
-@mixin ClashDisplay {font-family: "Clash Display", sans-serif;}
+@mixin ClashDisplay {font-family: "Clash Display";}
 @mixin Fredoka {
     font-family: "Fredoka", sans-serif;
     font-optical-sizing: auto;
