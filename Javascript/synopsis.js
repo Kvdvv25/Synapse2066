@@ -4,36 +4,36 @@
 const moments = document.querySelectorAll(".moment");
 const mediaQuery = window.matchMedia('(min-width: 769px)');
 
-function handleDesktopMode(event) {
-    if (event.matches) {
+// function handleDesktopMode(event) {
+//     if (event.matches) {
         
-        if(moments){
-            console.log('Moments exist on another page');
+//         if(moments){
+//             console.log('Moments exist on another page');
         
-            moments.forEach( moment => {
-                const link = moment.querySelector(".moment_link");
-                const imgTarget = moment.querySelector('.moment_img');
+//             moments.forEach( moment => {
+//                 const link = moment.querySelector(".moment_link");
+//                 const imgTarget = moment.querySelector('.moment_img');
             
-                if(imgTarget||link){
-                    console.log('Both exist');
-                } else {
-                    console.log('Image or link do not exist');
-                }
+//                 if(imgTarget||link){
+//                     console.log('Both exist');
+//                 } else {
+//                     console.log('Image or link do not exist');
+//                 }
             
-                link.addEventListener('mouseenter', function(){
-                    imgTarget.style.display = 'flex';
-                })
+//                 link.addEventListener('mouseenter', function(){
+//                     imgTarget.style.display = 'flex';
+//                 })
             
-                link.addEventListener('mouseleave', function(){
-                    imgTarget.style.display = 'none';
-                })
-            })
-        } else {
-            console.log('moments are on another page'); 
-        }
+//                 link.addEventListener('mouseleave', function(){
+//                     imgTarget.style.display = 'none';
+//                 })
+//             })
+//         } else {
+//             console.log('moments are on another page'); 
+//         }
 
-    }
-}
+//     }
+// }
 
 const mediaQueryMobile = window.matchMedia('(max-width: 480px)');
 const box1 = document.getElementById('box1');
@@ -59,6 +59,34 @@ function handleMobileMode (event) {
     }
     else{
         console.log('desktop window size')
+       
+        
+            if(moments){
+                console.log('Moments exist on another page');
+            
+                moments.forEach( moment => {
+                    const link = moment.querySelector(".moment_link");
+                    const imgTarget = moment.querySelector('.moment_img');
+                
+                    if(imgTarget||link){
+                        console.log('Both exist');
+                    } else {
+                        console.log('Image or link do not exist');
+                    }
+                
+                    link.addEventListener('mouseenter', function(){
+                        imgTarget.style.display = 'flex';
+                    })
+                
+                    link.addEventListener('mouseleave', function(){
+                        imgTarget.style.display = 'none';
+                    })
+                })
+            } else {
+                console.log('moments are on another page'); 
+            }
+    
+    
     }
 }
 
