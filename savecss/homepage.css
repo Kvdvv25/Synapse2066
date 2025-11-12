@@ -89,11 +89,12 @@ body {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #fff;
 }
 
 body {
+  background-color: #151f20;
   position: relative;
   overflow: hidden;
   background-position: center center;
