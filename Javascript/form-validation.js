@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 if(response.ok){
                     console.log('Fetch successful');
                     setTimeout(function(){
-                        window.location.href='/success-msg.html';
+                        window.location.href='/success_msg.html';
                     }, 2000)
                 } else{
                     alert('Error', result.error);
