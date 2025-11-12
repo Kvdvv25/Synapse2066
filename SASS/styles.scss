@@ -79,7 +79,6 @@ $font-body: "Fredoka-Light";
     @include ClashDisplay;
     font-weight: 500;
 }
-
 //TEXT
 @mixin text-align {text-align: center;}
 @mixin font-size($size) {font-size: $size;}
@@ -116,3 +115,42 @@ $font-body: "Fredoka-Light";
     font-weight: 300; 
 }
 @mixin CyberPunk{font-family: "CyberPunk", sans-serif;}
+
+//Buttons
+@mixin button-base{
+    font-family: 'ClashDisplay-Medium';
+    border-radius: 30px;
+    @include font-size($fs-btn);
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+
+    @media (max-width: 768px) {
+        @include font-size($fs-btn-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-btn-mobile);
+    }
+}
+
+    //primary button with border
+    .btn_primary{
+        @include button-base;
+        padding: 1vh 5vh;
+        border: $line;
+        margin: 2vh auto;
+        
+    }
+
+    //secondary button no border
+    .btn_secondary{
+        @include button-base;
+        padding: 1vh 5vh;
+    }
+
+    //icon button
+    .btn_icon{
+        @include button-base;
+    }

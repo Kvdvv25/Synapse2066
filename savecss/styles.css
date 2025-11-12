@@ -22,4 +22,67 @@
   src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
+}
+.btn_primary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+  border: 1px solid #b3bfbf;
+  margin: 2vh auto;
+}
+@media (max-width: 768px) {
+  .btn_primary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_primary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_secondary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+}
+@media (max-width: 768px) {
+  .btn_secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_secondary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_icon {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .btn_icon {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_icon {
+    font-size: 0.95rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
