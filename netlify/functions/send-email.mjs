@@ -3,7 +3,7 @@
 // Imports
 import nodemailer from 'nodemailer';
 import { createClient } from '@supabase/supabase-js';
-import { create } from 'domain';
+// import { create } from 'domain';
 
 // Info from supabase to connect to database
 const supabase_url = process.env.SUPABASE_URL;
@@ -16,11 +16,19 @@ export const handler = async function (event){
     //Checking httpMethod
     if(event.httpMethod !== 'POST'){
         console.log("Error: Wrong method");
+        return {
+            statusCode: 405,
+            body: JSON.stringify({error: 'problem with method'})
+        }
     }
 
     //Checking if body exists
     if(!event.body){
         console.log('Error: Body does not exist');
+        return {
+            statusCode: 400,
+            body: JSON.stringify({error: 'missing body'})
+        }
     }
 
     // Changing JSON string into javascript object
@@ -29,7 +37,11 @@ export const handler = async function (event){
         parsedBody = JSON.parse(event.body);
     } 
     catch (error){
-        console.log('Error', error);
+        console.error('Error', error);
+        return {
+            statusCode: 400,
+            body: JSON.stringify({error: 'JSON is incorrect'})
+        }
     }
 
     // Inserting 3 values into the database
@@ -44,6 +56,7 @@ export const handler = async function (event){
 
         if(error){
             console.error('Error: Inserting data', error);
+            alert('Error: ' + error.message);
         } else{
             console.log('Data successfully inserted', data);
         }
@@ -72,9 +85,16 @@ export const handler = async function (event){
             <p>We're excited to see you soon!</p>`
         });
 
-        console.log('Email was sent');
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: 'Success! Email sent.' })
+          };
     }
     catch (error){
         console.error('Error', error);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: error.message })
+          };
     }
 }

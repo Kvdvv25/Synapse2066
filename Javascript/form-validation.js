@@ -66,12 +66,16 @@ document.addEventListener('DOMContentLoaded', function(){
                         window.location.href='/success-msg.html';
                     }, 2000)
                 } else{
-                    console.log('Error', result.error);
+                    alert('Error', result.error);
                 }
             }
             catch (error){
-                console.error('Error', error);
-                alert('Error');
+                console.log('Error', error);
+                alert('ERROR')
+                console.error('Full error object:', error);
+                console.error('Error name:', error.name);
+                console.error('Error message:', error.message);
+                alert('Network error: ' + error.message);
             }
         }
     })
