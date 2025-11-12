@@ -24,7 +24,7 @@
   font-weight: 300;
 }
 .btn_primary {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -47,7 +47,7 @@
 }
 
 .btn_secondary {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -68,7 +68,7 @@
 }
 
 .btn_icon {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
