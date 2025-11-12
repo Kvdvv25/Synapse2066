@@ -2,6 +2,7 @@
 @use 'styles.scss' as *;
 
 body {
+  background-color: $charcoal-black;
   position: relative;
   overflow: hidden;
   background-position: center center;
@@ -9,6 +10,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  @include ClashDisplay;
 }
 .background-layer {
   position: fixed;
@@ -83,14 +85,7 @@ body {
   }
 
 }
-.logo {
-    margin: 1rem;
-    @include CyberPunk;
-    @include font-size(1.8rem);
-    @include font-weight(500);
-    color: #efeded;
-    text-decoration: none;
-}
+
 
 .item {
   color: $white;
@@ -98,7 +93,7 @@ body {
   top: 50%;
   left: 50%;
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 400;
   transform-origin: center center;
 
   --count: 10;
@@ -116,28 +111,30 @@ body {
 }
 
 .text {
-    color: $white;
-    width: 50%;
-    margin-left: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
+  color: $white;
+  width: 50%;
+  margin-left: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
     & .title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: 500;
     }
     & .subtitle {
-        margin-bottom: 30px;
+      margin-bottom: 30px;
+      font-weight: 400;
     }
     & .button {
-        padding: 10px 50px;
-        border: 1px solid $white;
-        border-radius: 100px;
-        color: $white;
-        font-weight: 500;
+      padding: 10px 50px;
+      border: 1px solid $white;
+      border-radius: 100px;
+      color: $white;
+      font-weight: 500;
     }
 
     

@@ -78,6 +78,70 @@ a {
   font-style: normal;
   font-weight: 300;
 }
+.btn_primary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+  border: 1px solid #b3bfbf;
+  margin: 2vh auto;
+}
+@media (max-width: 768px) {
+  .btn_primary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_primary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_secondary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+}
+@media (max-width: 768px) {
+  .btn_secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_secondary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_icon {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .btn_icon {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_icon {
+    font-size: 0.95rem;
+  }
+}
+
 @font-face {
   font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
@@ -102,7 +166,72 @@ a {
   font-style: normal;
   font-weight: 300;
 }
+.btn_primary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+  border: 1px solid #b3bfbf;
+  margin: 2vh auto;
+}
+@media (max-width: 768px) {
+  .btn_primary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_primary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_secondary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+}
+@media (max-width: 768px) {
+  .btn_secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_secondary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_icon {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .btn_icon {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_icon {
+    font-size: 0.95rem;
+  }
+}
+
 body {
+  background-color: #151f20;
   position: relative;
   overflow: hidden;
   background-position: center center;
@@ -110,6 +239,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  font-family: "Clash Display";
 }
 
 .background-layer {
@@ -192,22 +322,13 @@ body {
   }
 }
 
-.logo {
-  margin: 1rem;
-  font-family: "CyberPunk", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #efeded;
-  text-decoration: none;
-}
-
 .item {
   color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 400;
   transform-origin: center center;
   --count: 10;
   --step: calc(360deg / var(--count));
@@ -234,9 +355,11 @@ body {
 .text .title {
   font-size: 2rem;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 .text .subtitle {
   margin-bottom: 30px;
+  font-weight: 400;
 }
 .text .button {
   padding: 10px 50px;
