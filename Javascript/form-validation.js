@@ -47,11 +47,6 @@ document.addEventListener('DOMContentLoaded', function(){
             }
 
             // fetching backend: send-email
-            console.log(JSON.stringify({
-                        name:userName,
-                        email:userEmail,
-                        numberOfTickets:userTickets
-                    }))
             try{
                 const response = await fetch('/.netlify/functions/send-email', {
                     method: 'POST',
@@ -71,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         window.location.href='/success_msg.html';
                     }, 2000)
                 } else{
-                    console.log('Error', result.error);
+                    console.log('Error', 'Error is here');
                 }
             }
             catch (error){
