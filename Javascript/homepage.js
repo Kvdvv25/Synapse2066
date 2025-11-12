@@ -9,33 +9,33 @@ let isScrolling = false;
 
 const content = [
   {
-    title: "Title 1",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "See Title 1 →",
+    title: "Synapsis",
+    text: "Learn more about Synapse`s storyline",
+    button: "Learn about the film →",
     link: "#1",
   },
   {
-    title: "Title 2",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "See Title 2 →",
+    title: "Cast",
+    text: "Explore the film`s characters, who they are and which actors bring them to life",
+    button: "Explore the Characters →",
     link: "#2",
   },
   {
-    title: "Title 3",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "See Title 3 →",
+    title: "Production Team",
+    text: "Explore the individual profile introducing the members of our filming team",
+    button: "Discover the team →",
     link: "#3",
   },
   {
     title: "Gallery",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
+    text: "Explore the gallery with film poster and much more",
     button: "See Gallery →",
     link: "gallery.html",
   },
   {
-    title: "Title 5",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, incidunt.",
-    button: "See Title 5 →",
+    title: "Contribute",
+    text: "Be part of our journey by supporting our Kickstarter and making this dream a reality",
+    button: "Contribute to Kickstarter →",
     link: "#5",
   },
 ];
