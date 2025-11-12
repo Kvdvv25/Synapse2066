@@ -24,11 +24,11 @@
             <!-- TITLE -->
             <div class="contentBox">
                 <div class="titleBox descrBox">
-                    <p class="formTitle">Reservation Confirmation</p>
+                    <p class="formTitle">Reservation Error</p>
                     <button class="btn_icon"><i class="fa-solid fa-xmark fa-xl"></i></button>
                 </div>
 
-                <!-- EVENT DETAILS -->
+                <!-- EVENT DETAILS
                 <div class="detailsBox descrBox">
                     <div id="location" class="details">
                         <p>Location:&nbsp</p>
@@ -38,16 +38,16 @@
                         <p>Date:&nbsp</p>
                         <p>12/12/25</p>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- MESSAGE TO THE USER -->
                 <div class="infoBox success_msg">
-                    <h2>Thank you!</h2>
-                    <p>Your tickets have been successfully reserved. Please check your inbox for your confirmation email.</p>
-                    <p>We are excited to see you at the premiere!</p>
+                    <!-- <h2>Thank you!</h2> -->
+                    <p>Unfortunately, your reservation could not be processed at this time.</p>
+                    <p>Please go back to the reservation page and try again.</p>
                     <div class="btn_box">
                         <!-- <button type="button" class="btn_secondary" id="backToTickets" name="confirmBtn">More Tickets</button> -->
-                        <button type="button" class="btn_primary" id="backToHome"><a href="/index.html">Back to home</a></button>
+                        <button type="button" class="btn_primary" id="toTickets"><a href="/tickets.html">Back to Ticket Reservations</a></button>
                     </div>
                 </div>
 
@@ -56,9 +56,10 @@
 </body>
 <script src="https://kit.fontawesome.com/cfd313fcca.js" crossorigin="anonymous"></script>
 <script>
-    let backToHome = document.getElementById('backToHome');
-    backToHome.addEventListener("click", function(){
+    let backToTickets = document.getElementById('toTickets');
+    backToTickets.addEventListener("click", function(){
         window.location.href = '../tickets.html';
     })
 </script>
+
 </html>

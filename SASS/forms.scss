@@ -87,7 +87,7 @@ h2{
 //Form
 .contentBox{
     width: 60%;
-    min-height: 30%;
+    min-height: 20%;
     backdrop-filter: blur(10px);
     background-color: $black-translucent;
     border-radius: 20px;
@@ -340,6 +340,16 @@ form{
     padding: 10px 15px;
     border-radius: 10px;
     border-left: 10px solid rgb(255, 53, 53);
+
+    @media (max-width: 768px) {
+        @include font-size($fs-body-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-body-mobile);
+    }
+    
+
 }
 
 .hidden{
@@ -371,4 +381,7 @@ form{
 #submit:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+}
+a{
+    text-decoration: none;
 }
