@@ -75,6 +75,6 @@ export const handler = async function (event){
         console.log('Email was sent');
     }
     catch (error){
-        console.error('Error', error);
+        console.error('Error', "Error is here");
     }
 }
