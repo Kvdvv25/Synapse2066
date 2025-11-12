@@ -91,7 +91,7 @@ body {
         
         .title {
             @include font-size(4rem);
-            font-family: $font-synapse;
+            @include CyberPunk;
             font-weight: 500;
             margin-bottom: 10px;
             
@@ -363,7 +363,7 @@ body {
     // (Watch the Trailer)
     .timeline-item:nth-child(2) .timeline-content {
         margin-left: auto;
-        font-family: $font-body;
+        @include Fredoka;
         margin-right: 7rem;
         
         @media (max-width: 1024px) {
@@ -383,7 +383,7 @@ body {
     // Free Premiere Tickets
     .timeline-item:nth-child(3) .timeline-content {
         margin-left: auto;
-        font-family: $font-body;
+        @include Fredoka;
         margin-right: 7rem;
         
         @media (max-width: 1024px) {
