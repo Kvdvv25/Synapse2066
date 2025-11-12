@@ -90,8 +90,8 @@ body {
         }
         
         .title {
-            @include font-size(2rem);
-            @include ClashDisplay;
+            @include font-size(4rem);
+            font-family: $font-synapse;
             font-weight: 500;
             margin-bottom: 10px;
             
