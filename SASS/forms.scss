@@ -202,7 +202,7 @@ h2{
 }  
 
 p{
-    font-family: $font-body;
+    @include Fredoka;
     @include font-size($fs-body);
 
     @media (max-width: 768px) {
@@ -273,7 +273,7 @@ input[type="number"]{
 }
 
 .labelUser{
-    font-family: $font-body;
+    @include Fredoka;
     min-width: 30%;
     @include font-size($fs-body);
     @media (max-width: 768px) {
@@ -333,7 +333,7 @@ form{
 //the php one
 .error_message, .error_name, .error_email, .error_number{
     color: black;
-    font-family: $font-body;
+    @include Fredoka;
     margin-top: 1vh;
     font-size: $fs-body;
     background-color: white;

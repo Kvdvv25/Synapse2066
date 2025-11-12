@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 @font-face {
   font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
@@ -6,16 +7,21 @@
 }
 @font-face {
   font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
-  font-family: "Cyberpunk";
-  src: url("../fonts/cyberpunk_style_light.woff2") format("woff2");
-  font-weight: 200 700;
-  font-display: swap;
+  font-family: "CyberPunk";
+  src: url("/fonts/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
+  font-weight: 300;
 }
 .btn_primary {
   font-family: "ClashDisplay-Medium";
@@ -127,7 +133,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  font-family: "Clash Display", sans-serif;
+  font-family: "Clash Display";
   font-weight: 500;
   margin-bottom: 1vh;
 }
@@ -200,7 +206,7 @@ h2 {
 
 .formTitle {
   font-size: 1.5rem;
-  font-family: "Clash Display", sans-serif;
+  font-family: "Clash Display";
   font-weight: 500;
 }
 @media (max-width: 768px) {
@@ -306,7 +312,9 @@ h2 {
 }
 
 p {
-  font-family: "Fredoka-Light";
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-size: 1.15rem;
 }
 @media (max-width: 768px) {
@@ -385,7 +393,9 @@ input[type=number] {
 }
 
 .labelUser {
-  font-family: "Fredoka-Light";
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   min-width: 30%;
   font-size: 1.15rem;
 }
@@ -447,7 +457,9 @@ form {
 
 .error_message, .error_name, .error_email, .error_number {
   color: black;
-  font-family: "Fredoka-Light";
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   margin-top: 1vh;
   font-size: 1.15rem;
   background-color: white;
