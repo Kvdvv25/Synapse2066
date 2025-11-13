@@ -1,5 +1,6 @@
 @use 'main.scss';
 @use 'styles.scss' as *;
+@use 'sidebar.scss';
 
 // Main 
 body {
@@ -8,6 +9,7 @@ body {
     @include ClashDisplay;
 }
 .header {
+    transition: all ease 0.3s;
     width: 20%;
     background-image: url(../images/bg_3.jpg);
     background-repeat: no-repeat;
@@ -99,83 +101,6 @@ body {
     right: 10px;
     top: 10px;
     transition: all ease 0.3s;
-}
-
-
-// Bottom Menu
-.bottom-menu {
-    margin-top: auto;
-    &__item {
-        display: block;
-        margin-left: 50px;
-        position: relative;
-        &:before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: $white-transparent;
-            position: absolute;
-            left: -30px;
-            top: 5px;
-            display: block;
-        }
-        &:not(:last-child):after {
-            content: '';
-            display: block;
-            width: 1px;
-            height: 150%;
-            background-color: $white-transparent;
-            position: absolute;
-            left: -25px;
-            top: 15px;
-        }
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-        &.active {
-            & .bottom-menu__link {
-                color: $white;
-            }
-            &::before{
-                background-color: $white;
-            }
-        }
-    }
-    &__link {
-        font-size: 1.3rem;
-        color: $white-transparent;
-    }
-}
-
-// Submenus
-.bottom-menu__item.active > .bottom-submenu {
-    position: relative;
-    margin-left: 20px;
-    margin-top: 10px;
-    .bottom-submenu:before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        background-color: $white-transparent;
-        left: -20px;
-    }
-    .bottom-submenu__item:not(:last-child) {
-        margin-bottom: 10px;
-    }
-    .bottom-submenu__link {
-        color: $white;
-        font-size: 1.2rem;
-    }
-}
-.bottom-menu__item:not(.active) > .bottom-submenu {
-    display: none;
-}
-.bottom-menu__item.active .bottom-submenu__link.active {
-  text-decoration-line: underline;
-  text-underline-offset: 4px; 
 }
 
 // Main Section
@@ -302,30 +227,6 @@ body {
     }
     .top-menu {
         width: 200px;
-    }
-    .bottom-menu {
-        background-color: $grey-transparent;
-        padding: 5px 0;
-        border-radius: 100px;
-        position: absolute;
-        right: 30px;
-        top: 30px;
-        &__item {
-            margin-left: 35px;
-        }
-        &__item::before {
-            left: -23px;
-        }
-        &__item:not(:last-child) {
-           margin-bottom: 0;
-           &:after {
-                height: 39%;
-                left: -19px;
-           }
-        }
-        &__link {
-            font-size: 0;
-        }
     }
 }
 @media screen and (max-width: 576px) {
