@@ -102,3 +102,9 @@ if (window.innerWidth > 768) {
     });
   });
 }
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    popup.classList.remove("show");
+  }
+});
