@@ -178,7 +178,7 @@ body {
     border-radius: 100px;
     position: absolute;
     right: 30px;
-    top: 26px;
+    top: unset;
     transition: right 0.3s ease-in-out, transform 0.3s ease-in-out;
     background-color: rgba(100, 100, 100, 0.6431372549);
   }
@@ -189,10 +189,10 @@ body {
     left: -23px;
   }
   .bottom-menu__item:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
   .bottom-menu__item:not(:last-child):after {
-    height: 39%;
+    height: 70%;
     left: -19px;
   }
   .bottom-menu__link {
@@ -208,6 +208,7 @@ body {
     font-size: 0 !important;
   }
   .show {
+    top: 30px;
     right: 60px;
     background-color: transparent;
   }
