@@ -88,7 +88,7 @@
         border-radius: 100px;
         position: absolute;
         right: 30px;
-        top: 30px;
+        top: unset;
         transition: right 0.3s ease-in-out, transform 0.3s ease-in-out; 
         background-color: $grey-transparent;
         &__item {
@@ -98,9 +98,9 @@
             left: -23px;
         }
         &__item:not(:last-child) {
-            margin-bottom: 0;
+            margin-bottom: 5px;
             &:after {
-                height: 39%;
+                height: 70%;
                 left: -19px;
             }
         }
@@ -118,6 +118,7 @@
         }
     }
     .show {
+        top: 30px;
         right: 60px;
         background-color: transparent;
         .bottom-menu__item {
@@ -153,6 +154,12 @@
     .header:has(> .show) {
         padding-bottom: 120px;
     }
+    // .header:has( .rotate) .bottom-menu__item {
+    //     margin-bottom: 20px;
+    // }
+    // .header:has( .rotate) .bottom-menu__item:after {
+    //     height: 160%;
+    // }
 }
 
 @media screen and (max-width: 576px) {

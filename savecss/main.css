@@ -165,3 +165,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
+
+.rotate {
+  transform: rotate(180deg);
+}

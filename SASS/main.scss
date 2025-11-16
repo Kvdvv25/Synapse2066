@@ -21,3 +21,6 @@ body {
     color: $white;
     width: fit-content;
 }
+.rotate {
+    transform: rotate(180deg);
+}
