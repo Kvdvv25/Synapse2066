@@ -1,4 +1,4 @@
-// @use 'reset.scss';
+@use 'reset.scss';
 @use 'styles.scss' as *;
 
 body {
@@ -19,4 +19,5 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     color: $white;
+    width: fit-content;
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 @font-face {
   font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
@@ -6,16 +7,21 @@
 }
 @font-face {
   font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
-  font-family: "Cyberpunk";
-  src: url("../fonts/cyberpunk_style_light.woff2") format("woff2");
-  font-weight: 200 700;
-  font-display: swap;
+  font-family: "CyberPunk";
+  src: url("/fonts/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
+  font-weight: 300;
 }
 .btn_primary {
   font-family: "ClashDisplay-Medium";
@@ -145,7 +151,7 @@ body {
 }
 
 h2 {
-  font-family: "Clash Display", sans-serif;
+  font-family: "Clash Display";
   font-weight: 500;
   margin-right: 1vw;
   color: #b3bfbf;
@@ -175,7 +181,7 @@ h2 {
 }
 
 h1 {
-  font-family: "Clash Display", sans-serif;
+  font-family: "Clash Display";
   font-weight: 500;
   font-size: 2.6rem;
   margin: 4vh 0;

@@ -1,0 +1,163 @@
+@use 'main.scss';
+@use 'styles.scss' as *;
+
+// Bottom Menu
+.bottom-menu {
+    z-index: 999;
+    margin-top: auto;
+    &__item {
+        display: block;
+        margin-left: 50px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $white-transparent;
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            display: block;
+        }
+        &:not(:last-child):after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 150%;
+            background-color: $white-transparent;
+            position: absolute;
+            left: -25px;
+            top: 15px;
+            
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &.active {
+            & .bottom-menu__link {
+                color: $white;
+            }
+            &::before{
+                background-color: $white;
+            }
+        }
+    }
+    &__link {
+        font-size: 1.3rem;
+        color: $white-transparent;
+    }
+}
+
+// Submenus
+.bottom-menu__item.active > .bottom-submenu {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 10px;
+    .bottom-submenu:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: $white-transparent;
+        left: -20px;
+    }
+    .bottom-submenu__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .bottom-submenu__link {
+        color: $white-transparent;
+        font-size: 1.2rem;
+    }
+
+}
+.bottom-menu__item:not(.active) > .bottom-submenu {
+    display: none;
+}
+.bottom-menu__item.active .bottom-submenu__link.active {
+  text-decoration-line: underline;
+  text-underline-offset: 4px; 
+  color: $white;
+}
+
+@media screen and (max-width: 992px) {
+    .bottom-menu {
+        text-align: end;
+        padding: 5px 0;
+        border-radius: 100px;
+        position: absolute;
+        right: 30px;
+        top: 26px;
+        transition: right 0.3s ease-in-out, transform 0.3s ease-in-out; 
+        background-color: $grey-transparent;
+        &__item {
+            margin-left: 35px;
+        }
+        &__item::before {
+            left: -23px;
+        }
+        &__item:not(:last-child) {
+            margin-bottom: 0;
+            &:after {
+                height: 39%;
+                left: -19px;
+            }
+        }
+        &__link {
+            font-size: 0;
+        }
+    }
+    .bottom-submenu {
+        text-align: end !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        height: 0 !important;
+        & .bottom-submenu__link  {
+            font-size: 0 !important;
+        }
+    }
+    .show {
+        right: 60px;
+        background-color: transparent;
+        .bottom-menu__item {
+            margin-left: 50px;
+        }
+        .bottom-menu__item::before {
+            left: unset !important;
+            right: -30px;
+        }
+        .bottom-menu__item:not(:last-child) {
+            margin-bottom: 20px;
+            &:after {
+                height: 150%;
+                left: unset !important;
+                right: -26px;
+            }
+        }
+        .bottom-menu__link {
+            font-size: 1.3rem;
+        }
+        .bottom-menu__item.active > .bottom-submenu .bottom-submenu__link {
+            font-size: 1.3rem !important;
+        }
+        .bottom-menu__item.active > .bottom-submenu {
+            margin-left: 20px !important;
+            margin-top: 10px !important;
+            height: auto !important;
+        }
+        .bottom-menu__item:not(:last-child):after {
+            height: calc(100% + 10px) !important;
+        }
+    }
+    .header:has(> .show) {
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header:has(> .show) .top-menu { 
+        width: 0;
+        height: 40px !important;
+    }
+}
