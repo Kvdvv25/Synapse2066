@@ -249,7 +249,7 @@ body {
     border-radius: 100px;
     position: absolute;
     right: 30px;
-    top: 26px;
+    top: 30px;
     transition: right 0.3s ease-in-out, transform 0.3s ease-in-out;
     background-color: rgba(100, 100, 100, 0.6431372549);
   }
@@ -318,6 +318,5 @@ body {
 @media screen and (max-width: 576px) {
   .header:has(> .show) .top-menu {
     width: 0;
-    height: 40px !important;
   }
-}/*# sourceMappingURL=sidebar.css.map */
+}
