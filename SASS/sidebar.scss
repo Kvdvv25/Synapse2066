@@ -1,6 +1,83 @@
 @use 'main.scss';
 @use 'styles.scss' as *;
 
+// Top Menu
+.top-menu {
+    overflow: hidden;
+    height: 40px;
+    transition: all ease 0.3s;
+    &__item {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        padding: 10px;
+        background-color: $grey-transparent;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 1.2rem;
+        position: relative;
+        margin-bottom: 10px;
+        & .arrow {
+            width: 20px;
+        }
+    }
+}
+.updates-status {
+    display: flex;
+    margin-right: 30px;
+    opacity: 0.6;
+    &__item {
+        display: none;
+    }
+    & .active {
+        display: block;
+    }
+}
+.tickets {
+    flex-direction: column;
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.4);
+            position: absolute;
+            bottom: -15px;
+        }
+    }
+    &-link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        margin-top: 30px;
+        & .arrow {
+            position: unset;
+        }
+    }
+}
+.newsletters-link {
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.top-menu__arrow {
+    position: absolute;
+    width: 20px;
+    right: 10px;
+    top: 10px;
+    transition: all ease 0.3s;
+}
+
 // Bottom Menu
 .bottom-menu {
     z-index: 999;
