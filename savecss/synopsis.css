@@ -173,6 +173,7 @@ body {
 .bottom-menu {
   z-index: 999;
   margin-top: auto;
+  font-family: "Clash Display";
 }
 .bottom-menu__item {
   display: block;
@@ -319,15 +320,6 @@ body {
   .header:has(> .show) {
     padding-bottom: 120px;
   }
-  .header:has(> .show) .top-menu {
-    height: 40px !important;
-  }
-  /* .header:has( .rotate) .bottom-menu__item:not(:last-child) {
-    margin-bottom: 21px;
-  }
-  .header:has( .rotate) .bottom-menu__item:after {
-    height: 170%;
-  } */
 }
 @media screen and (max-width: 576px) {
   .header:has(> .show) .top-menu {
@@ -345,11 +337,6 @@ body {
   display: flex;
   height: 100vh;
 }
-@media (max-width: 992px) {
-  body {
-    flex-direction: column;
-  }
-}
 
 .header {
   width: 20%;
@@ -363,12 +350,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-@media (max-width: 992px) {
-  .header {
-    width: 100%;
-    height: auto;
-  }
 }
 
 .logo {
@@ -408,11 +389,6 @@ body {
 }
 .top-menu__item .arrow {
   width: 20px;
-}
-@media (max-width: 992px) {
-  .top-menu {
-    width: 200px;
-  }
 }
 
 .updates-status {
@@ -482,7 +458,6 @@ body {
 }
 @media (max-width: 992px) {
   .main {
-    min-height: 65vh;
     overflow-y: visible;
   }
 }
@@ -604,27 +579,10 @@ a {
   margin-right: 1.5vw;
 }
 
-.video_description {
-  padding-top: 2vh;
-  margin-bottom: 2vh;
-  border-top: 1px solid #b3bfbf;
-  justify-content: space-between;
-}
-
 .icon {
   width: 25px;
   height: auto;
   margin-left: 1vw;
-}
-
-.trailer {
-  width: 100%;
-  margin-bottom: 2vh;
-}
-@media (max-width: 768px) {
-  .trailer {
-    height: 30vh;
-  }
 }
 
 .related_pages_box {
@@ -633,6 +591,7 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: auto;
+  padding-bottom: 3vh;
 }
 .related_pages_box h2 {
   color: #b3bfbf;
@@ -670,14 +629,114 @@ a {
   align-items: center;
 }
 
-.description_box {
-  padding-bottom: 5vh;
-  margin-bottom: 5vh;
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4vh;
+}
+@media (max-width: 597px) {
+  .content {
+    flex-direction: column;
+    margin-bottom: 2vh;
+  }
+}
+
+.poster {
+  margin-right: 3vw;
+}
+
+.content_side {
+  width: 50%;
+}
+.content_side .poster_img {
+  width: 100%;
+}
+@media (max-width: 597px) {
+  .content_side .poster_img {
+    margin-bottom: 2vh;
+  }
+}
+@media (max-width: 597px) {
+  .content_side {
+    width: 100%;
+  }
+}
+
+.movie_facts {
+  margin-bottom: 2vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #b3bfbf;
+}
+
+.film_info_box {
+  display: flex;
+  flex-direction: row;
+}
+.film_info_box p {
+  width: 50%;
+}
+@media (max-width: 1235px) {
+  .film_info_box p {
+    width: 100%;
+  }
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+@media (max-width: 1235px) {
+  .genres {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.genre_type {
+  text-align: center;
+  padding: 1px 20px;
+  border: 1px solid #b3bfbf;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+@media (max-width: 1235px) {
+  .genre_type {
+    margin-bottom: 1vh;
+  }
+}
+
+.info_type {
+  font-family: "Clash Display";
+  color: #b3bfbf;
+}
+
+#overview {
+  margin-bottom: 3vh;
+  text-align: justify;
+}
+
+.video_description {
+  padding-top: 2vh;
+  margin-bottom: 2vh;
+  border-top: 1px solid #b3bfbf;
+  justify-content: space-between;
+}
+
+.trailer {
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.description_storyline {
   border-bottom: 1px solid #b3bfbf;
   text-align: justify;
   text-justify: inter-word;
+  margin-bottom: 3vh;
+  padding-bottom: 3vh;
 }
-.description_box p {
+.description_storyline p {
   line-height: 1.5em;
 }
 
@@ -813,3 +872,87 @@ a {
     display: none;
   }
 }
+
+.moments_header {
+  width: 50%;
+}
+
+.top-menu-moments {
+  width: 300px;
+}
+
+.carousel_box {
+  position: relative;
+  max-width: 1000px;
+  height: 60vh;
+  margin-bottom: 4vh;
+}
+@media screen and (max-width: 992px) {
+  .carousel_box {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 573px) {
+  .carousel_box {
+    height: 40vh;
+  }
+}
+
+.slides {
+  display: none;
+  height: 100%;
+}
+
+.carousel_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.numbertext {
+  font-size: 1.15rem;
+  font-family: "Fredoka-Light";
+  position: absolute;
+  margin: 1vw;
+}
+
+.slider_btns {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 48%;
+}
+
+.prev .icon {
+  rotate: 90deg;
+}
+
+.next .icon {
+  rotate: -90deg;
+}
+
+.description_box {
+  font-family: "Fredoka-Light";
+  margin-bottom: 5vh;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.description_box p {
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    flex-direction: column;
+  }
+  .header {
+    width: 100%;
+    height: auto;
+  }
+  .top-menu {
+    width: 200px;
+  }
+}/*# sourceMappingURL=synopsis.css.map */

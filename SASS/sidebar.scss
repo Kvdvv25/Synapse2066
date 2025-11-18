@@ -5,6 +5,7 @@
 .bottom-menu {
     z-index: 999;
     margin-top: auto;
+    @include ClashDisplay;
     &__item {
         display: block;
         margin-left: 50px;
