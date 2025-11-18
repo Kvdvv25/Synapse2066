@@ -286,7 +286,7 @@ body {
 .header {
   transition: all ease 0.3s;
   width: 20%;
-  background-image: url(../images/bg_3.jpg);
+  background-image: url(../images/bg_3.webp);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;

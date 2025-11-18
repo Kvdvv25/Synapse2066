@@ -69,7 +69,7 @@ describe("Circle menu logic", () => {
 
     jest.advanceTimersByTime(300);
 
-    expect(backgroundLayer.style.backgroundImage).toContain("bg_3.jpg");
+    expect(backgroundLayer.style.backgroundImage).toContain("bg_3.webp");
     expect(backgroundLayer.classList.contains("fade-out")).toBe(false);
   });
 

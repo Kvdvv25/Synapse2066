@@ -81,7 +81,7 @@ const backgroundLayer = document.querySelector(".background-layer");
 function updateBackground(index) {
   backgroundLayer.classList.add("fade-out");
   setTimeout(() => {
-    backgroundLayer.style.backgroundImage = `url("images/bg_${index}.jpg")`;
+    backgroundLayer.style.backgroundImage = `url("images/bg_${index}.webp")`;
     backgroundLayer.classList.remove("fade-out");
   }, 300);
 }
