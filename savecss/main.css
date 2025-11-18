@@ -70,6 +70,12 @@ a {
   font-style: normal;
   font-weight: 500;
 }
+@font-face {
+  font-family: "CyberPunk";
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
 body {
   background: #151515;
   height: 100vh;
@@ -88,9 +94,11 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
   font-weight: 400;
   color: #fff;
   width: -moz-fit-content;
   width: fit-content;
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
 }

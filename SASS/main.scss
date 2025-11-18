@@ -16,8 +16,10 @@ body {
     left: 30px;
 }
 .logo {
-    font-size: 1.5rem;
     font-weight: 400;
     color: $white;
     width: fit-content;
+    @include CyberPunk;
+    font-size: 1.8rem;
+    font-weight: 500;
 }

@@ -70,6 +70,12 @@ a {
   font-style: normal;
   font-weight: 500;
 }
+@font-face {
+  font-family: "CyberPunk";
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
 body {
   background: #151515;
   height: 100vh;
@@ -88,11 +94,13 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
   font-weight: 400;
   color: #fff;
   width: -moz-fit-content;
   width: fit-content;
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .bottom-menu {
@@ -139,12 +147,12 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.bottom-menu__item.active > .bottom-submenu {
+.bottom-submenu {
   position: relative;
   margin-left: 20px;
   margin-top: 10px;
 }
-.bottom-menu__item.active > .bottom-submenu .bottom-submenu:before {
+.bottom-submenu:before {
   content: "";
   display: block;
   position: absolute;
@@ -153,10 +161,10 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   left: -20px;
 }
-.bottom-menu__item.active > .bottom-submenu .bottom-submenu__item:not(:last-child) {
+.bottom-submenu .bottom-submenu__item:not(:last-child) {
   margin-bottom: 10px;
 }
-.bottom-menu__item.active > .bottom-submenu .bottom-submenu__link {
+.bottom-submenu .bottom-submenu__link {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.2rem;
 }
@@ -171,7 +179,14 @@ body {
   color: #fff;
 }
 
+.bottom-menu__item:not(:last-child):after {
+  height: calc(100% + 10px) !important;
+}
+
 @media screen and (max-width: 992px) {
+  .bottom-menu .active {
+    width: 0;
+  }
   .bottom-menu {
     text-align: end;
     padding: 5px 0;
@@ -202,10 +217,18 @@ body {
     text-align: end !important;
     margin-left: 0 !important;
     margin-top: 0 !important;
+    margin-right: 20px;
     height: 0 !important;
   }
   .bottom-submenu .bottom-submenu__link {
     font-size: 0 !important;
+  }
+  .bottom-submenu::before {
+    left: unset;
+    right: -20px;
+  }
+  .bottom-menu__item:not(:last-child):after {
+    height: 70% !important;
   }
   .show {
     top: 30px;
@@ -243,6 +266,9 @@ body {
   }
   .header:has(> .show) {
     padding-bottom: 120px;
+  }
+  .header:has(> .show) .active {
+    width: unset;
   }
 }
 @media screen and (max-width: 576px) {

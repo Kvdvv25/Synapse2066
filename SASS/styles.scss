@@ -59,6 +59,14 @@ $grey-transparent : #646464a4;
     font-family: "Clash Display", sans-serif;
 }
 
+@font-face {
+    font-family: "CyberPunk";
+    src: url('/fonts/CyberpunkStyle/cyberpunk_style_light.woff2') format('woff');
+    font-style: normal;
+    font-weight: 300; 
+}
+@mixin CyberPunk{font-family: "CyberPunk", sans-serif;}
+
 //TEXT
 @mixin text-align {
     text-align: center;
