@@ -166,9 +166,14 @@ body {
   width: fit-content;
 }
 
+.rotate {
+  transform: rotate(180deg);
+}
+
 .bottom-menu {
   z-index: 999;
   margin-top: auto;
+  font-family: "Clash Display";
 }
 .bottom-menu__item {
   display: block;
@@ -319,7 +324,6 @@ body {
 @media screen and (max-width: 576px) {
   .header:has(> .show) .top-menu {
     width: 0;
-    height: 40px !important;
   }
 }
 body {

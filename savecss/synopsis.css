@@ -374,6 +374,10 @@ body {
   overflow: hidden;
   transition: all ease 0.3s;
 }
+.top-menu p {
+  font-family: "Clash Display";
+  font-weight: 400;
+}
 .top-menu__item {
   cursor: pointer;
   display: flex;
@@ -510,7 +514,9 @@ h1 {
 }
 
 p {
-  font-family: "Fredoka-Light";
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   line-height: 2;
   font-size: 1.15rem;
 }
@@ -591,7 +597,7 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: auto;
-  padding-bottom: 3vh;
+  padding-bottom: 1vh;
 }
 .related_pages_box h2 {
   color: #b3bfbf;
@@ -604,6 +610,11 @@ a {
 @media (max-width: 480px) {
   .related_pages_box h2 {
     font-size: 1.15rem;
+  }
+}
+@media (max-width: 768px) {
+  .related_pages_box {
+    padding-bottom: 3vh;
   }
 }
 
@@ -642,15 +653,35 @@ a {
   }
 }
 
+.watch_content {
+  align-items: center;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .watch_content {
+    flex-direction: column;
+  }
+}
+
 .poster {
   margin-right: 3vw;
+}
+
+.frist_vid {
+  margin-right: 3vw;
+}
+@media (max-width: 1200px) {
+  .frist_vid {
+    margin-right: 0;
+  }
 }
 
 .content_side {
   width: 50%;
 }
 .content_side .poster_img {
-  width: 100%;
+  width: 80%;
+  margin-left: 4.5vw;
 }
 @media (max-width: 597px) {
   .content_side .poster_img {
@@ -659,6 +690,16 @@ a {
 }
 @media (max-width: 597px) {
   .content_side {
+    width: 100%;
+  }
+}
+
+.content_side_video {
+  width: 50%;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .content_side_video {
     width: 100%;
   }
 }
@@ -709,6 +750,7 @@ a {
 
 .info_type {
   font-family: "Clash Display";
+  font-weight: 500;
   color: #b3bfbf;
 }
 
@@ -726,7 +768,35 @@ a {
 
 .trailer {
   width: 100%;
-  margin-bottom: 2vh;
+}
+
+.video_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh 0;
+}
+
+.vid {
+  position: relative;
+  width: 100%;
+}
+
+.vid:hover {
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.653);
+}
+
+.play_icon {
+  padding: 10px;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 100%;
+  display: none;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 
 .description_storyline {
@@ -911,7 +981,9 @@ a {
 
 .numbertext {
   font-size: 1.15rem;
-  font-family: "Fredoka-Light";
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   position: absolute;
   margin: 1vw;
 }
@@ -935,7 +1007,9 @@ a {
 }
 
 .description_box {
-  font-family: "Fredoka-Light";
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   margin-bottom: 5vh;
   text-align: justify;
   text-justify: inter-word;

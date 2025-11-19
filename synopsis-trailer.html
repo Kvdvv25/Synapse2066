@@ -28,7 +28,7 @@
             <p class="tickets-header__text">Film Premier</p>
             <p class="tickets-header__date">12/12/25</p>
           </div>
-          <a href="#" class="tickets-link">
+          <a href="tickets.html" class="tickets-link">
             <p class="tickets-link__text">Get Free Tickets</p>
             <img src="images/arrow2.png" alt="Arrow Icon" class="arrow" />
           </a>
@@ -39,13 +39,10 @@
           <a href="synopsis.html" class="bottom-menu__link ">Synopsis</a>
           <ul class="bottom-submenu">
             <li class="bottom-submenu__item " >
-              <a href="synopsis-trailer.html" class="bottom-submenu__link">Trailer</a>
+              <a href="synopsis-trailer.html" class="bottom-submenu__link active">Watch Now</a>
             </li>
             <li class="bottom-submenu__item">
               <a href="synopsis-storyline.html" class="bottom-submenu__link">Storyline</a>
-            </li>
-            <li class="bottom-submenu__item">
-                <a href="#" class="bottom-submenu__link">Link to film</a>
             </li>
           </ul>
         </li>
@@ -103,14 +100,51 @@
 
         <!-- Main heading -->
         <div class="title_box">
-            <h1>Trailer</h1> 
+            <h1>Watch Now</h1> 
         </div>
 
+         <!-- Description -->
+         <div class="description_storyline">
+          <p>Watch the trailer below and immerse yourself in the world of Synapse by watching the full film through the link below.</p>
+        </div>
+
+
         <!-- Trailer -->
-        <video class="trailer" poster="/images/trailer_vid_cover.png" controls><source src="/images/SYNAPSE_TRAILER.mp4" type="video/mp4"></video>
+        
+        <div class="content watch_content">
+          <!-- first video -->
+          <div class="frist_vid content_side_video">
+            <div class="vid" id="vid_box1">
+              <video class="trailer" id="trailer_video" poster="/images/trailer_vid_cover.png" controls src="/images/SYNAPSE_TRAILER.mp4">
+                <!-- <source src="/images/SYNAPSE_TRAILER.mp4" type="video/mp4"> -->
+              </video>
+              <!-- <a class="trailer" href=""><img class="trailer" src="images/ceo_vid_cover.png" alt=""></a> -->
+              <img class="play_icon" id="play1" src="/images/play.svg" alt="">
+            </div>
+            <div class="video_info">
+              <h2>Trailer</h2>
+              <p>2 min.</p>
+            </div>
+          </div>
+
+          <!-- second video -->
+          <div class="content_side_video">
+            <div class="vid" id="vid_box2">
+              <a class="trailer" href="#"><img class="trailer" src="images/ceo_vid_cover.png" alt=""></a>
+              <img class="play_icon" id="play2" src="/images/play.svg" alt="">
+            </div>
+            <div class="video_info">
+              <h2>Full film</h2>
+              <p>10 min.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Trailer -->
+        <!-- <button class="btn_primary"><a href="">Watch the film</a></button> -->
+
 
         <!-- Contact info -->
-        <div class="contact_info">
+        <!-- <div class="contact_info">
                 <p class="contact_type">Contact:</p>
                 <div class="info">
                     <a href="" class="contact_links">
@@ -121,7 +155,7 @@
                         <img class="icon" src="/images/icons/arrow_topright.svg" alt="">
                     </a>
                 </div>
-        </div>
+        </div> -->
 
         <!-- Related page section -->
         <div class="related_pages_box">
@@ -133,8 +167,7 @@
             </div>
         </div>
     </section>
-
-<script src="/Javascript/synopsis.js"></script>
+<script src="Javascript/trailer.js"></script>
 <script src="Javascript/sidebar.js"></script>
 </body>
 </html>

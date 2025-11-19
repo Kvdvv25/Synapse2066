@@ -48,7 +48,12 @@ body {
 
     // Top Menu
     .top-menu {
+        p{
+            @include ClashDisplay;
+            font-weight: 400;
+        }
         overflow: hidden;
+       
         // height: 18vh;
         transition: all ease 0.3s;
         &__item {
@@ -185,7 +190,7 @@ body {
 
     // Contact info
     p{
-        font-family: $font-body;
+        @include Fredoka;
         line-height: 2;
         font-size: $fs-body;
 
@@ -262,19 +267,26 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
         margin-top: auto;
-        padding-bottom: 3vh;
+        padding-bottom: 1vh;
+        
 
         h2{
             color: $slate-blue;
 
             @media (max-width: 768px) {
                 @include font-size($fs-h2-tablet);
+    
             }
 
             @media (max-width: 480px) {
                 @include font-size($fs-h2-mobile);
             }
         }
+        
+        @media (max-width: 768px) {
+            padding-bottom: 3vh;
+        }
+        
     }
 
     .related_page{
@@ -311,15 +323,34 @@ body {
         }
     }
 
+    .watch_content{
+        align-items: center;
+        height: 100%;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            // margin-bottom: 2vh;
+        }
+    }
+
     .poster{
-        margin-right: 3vw
+        margin-right: 3vw;
+    }
+
+    .frist_vid{
+        margin-right: 3vw;
+
+        @media (max-width: 1200px) {
+            margin-right: 0;
+        }
     }
 
     .content_side{
         width: 50%;
 
         .poster_img{
-            width: 100%;
+            width: 80%;
+            margin-left:4.5vw;
 
             @media (max-width: 597px) {
                 margin-bottom: 2vh;
@@ -327,6 +358,15 @@ body {
         }
 
         @media (max-width: 597px) {
+            width: 100%;
+        }
+    }
+
+    .content_side_video{
+        width: 50%;
+        position: relative;
+
+        @media (max-width: 1200px) {
             width: 100%;
         }
     }
@@ -375,6 +415,7 @@ body {
 
     .info_type{
         @include ClashDisplay;
+        font-weight: 500;
         color: $slate-blue;
     }
 
@@ -395,13 +436,41 @@ body {
     // Video
     .trailer{
         width: 100%;
-        margin-bottom: 2vh;
-
-        // @media (max-width: 768px) {
-        //     height: 30vh;
-        // }
-        
+        // margin-bottom: 2vh;
+        // position: absolute;
     }
+   
+    .video_info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2vh 0;
+    }
+
+    .vid{
+        position: relative;
+        width: 100%;
+    }
+
+    .vid:hover {
+        box-shadow: 0 0 11px rgba(0, 0, 0, 0.653); 
+      }
+    
+    .play_icon{
+        // width: 50px;
+        padding: 10px;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        border-radius: 100%;
+        // border: $line;
+        // background-color: $charcoal-black;
+      
+        display: none;
+        backdrop-filter: blur(6px);
+      }
 
 //Storyline page
     //description
@@ -581,7 +650,7 @@ body {
 
     .numbertext{
         font-size: $fs-body;
-        font-family: $font-body;
+        @include Fredoka;
         position: absolute;
         margin: 1vw;
     }
@@ -607,7 +676,7 @@ body {
 
     //Image description
     .description_box{
-        font-family: $font-body;
+        @include Fredoka;
         margin-bottom: 5vh;
         text-align: justify;
         text-justify:inter-word;
