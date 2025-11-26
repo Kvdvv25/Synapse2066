@@ -104,6 +104,7 @@ body {
 }
 
 .top-menu {
+  width: 200px;
   overflow: hidden;
   height: 40px;
   transition: all ease 0.3s;
@@ -262,7 +263,23 @@ body {
   height: calc(100% + 10px) !important;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+  .header {
+    width: 100% !important;
+    height: auto !important;
+    overflow: unset !important;
+    position: unset !important;
+    min-height: unset !important;
+  }
+  .top-menu {
+    width: 200px;
+  }
+  .logo {
+    margin-bottom: 30px !important;
+  }
   .bottom-menu .active {
     width: 0;
   }
@@ -322,7 +339,7 @@ body {
     right: -30px;
   }
   .show .bottom-menu__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .show .bottom-menu__item:not(:last-child):after {
     height: 150%;
@@ -330,10 +347,10 @@ body {
     right: -26px;
   }
   .show .bottom-menu__link {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
   .show .bottom-menu__item.active > .bottom-submenu .bottom-submenu__link {
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
   }
   .show .bottom-menu__item.active > .bottom-submenu {
     margin-left: 20px !important;

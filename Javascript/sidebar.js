@@ -8,7 +8,7 @@ const statusHide = document.querySelector(".updates-status__hide");
 const statusShow = document.querySelector(".updates-status__show");
 const arrow = document.querySelector(".top-menu__arrow");
 
-let isTopMenuOpen = true;
+let isTopMenuOpen = false;
 
 function openTopMenu() {
   topMenu.style.height = topMenu.scrollHeight + "px";
@@ -32,7 +32,6 @@ function toggleTopMenu() {
   } else {
     openTopMenu();
   }
-  closeBottomMenu();
 }
 
 function openBottomMenu() {
@@ -49,7 +48,6 @@ function toggleBottomMenu() {
   const isOpen = menu.classList.contains("show");
 
   if (!isOpen) {
-    closeTopMenu();
     openBottomMenu();
   } else {
     closeBottomMenu();
@@ -58,28 +56,30 @@ function toggleBottomMenu() {
 
 function updateHeaderHeight() {
   const menuHeight = menu.offsetHeight;
-  header.style.minHeight = `calc(${menuHeight}px + 50px)`;
+  header.style.setProperty(
+    "min-height",
+    `calc(${menuHeight}px + 50px)`,
+    "important"
+  );
 }
 
 function resetHeaderHeight() {
   header.style.minHeight = "";
 }
 
+// Top menu toggle
 updates.addEventListener("click", (e) => {
   e.stopPropagation();
-  if (menu.classList.contains("show")) {
-    closeBottomMenu();
-    openTopMenu();
-    return;
-  }
   toggleTopMenu();
 });
 
+// Bottom menu toggle
 menu.addEventListener("click", (e) => {
   e.stopPropagation();
   toggleBottomMenu();
 });
 
+// Close bottom menu when clicking item
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -87,6 +87,7 @@ menuItems.forEach((item) => {
   });
 });
 
+// Click outside closes BOTH
 window.addEventListener("click", () => {
   closeBottomMenu();
   closeTopMenu();
