@@ -21,7 +21,7 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 .folder {
-    position: absolute;
+    position: fixed;
     left: 30px;
     top: 30px;
     cursor: pointer;
@@ -39,7 +39,7 @@ body {
     }
 }
 .notes {
-    position: absolute;
+    position: fixed;
     right: 30px;
     top: 30px;
     width: 250px;

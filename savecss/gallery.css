@@ -517,7 +517,7 @@ body {
     width: 200px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .subtitle, .breadcrumbs__title, .breadcrumbs-link {
     font-size: 1rem;
   }
@@ -530,8 +530,14 @@ body {
     display: block;
   }
   .gallery__img {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     height: auto;
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery__img {
+    width: 100%;
   }
 }
