@@ -1,5 +1,5 @@
-@use 'main.scss';
 @use 'styles.scss' as *;
+@use 'reset.scss';
 @use 'sidebar.scss';
 
 //Reset
@@ -13,7 +13,7 @@ body {
     height: 100vh;
     @include ClashDisplay;
     background-color: $charcoal-black1;
-    color: #fff;
+    color: $white;
 }
 .wrapper-update{
     max-width: 15vw;
@@ -23,12 +23,12 @@ body {
 .header {
     transition: all ease 0.3s;
     width: 20vw;
-    background-image: url(../images/bg_1.jpg);
+    background-image: url(../images/bg_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     box-sizing: border-box;
-    position: fixed;
+    @include fixed;
     top: 0;
     left: 0;
     @include overflow(hidden);
@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     z-index: 100;
     @media (max-width: 1000px){
-        min-height: 55vh;
+        min-height: 30vh;
         width: 100vw;
         @include relative;
     }
@@ -46,19 +46,18 @@ body {
     margin-top: 20%;
     display: block;
     @include CyberPunk;
-    @include font-size(2rem);
-    @include font-weight(500);
-    padding-bottom: 10%;
+    @include font-size(2.6rem);
+    @include font-weight(400);
     color: $white;
+    padding-bottom: 10px;
     margin: 0;
                 
     @media (max-width: 992px) {
-        @include font-size(1.8rem);
-        padding-bottom: 5vw;
+        @include font-size($fs-h1-tablet);
     }
                 
     @media (max-width: 768px) {
-        @include font-size(1.5rem);
+        @include font-size($fs-h1-mobile);
     }
 }
 // Container Layout
@@ -78,24 +77,20 @@ body {
 
 // Main Content
 .main-content {
-    flex: 1;
-    padding: 3rem 4rem;
-    min-height: 100vh;
-    margin-left: 300px;
-    
-    @media (max-width: 1400px) {
-        padding: 3rem 3rem;
-    }
-    
-    @media (max-width: 992px) {
-        margin-left: 280px;
-        padding: 2.5rem 2rem;
-    }
-    
-    @media (max-width: 768px) {
+    overflow-y: hidden;
+    width: 100%;
+    margin-left: 21vw;
+    padding: 3rem 2rem;
+    height: 100vh;
+
+    @media (max-width: 1000px){
         margin-left: 0;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    @media (max-width: 768px) {
         padding: 2rem 1.5rem;
-        min-height: auto;
     }
 
     .content-header {
@@ -104,7 +99,7 @@ body {
         z-index: 1;
 
         .section-title {
-            @include font-size(1.2rem);
+            @include font-size($fs-h2);
             @include font-weight(400);
             color: $slate-blue;
             @include relative;
@@ -117,7 +112,8 @@ body {
                 content: "";
                 flex: 1;
                 height: 1px;
-                background-color: rgba(255, 255, 255, 0.1);
+                margin-top: 18px;
+                background-color: #ffffff59;
                 z-index: 1;
             }
             
@@ -129,17 +125,19 @@ body {
 
     .characters-section {
         .characters-heading {
-            @include font-size(2.4rem);
-            @include font-weight(500);
+            @include font-size($fs-h1);
+            @include font-weight(400);
             margin-bottom: 2rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            color: $white-transparent;
+            border-bottom: 1px solid #ffffff59;
+            color: $white;
             
             @media (max-width: 768px) {
+                @include font-size(2rem);
+            }
+
+            @media (max-width: 480px) {
                 @include font-size(1.8rem);
-                margin-bottom: 1.5rem;
-                padding-bottom: 1.5rem;
             }
         }
 
@@ -200,22 +198,30 @@ body {
 
     .character-image {
         width: 100%;
-        aspect-ratio: 3/4;
+        height: 450px;
+        aspect-ratio: 4/5;
         @include overflow(hidden);
-        margin-bottom: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1.2rem;
         @include relative;
-        border-radius: 4px;
+
+        @media (max-width: 1200px) {
+            height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            height: 350px;
+        }
+
+        @media (max-width: 480px) {
+            height: 300px;
+        }
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
-            display: block;
-        }
-        
-        @media (max-width: 768px) {
-            margin-bottom: 1rem;
         }
     }
 
@@ -229,11 +235,11 @@ body {
             @include display(flex);
             @include align-items(center);
             @include justify-content(space-between);
-            gap: 0.6rem;
-            @include font-size(1.3rem);
-            color: #efeded;
+            gap: 0.3rem;
+            @include font-size($fs-body);
+            color: $white;
             @include ClashDisplay;
-            @include font-weight(300);
+            @include font-weight(400);
             margin-bottom: 0.5rem;
             
             @media (max-width: 768px) {
@@ -248,8 +254,8 @@ body {
                 flex-shrink: 0;
                 
                 img {
-                    width: 18px;
-                    height: 18px;
+                    width: 25px;
+                    height: 25px;
                     opacity: 0.8;
                     transition: all 0.3s ease;
                     
@@ -264,8 +270,8 @@ body {
         .character-descr {
             @include ClashDisplay;
             @include font-weight(200);
-            padding-left: 1.8rem;
-            color: #efeded;
+            padding-left: 1.2rem;
+            color: $white;
             @include relative;
             
             @media (max-width: 768px) {
@@ -279,7 +285,7 @@ body {
                 top: 0;
                 width: 1.5px;
                 height: 100%;
-                background-color: $slate-blue;
+                background-color:#ffffff59;
                 
                 @media (max-width: 768px) {
                     left: 0.3rem;
@@ -289,9 +295,10 @@ body {
             
             .character-actor,
             .character-role {
-                @include font-size(1rem);
-                color: #efeded;
-                @include font-weight(200);
+                @include font-size($fs-body);
+                @include font-weight(400);
+                color: $slate-blue;
+                @include Fredoka;
                 line-height: 1.5;
                 
                 @media (max-width: 768px) {
@@ -310,21 +317,25 @@ body {
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    width: 100%;
     
     @media (max-width: 768px) {
         gap: 1rem;
         margin-top: 1.5rem;
+        margin-bottom: -1rem;
     }
 
     .explore-text {
         @include display(flex);
         @include align-items(center);
-        @include font-size(1.1rem);
-        color: #efeded;
+        @include font-size($fs-h2-tablet);
+        @include font-weight(400);
+        color: $slate-blue;
         gap: 2rem;
         flex: 1;
-        white-space: nowrap;
+        min-width: 0;
         
         @media (max-width: 768px) {
             @include font-size(1rem);
@@ -332,10 +343,12 @@ body {
         }
 
         &::after {
+            margin-top: 18px;
             content: "";
             flex: 1;
             height: 1px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #ffffff59;
+            min-width: 50px;
         }
     }
 
@@ -343,13 +356,12 @@ body {
         @include display(flex);
         @include align-items(center);
         gap: 1rem;
-        color: #efeded;
-        text-decoration: none;
-        @include font-size(1.1rem);
+        color: $white;
+        @include font-size($fs-h2-tablet);
+        @include font-weight(400);
         @include ClashDisplay;
-        @include font-weight(200);
         transition: gap 0.3s ease;
-        flex-shrink: 0;
+        flex-shrink: 1;
         white-space: nowrap;
         
         @media (max-width: 768px) {
@@ -366,11 +378,13 @@ body {
         }
         
         img {
+            width: 25px;
+            height: auto;
             transition: transform 0.3s ease;
             
             @media (max-width: 768px) {
-                width: 16px;
-                height: 16px;
+                width: 21px;
+                height: 21px;
             }
         }
     }

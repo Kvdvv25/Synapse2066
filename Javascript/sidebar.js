@@ -1,33 +1,29 @@
 const menu = document.querySelector(".bottom-menu");
 const menuItems = document.querySelectorAll(".bottom-menu__item");
 const header = document.querySelector(".header");
+
 const updates = document.querySelector(".updates");
 const topMenu = document.querySelector(".top-menu");
 const statusHide = document.querySelector(".updates-status__hide");
 const statusShow = document.querySelector(".updates-status__show");
 const arrow = document.querySelector(".top-menu__arrow");
 
-let isTopMenuOpen = true;
-topMenu.style.maxWidth = "60vw"; 
+let isTopMenuOpen = false;
 
 function openTopMenu() {
   topMenu.style.height = topMenu.scrollHeight + "px";
-  topMenu.style.maxWidth = "none"; 
   statusHide.classList.add("active");
   statusShow.classList.remove("active");
   arrow.classList.add("rotate");
   isTopMenuOpen = true;
-  updateHeaderHeight();
 }
 
 function closeTopMenu() {
-  topMenu.style.height = "30vh";
-  topMenu.style.maxWidth = "60vw"; 
+  topMenu.style.height = "40px";
   statusHide.classList.remove("active");
   statusShow.classList.add("active");
   arrow.classList.remove("rotate");
   isTopMenuOpen = false;
-  resetHeaderHeight();
 }
 
 function toggleTopMenu() {
@@ -36,7 +32,6 @@ function toggleTopMenu() {
   } else {
     openTopMenu();
   }
-  closeBottomMenu();
 }
 
 function openBottomMenu() {
@@ -53,7 +48,6 @@ function toggleBottomMenu() {
   const isOpen = menu.classList.contains("show");
 
   if (!isOpen) {
-    closeTopMenu();
     openBottomMenu();
   } else {
     closeBottomMenu();
@@ -61,33 +55,31 @@ function toggleBottomMenu() {
 }
 
 function updateHeaderHeight() {
-  const menuHeight = menu.classList.contains("show") ? menu.offsetHeight : 0;
-  const topMenuHeight = isTopMenuOpen ? topMenu.scrollHeight : 40;
-  const baseHeight = 85;
-  const totalHeight = baseHeight + menuHeight + topMenuHeight - 40;
-  
-  header.style.minHeight = `${totalHeight}px`;
+  const menuHeight = menu.offsetHeight;
+  header.style.setProperty(
+    "min-height",
+    `calc(${menuHeight}px + 50px)`,
+    "important"
+  );
 }
 
 function resetHeaderHeight() {
   header.style.minHeight = "";
 }
 
+// Top menu toggle
 updates.addEventListener("click", (e) => {
   e.stopPropagation();
-  if (menu.classList.contains("show")) {
-    closeBottomMenu();
-    openTopMenu();
-    return;
-  }
   toggleTopMenu();
 });
 
+// Bottom menu toggle
 menu.addEventListener("click", (e) => {
   e.stopPropagation();
   toggleBottomMenu();
 });
 
+// Close bottom menu when clicking item
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -95,6 +87,7 @@ menuItems.forEach((item) => {
   });
 });
 
+// Click outside closes BOTH
 window.addEventListener("click", () => {
   closeBottomMenu();
   closeTopMenu();

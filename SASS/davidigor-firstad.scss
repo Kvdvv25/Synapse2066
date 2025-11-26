@@ -1,6 +1,6 @@
-@use 'main.scss';
 @use 'styles.scss' as *;
 @use 'sidebar.scss';
+@use 'reset.scss';
 
 //Reset
 * {
@@ -51,6 +51,7 @@ body {
         background-color: rgba(0, 0, 0, 0.415);
         z-index: -1;
     }
+    
     @media (max-width: 1000px){
         background-position: center 40%;
         min-height: 70vh;
@@ -134,7 +135,7 @@ body {
         
         .who-label {
             @include ClashDisplay;
-            @include font-size(1rem);
+            @include font-size($fs-body);
             color: $slate-blue;
             
             @media (max-width: 768px) {
@@ -152,8 +153,8 @@ body {
         }
         
         .role-label {
-            @include font-size(1rem);
-            color: #efeded;
+            @include font-size($fs-body);
+            color: $white;
             @include font-weight(400);
             
             @media (max-width: 768px) {
@@ -172,9 +173,9 @@ body {
     border-bottom: 1px solid #ffffff59;
     
     h1 {
-        @include font-size(2.6rem);
-        @include font-weight(500);
-        color: #efeded;
+        @include font-size($fs-h1);
+        @include font-weight(400);
+        color: $white;
         letter-spacing: 0.05em;
         @include ClashDisplay;
         margin-bottom: 1rem;
@@ -209,9 +210,9 @@ body {
         }
 
         .detail-label {
-            @include font-size(1.15rem);
+            @include font-size($fs-body);
             color: $slate-blue;
-            @include font-weight(500);
+            @include font-weight(400);
             min-width: 150px;
             flex-shrink: 0;
             
@@ -271,9 +272,9 @@ body {
         }
 
         .socials-label {
-            @include font-size(1rem);
+             @include font-size($fs-body);
             color: $slate-blue;
-            @include font-weight(500);
+            @include font-weight(400);
             min-width: 150px;
             flex-shrink: 0;
             
@@ -340,7 +341,7 @@ body {
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 1.6rem;
     
     @media (max-width: 768px) {
         gap: 1rem;
@@ -350,7 +351,7 @@ body {
     .explore-text {
         @include display(flex);
         @include align-items(center);
-        @include font-size(1rem);
+        @include font-size($fs-body);
         color: $slate-blue;
         gap: 2rem;
         flex: 1;
@@ -379,7 +380,7 @@ body {
         gap: 1rem;
         color: $white;
         text-decoration: none;
-        @include font-size(1rem);
+        @include font-size($fs-body);
         @include ClashDisplay;
         transition: gap 0.3s ease;
         white-space: nowrap;

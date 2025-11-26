@@ -1,6 +1,6 @@
-@use 'main.scss';
 @use 'styles.scss' as *;
 @use 'sidebar.scss';
+@use 'reset.scss';
 
 //Reset
 * {
@@ -67,12 +67,12 @@ body {
     min-height: 100vh;
     @include relative;
     @media (max-width:1000px){
-        display: grid;
+        @include display(grid);
         grid-template-columns: 2 1fr;
     }
     @media (max-width:800px){
-        display: flex;
-        flex-direction: column;
+        @include display(flex);
+        @include flex-direction(column);
     }
 }
 
@@ -146,7 +146,7 @@ body {
                 gap: 1.25rem;
             }
 
-            // Mobile - Block display
+            // Mobile - Block
             @media (max-width: 768px) {
                 @include display(block);
             }
@@ -237,8 +237,8 @@ body {
                 transition: transform 0.3s ease;
                 
                 img {
-                    width: 18px;
-                    height: 18px;
+                    width: 25px;
+                    height: 25px;
                     opacity: 0.8;
                 }
                 

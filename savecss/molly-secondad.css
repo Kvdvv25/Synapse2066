@@ -436,10 +436,11 @@ body {
 
 .header {
   transition: all ease 0.3s;
-  width: 20vw;
-  background-image: url(../images/bg_2.jpg);
+  width: 50vw;
+  background-image: url(../images/Crew/woman-director.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
   box-sizing: border-box;
   position: fixed;
@@ -451,32 +452,50 @@ body {
   flex-direction: column;
   z-index: 100;
 }
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.415);
+  z-index: -1;
+}
 @media (max-width: 1000px) {
   .header {
-    min-height: 30vh;
+    background-position: center 40%;
+    min-height: 70vh;
     width: 100vw;
     position: relative;
+    height: auto;
   }
 }
 
 .logo {
-  margin-top: 20%;
+  margin-top: 30%;
   display: block;
   font-family: "CyberPunk", sans-serif;
-  font-size: 2.6rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 5%;
   color: #fff;
-  padding-bottom: 10px;
   margin: 0;
 }
 @media (max-width: 992px) {
   .logo {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    padding-bottom: 5vw;
   }
 }
 @media (max-width: 768px) {
   .logo {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.7rem;
   }
 }
 
@@ -487,23 +506,20 @@ body {
 }
 @media (max-width: 1000px) {
   .container {
-    display: grid;
-    grid-template-columns: 2 1fr;
-  }
-}
-@media (max-width: 800px) {
-  .container {
     display: flex;
     flex-direction: column;
   }
 }
 
 .main-content {
-  overflow-y: hidden;
-  width: 100%;
-  margin-left: 21vw;
-  padding: 3rem 2rem;
+  flex: 1;
+  margin-left: 50vw;
+  padding: 3rem 4rem;
   height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 @media (max-width: 1000px) {
   .main-content {
@@ -515,281 +531,286 @@ body {
 @media (max-width: 768px) {
   .main-content {
     padding: 2rem 1.5rem;
-  }
-}
-.main-content .content-header {
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 1;
-}
-.main-content .content-header .section-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #b3bfbf;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  z-index: 1;
-}
-.main-content .content-header .section-title::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  margin-top: 18px;
-  background-color: rgba(255, 255, 255, 0.3490196078);
-  z-index: 1;
-}
-@media (max-width: 768px) {
-  .main-content .content-header .section-title {
-    font-size: 1rem;
-  }
-}
-.main-content .characters-section .characters-heading {
-  font-size: 2.6rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
-  color: #fff;
-}
-@media (max-width: 768px) {
-  .main-content .characters-section .characters-heading {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 480px) {
-  .main-content .characters-section .characters-heading {
-    font-size: 1.8rem;
-  }
-}
-.main-content .characters-section .character-grid {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-@media (max-width: 1200px) {
-  .main-content .characters-section .character-grid {
     gap: 1.5rem;
   }
 }
-@media (max-width: 768px) {
-  .main-content .characters-section .character-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-}
 @media (max-width: 480px) {
-  .main-content .characters-section .character-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .main-content {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
   }
 }
 
-.character-card {
-  flex: 1;
-  height: 440px;
-  min-width: 200px;
-  max-width: 350px;
-  position: relative;
+.team-header .header-info {
   display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  align-items: center;
+  padding-bottom: 1rem;
+  gap: 2rem;
 }
 @media (max-width: 768px) {
-  .character-card {
-    max-width: 100%;
-    min-width: auto;
+  .team-header .header-info {
+    gap: 1rem;
   }
 }
-.character-card:hover {
-  transform: translateY(-8px);
-}
-.character-card:hover .character-image img {
-  transform: scale(1.05);
-}
-.character-card:hover .character-link img {
-  opacity: 1;
-  transform: translateX(3px);
-}
-.character-card .character-image {
-  width: 100%;
-  height: 450px;
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
-@media (max-width: 1200px) {
-  .character-card .character-image {
-    height: 400px;
-  }
+.team-header .header-info .who-label {
+  font-family: "Clash Display";
+  font-size: 1.15rem;
+  color: #b3bfbf;
 }
 @media (max-width: 768px) {
-  .character-card .character-image {
-    height: 350px;
+  .team-header .header-info .who-label {
+    font-size: 1rem;
+  }
+}
+.team-header .header-info .divider-line {
+  margin-top: 13px;
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.349);
+}
+.team-header .header-info .role-label {
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .team-header .header-info .role-label {
+    font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
-  .character-card .character-image {
-    height: 300px;
+  .team-header .header-info .role-label {
+    font-size: 1rem;
   }
 }
-.character-card .character-image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.3s ease;
+
+.team-title {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
 }
-.character-card .character-info {
+.team-title h1 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.05em;
   font-family: "Clash Display";
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .team-title h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.02em;
+  }
+}
+@media (max-width: 480px) {
+  .team-title h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0;
+  }
+}
+
+.team-details {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
-.character-card .character-info .character-name {
+.team-details .detail-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.3rem;
-  font-size: 1.15rem;
-  color: #fff;
-  font-family: "Clash Display";
-  font-weight: 400;
-  margin-bottom: 0.5rem;
+  gap: 3rem;
 }
 @media (max-width: 768px) {
-  .character-card .character-info .character-name {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+  .team-details .detail-row {
+    gap: 1rem;
+    flex-direction: column;
+    padding-bottom: 1rem;
   }
 }
-.character-card .character-info .character-name .character-link {
-  display: inline-flex;
-  align-items: center;
-  transition: transform 0.3s ease;
+.team-details .detail-row .detail-label {
+  font-size: 1.15rem;
+  color: #b3bfbf;
+  font-weight: 400;
+  min-width: 150px;
   flex-shrink: 0;
 }
-.character-card .character-info .character-name .character-link img {
-  width: 25px;
-  height: 25px;
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
 @media (max-width: 768px) {
-  .character-card .character-info .character-name .character-link img {
-    width: 16px;
-    height: 16px;
+  .team-details .detail-row .detail-label {
+    font-size: 0.9rem;
   }
 }
-.character-card .character-info .character-descr {
-  font-family: "Clash Display";
-  font-weight: 200;
-  padding-left: 1.2rem;
+@media (max-width: 480px) {
+  .team-details .detail-row .detail-label {
+    font-size: 0.85rem;
+  }
+}
+.team-details .detail-row .detail-value {
+  font-size: 1rem;
   color: #fff;
-  position: relative;
-}
-@media (max-width: 768px) {
-  .character-card .character-info .character-descr {
-    padding-left: 1.2rem;
-  }
-}
-.character-card .character-info .character-descr::before {
-  content: "";
-  position: absolute;
-  left: 0.6rem;
-  top: 0;
-  width: 1.5px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3490196078);
-}
-@media (max-width: 768px) {
-  .character-card .character-info .character-descr::before {
-    left: 0.3rem;
-    width: 1.2px;
-  }
-}
-.character-card .character-info .character-descr .character-actor,
-.character-card .character-info .character-descr .character-role {
-  font-size: 1.15rem;
-  font-weight: 400;
-  color: #b3bfbf;
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  line-height: 1.5;
+  flex: 1;
 }
 @media (max-width: 768px) {
-  .character-card .character-info .character-descr .character-actor,
-  .character-card .character-info .character-descr .character-role {
+  .team-details .detail-row .detail-value {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .team-details .detail-row .detail-value {
+    font-size: 0.85rem;
+  }
+}
+.team-details .detail-row .detail-value.description-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.team-details .detail-row .detail-value.description-text p {
+  line-height: 1.6;
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  .team-details .detail-row .detail-value.description-text p {
+    text-align: left;
+  }
+}
+
+.socials-section {
+  padding: 1rem 0 2rem;
+  margin-bottom: 2.8rem;
+}
+.socials-section .socials-header {
+  display: flex;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .socials-section .socials-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.socials-section .socials-header .socials-label {
+  font-size: 1.15rem;
+  color: #b3bfbf;
+  font-weight: 400;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .socials-section .socials-header .socials-label {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .socials-section .socials-header .socials-label {
+    font-size: 0.85rem;
+  }
+}
+.socials-section .socials-header .socials-links {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .socials-section .socials-header .socials-links {
+    gap: 1.5rem;
+  }
+}
+.socials-section .socials-header .socials-links .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .socials-section .socials-header .socials-links .social-link {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .socials-section .socials-header .socials-links .social-link {
+    font-size: 0.85rem;
+  }
+}
+.socials-section .socials-header .socials-links .social-link:hover {
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.socials-section .socials-header .socials-links .social-link i {
+  font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+  .socials-section .socials-header .socials-links .social-link img {
+    width: 14px;
+    height: 14px;
   }
 }
 
 .explore-next {
   font-family: "Clash Display";
-  font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin-top: 1rem;
-  margin-bottom: -1rem;
-  width: 100%;
+  margin-top: 1.6rem;
 }
 @media (max-width: 768px) {
   .explore-next {
     gap: 1rem;
     margin-top: 1.5rem;
-    margin-bottom: -1rem;
   }
 }
 .explore-next .explore-text {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.15rem;
   color: #b3bfbf;
   gap: 2rem;
   flex: 1;
-  min-width: 0;
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
   .explore-next .explore-text {
-    font-size: 1rem;
+    font-size: 1.05rem;
     gap: 1rem;
   }
 }
+@media (max-width: 480px) {
+  .explore-next .explore-text {
+    font-size: 1rem;
+  }
+}
 .explore-next .explore-text::after {
-  margin-top: 18px;
   content: "";
   flex: 1;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.3490196078);
-  min-width: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .explore-next .explore-link {
   display: flex;
   align-items: center;
   gap: 1rem;
   color: #fff;
-  font-size: 1.3rem;
-  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.15rem;
   font-family: "Clash Display";
   transition: gap 0.3s ease;
-  flex-shrink: 1;
   white-space: nowrap;
 }
 @media (max-width: 768px) {
   .explore-next .explore-link {
     font-size: 1rem;
     gap: 0.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .explore-next .explore-link {
+    font-size: 1rem;
   }
 }
 .explore-next .explore-link:hover {
@@ -799,30 +820,41 @@ body {
   transform: translateX(5px);
 }
 .explore-next .explore-link img {
-  width: 25px;
-  height: auto;
   transition: transform 0.3s ease;
 }
 @media (max-width: 768px) {
   .explore-next .explore-link img {
-    width: 21px;
-    height: 21px;
+    width: 14px;
+    height: 14px;
   }
 }
 
-.sidebar::-webkit-scrollbar {
-  width: 6px;
+@media (max-width: 1200px) {
+  .character-details .detail-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .socials-section .socials-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
-
-.sidebar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 3px;
-}
-
-.sidebar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
-}/*# sourceMappingURL=cast.css.map */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .main-content {
+    padding: 2rem 1rem;
+  }
+  .character-title h1 {
+    font-size: 2rem;
+  }
+  .explore-next {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=molly-secondad.css.map */

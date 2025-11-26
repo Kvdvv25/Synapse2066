@@ -1,5 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "CyberPunk";
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+.btn_primary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+  border: 1px solid #b3bfbf;
+  margin: 2vh auto;
+}
+@media (max-width: 768px) {
+  .btn_primary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_primary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_secondary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+}
+@media (max-width: 768px) {
+  .btn_secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_secondary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_icon {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .btn_icon {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_icon {
+    font-size: 0.95rem;
+  }
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,182 +139,6 @@ table {
 
 a {
   text-decoration: none;
-}
-
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
-  font-style: normal;
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "CyberPunk";
-  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
-  font-style: normal;
-  font-weight: 300;
-}
-.btn_primary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-  border: 1px solid #b3bfbf;
-  margin: 2vh auto;
-}
-@media (max-width: 768px) {
-  .btn_primary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_primary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_secondary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-}
-@media (max-width: 768px) {
-  .btn_secondary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_secondary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_icon {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-}
-@media (max-width: 768px) {
-  .btn_icon {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_icon {
-    font-size: 0.95rem;
-  }
-}
-
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
-  font-style: normal;
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "CyberPunk";
-  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
-  font-style: normal;
-  font-weight: 300;
-}
-.btn_primary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-  border: 1px solid #b3bfbf;
-  margin: 2vh auto;
-}
-@media (max-width: 768px) {
-  .btn_primary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_primary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_secondary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-}
-@media (max-width: 768px) {
-  .btn_secondary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_secondary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_icon {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-}
-@media (max-width: 768px) {
-  .btn_icon {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_icon {
-    font-size: 0.95rem;
-  }
 }
 
 .top-menu {
@@ -390,7 +301,23 @@ a {
   height: calc(100% + 10px) !important;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+  .header {
+    width: 100% !important;
+    height: auto !important;
+    overflow: unset !important;
+    position: unset !important;
+    min-height: unset !important;
+  }
+  .top-menu {
+    width: 200px;
+  }
+  .logo {
+    margin-bottom: 30px !important;
+  }
   .bottom-menu .active {
     width: 0;
   }
@@ -450,7 +377,7 @@ a {
     right: -30px;
   }
   .show .bottom-menu__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .show .bottom-menu__item:not(:last-child):after {
     height: 150%;
@@ -458,10 +385,10 @@ a {
     right: -26px;
   }
   .show .bottom-menu__link {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
   .show .bottom-menu__item.active > .bottom-submenu .bottom-submenu__link {
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
   }
   .show .bottom-menu__item.active > .bottom-submenu {
     margin-left: 20px !important;
@@ -724,8 +651,8 @@ body {
   transition: transform 0.3s ease;
 }
 .team-card .team-info .team-name .team-link img {
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   opacity: 0.8;
 }
 .team-card .team-info .team-name .team-link:hover img {

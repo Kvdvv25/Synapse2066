@@ -1,147 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
-  font-style: normal;
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "CyberPunk";
-  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
-  font-style: normal;
-  font-weight: 300;
-}
-.btn_primary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-  border: 1px solid #b3bfbf;
-  margin: 2vh auto;
-}
-@media (max-width: 768px) {
-  .btn_primary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_primary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_secondary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-}
-@media (max-width: 768px) {
-  .btn_secondary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_secondary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_icon {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-}
-@media (max-width: 768px) {
-  .btn_icon {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_icon {
-    font-size: 0.95rem;
-  }
-}
-
 @font-face {
   font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
@@ -231,11 +88,10 @@ a {
 }
 
 .top-menu {
+  width: 200px;
   overflow: hidden;
   height: 40px;
   transition: all ease 0.3s;
-  max-width: 300px;
-  width: 100%;
 }
 .top-menu__item {
   cursor: pointer;
@@ -313,6 +169,7 @@ a {
 
 .bottom-menu {
   z-index: 999;
+  text-decoration: none;
   margin-top: auto;
 }
 .bottom-menu__item {
@@ -351,7 +208,7 @@ a {
   background-color: #fff;
 }
 .bottom-menu__link {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -374,6 +231,7 @@ a {
 }
 .bottom-submenu .bottom-submenu__link {
   color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
   font-size: 1.2rem;
 }
 
@@ -486,6 +344,33 @@ a {
   }
 }
 body {
+  background: #151515;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.navigation {
+  padding: 20px 0;
+  position: fixed;
+  left: 30px;
+}
+
+.logo {
+  font-weight: 400;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+body {
   display: flex;
   height: 100vh;
   font-family: "Clash Display";
@@ -526,8 +411,8 @@ body {
 .subtitle:before {
   content: "";
   flex: 1;
-  height: 1px;
   background-color: rgba(255, 255, 255, 0.6);
+  height: 1px;
   margin-left: 30px;
   order: 2;
   margin-top: 15px;
@@ -646,7 +531,7 @@ body {
     width: 200px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .subtitle, .breadcrumbs__title, .breadcrumbs-link {
     font-size: 1rem;
   }
@@ -659,8 +544,14 @@ body {
     display: block;
   }
   .gallery__img {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     height: auto;
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery__img {
+    width: 100%;
   }
 }/*# sourceMappingURL=gallery.css.map */

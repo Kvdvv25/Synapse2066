@@ -1,8 +1,30 @@
-@use 'main.scss';
+
 @use 'styles.scss' as *;
 @use 'sidebar.scss';
 
 // Main 
+body {
+  background: $black;
+  height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.navigation {
+    padding: 20px 0;
+    position: fixed;
+    left: 30px;
+}
+.logo {
+    font-weight: 400;
+    color: $white;
+    width: fit-content;
+    @include CyberPunk;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
 body {
     display: flex;
     height: 100vh;
@@ -41,8 +63,8 @@ body {
     &:before {
         content: "";
         flex: 1;
-        height: 1px;
         background-color: $white-transparent;
+        height: 1px;
         margin-left: 30px;
         order: 2;
         margin-top: 15px;
@@ -153,7 +175,7 @@ body {
         width: 200px;
     }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .subtitle, .breadcrumbs__title, .breadcrumbs-link {
         font-size: 1rem;
     }
@@ -165,10 +187,16 @@ body {
         margin-top: 20px;
         display: block;
         &__img {
-            width: 100%;
+            width: 70%;
+            margin: 0 auto;
             height: auto;
             margin-bottom: 20px;
         }
        
+    }
+}
+@media screen and (max-width: 576px) {
+    .gallery__img {
+        width: 100%;
     }
 }

@@ -1,3 +1,2 @@
-@import  'reset';
-@import 'styles';
-
+@use 'reset.scss';
+@use 'styles.scss' as *;
