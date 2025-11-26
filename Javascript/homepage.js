@@ -9,10 +9,10 @@ let isScrolling = false;
 
 const content = [
   {
-    title: "Synapsis",
+    title: "Synopsis",
     text: "Learn more about Synapse`s storyline",
     button: "Learn about the film →",
-    link: "#1",
+    link: "synopsis-trailer.html",
   },
   {
     title: "Cast",

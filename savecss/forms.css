@@ -23,6 +23,70 @@
   font-style: normal;
   font-weight: 300;
 }
+.btn_primary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+  border: 1px solid #b3bfbf;
+  margin: 2vh auto;
+}
+@media (max-width: 768px) {
+  .btn_primary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_primary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_secondary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+}
+@media (max-width: 768px) {
+  .btn_secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_secondary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_icon {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .btn_icon {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_icon {
+    font-size: 0.95rem;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -120,7 +184,7 @@ h2 {
   min-height: 30%;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  background-color: rgba(26, 26, 26, 0.347);
+  background-color: rgba(26, 26, 26, 0.048);
   border-radius: 20px;
   margin: 5vh 0;
 }
@@ -410,7 +474,7 @@ form {
   display: inline-block;
   width: 14px;
   height: 14px;
-  border: 2px solid rgba(100, 100, 100, 0.6431372549);
+  border: 2px solid rgba(46, 45, 45, 0.2156862745);
   border-top-color: #fff;
   border-radius: 50%;
   animation: spin 0.6s linear infinite;
