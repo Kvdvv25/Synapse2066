@@ -18,8 +18,14 @@
   font-weight: 700;
 }
 @font-face {
+  font-family: "Monaco";
+  src: url("/fonts/Monaco/Monaco.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
   font-family: "CyberPunk";
-  src: url("/fonts/cyberpunk_style_light.woff2") format("woff");
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
 }

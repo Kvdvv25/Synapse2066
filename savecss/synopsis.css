@@ -72,8 +72,14 @@ a {
   font-weight: 700;
 }
 @font-face {
+  font-family: "Monaco";
+  src: url("/fonts/Monaco/Monaco.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
   font-family: "CyberPunk";
-  src: url("/fonts/cyberpunk_style_light.woff2") format("woff");
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
 }
@@ -159,11 +165,13 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
   font-weight: 400;
   color: #fff;
   width: -moz-fit-content;
   width: fit-content;
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .rotate {
@@ -295,10 +303,12 @@ body {
 }
 
 .bottom-submenu {
+.bottom-submenu {
   position: relative;
   margin-left: 20px;
   margin-top: 10px;
 }
+.bottom-submenu:before {
 .bottom-submenu:before {
   content: "";
   display: block;
@@ -309,8 +319,10 @@ body {
   left: -20px;
 }
 .bottom-submenu .bottom-submenu__item:not(:last-child) {
+.bottom-submenu .bottom-submenu__item:not(:last-child) {
   margin-bottom: 10px;
 }
+.bottom-submenu .bottom-submenu__link {
 .bottom-submenu .bottom-submenu__link {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.2rem;
@@ -326,6 +338,30 @@ body {
   color: #fff;
 }
 
+.bottom-menu__item:not(:last-child):after {
+  height: calc(100% + 10px) !important;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+  .header {
+    width: 100% !important;
+    height: auto !important;
+    overflow: unset !important;
+    position: unset !important;
+    min-height: unset !important;
+  }
+  .top-menu {
+    width: 200px;
+  }
+  .logo {
+    margin-bottom: 30px !important;
+  }
+  .bottom-menu .active {
+    width: 0;
+  }
 .bottom-menu__item:not(:last-child):after {
   height: calc(100% + 10px) !important;
 }
@@ -381,10 +417,18 @@ body {
     margin-left: 0 !important;
     margin-top: 0 !important;
     margin-right: 20px;
+    margin-right: 20px;
     height: 0 !important;
   }
   .bottom-submenu .bottom-submenu__link {
     font-size: 0 !important;
+  }
+  .bottom-submenu::before {
+    left: unset;
+    right: -20px;
+  }
+  .bottom-menu__item:not(:last-child):after {
+    height: 70% !important;
   }
   .bottom-submenu::before {
     left: unset;
@@ -407,6 +451,7 @@ body {
   }
   .show .bottom-menu__item:not(:last-child) {
     margin-bottom: 15px;
+    margin-bottom: 15px;
   }
   .show .bottom-menu__item:not(:last-child):after {
     height: 150%;
@@ -415,8 +460,10 @@ body {
   }
   .show .bottom-menu__link {
     font-size: 1.15rem;
+    font-size: 1.15rem;
   }
   .show .bottom-menu__item.active > .bottom-submenu .bottom-submenu__link {
+    font-size: 1.1rem !important;
     font-size: 1.1rem !important;
   }
   .show .bottom-menu__item.active > .bottom-submenu {
@@ -425,11 +472,13 @@ body {
     height: auto !important;
   }
   .show .bottom-menu__item:not(:last-child):after {
-    height: calc(100% + 10px) !important;
+    height: calc(100% + 5px) !important;
   }
   .header:has(> .show) {
     padding-bottom: 120px;
   }
+  .header:has(> .show) .active {
+    width: unset;
   .header:has(> .show) .active {
     width: unset;
   }
@@ -437,6 +486,7 @@ body {
 @media screen and (max-width: 576px) {
   .header:has(> .show) .top-menu {
     width: 0;
+    height: 40px !important;
     height: 40px !important;
   }
 }

@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 //COLORS
 $deep-forest: #5c6c72;
 $slate-blue: #b3bfbf;
 $charcoal-black: #151f20;
 $golden-yellow: #fba105;
 $burnt-orange: #cc6506;
+$charcoal-black1: #0c1111;
+$blue: #1e6da1;
+$red: #b21b1b;
 $black: #151515;
 $white: #fff;
 $white-transparent: #ffffff99;
@@ -44,59 +49,64 @@ $line: 1px solid $line-color;
     flex-direction: $value;
 };
 @mixin z-index($value) {z-index: $value;}
+@mixin border-radius($value){border-radius: $value;}
 
 //Fonts
 $font-synapse: 'Cyberpunk';
 $font-title: 'ClashDisplay-Medium';
 $font-body: "Fredoka-Light";
 
-
 @mixin heading_style{
     @include ClashDisplay;
     font-weight: 400;
 }
-
-  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
-  @font-face {
-      font-family: "Clash Display";
-      src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff') format('woff');
-      font-style: normal;
-      font-weight: 500; 
-  }
-  @font-face {
-      font-family: "Clash Display";
-      src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff') format('woff');
-      font-style: normal;
-      font-weight: 200; 
-  }
-  @font-face {
-      font-family: "Clash Display";
-      src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff') format('woff');
-      font-style: normal;
-      font-weight: 700; 
-  }
-  
-  @mixin ClashDisplay {font-family: "Clash Display";}
-  @mixin Fredoka {
-      font-family: "Fredoka", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-  }
-  @font-face {
-    font-family: "CyberPunk";
-    src: url('/fonts/cyberpunk_style_light.woff2') format('woff');
+//TEXT
+@mixin text-align {text-align: center;}
+@mixin font-size($size) {font-size: $size;}
+@mixin font-weight($weight) {font-weight: $weight;}
+@font-face {
+    font-family: "Clash Display";
+    src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff') format('woff');
     font-style: normal;
-    font-weight: 300; 
+    font-weight: 500; 
+}
+@font-face {
+    font-family: "Clash Display";
+    src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: 200; 
+}
+@font-face {
+    font-family: "Clash Display";
+    src: url('/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700; 
+}
+@font-face {
+    font-family: 'Monaco';
+    src: url('/fonts/Monaco/Monaco.ttf');
+    font-style: normal;
+    font-weight: 500;
 }
 @mixin CyberPunk{font-family: "CyberPunk", sans-serif;}
 
 
 
-//TEXT
-@mixin text-align {
-    text-align: center;
+@mixin ClashDisplay {font-family: "Clash Display";}
+@mixin Fredoka {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
 }
+@font-face {
+    font-family: "CyberPunk";
+    src: url('/fonts/CyberpunkStyle/cyberpunk_style_light.woff2') format('woff');
+    font-style: normal;
+    font-weight: 300; 
+}
+@mixin CyberPunk{font-family: "CyberPunk", sans-serif;}
+
+//Buttons
 @mixin font-weight($weight) {font-weight: $weight;}
 
 //Font-sizes desktop

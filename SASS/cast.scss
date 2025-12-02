@@ -1,0 +1,409 @@
+@use 'styles.scss' as *;
+@use 'reset.scss';
+@use 'sidebar.scss';
+
+//Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    height: 100vh;
+    @include ClashDisplay;
+    background-color: $charcoal-black1;
+    color: $white;
+}
+.wrapper-update{
+    max-width: 15vw;
+    @media (max-width:992px)
+    {max-width: none;}
+}
+.header {
+    transition: all ease 0.3s;
+    width: 20vw;
+    background-image: url(../images/bg_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    box-sizing: border-box;
+    @include fixed;
+    top: 0;
+    left: 0;
+    @include overflow(hidden);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    @media (max-width: 1000px){
+        min-height: 30vh;
+        width: 100vw;
+        @include relative;
+    }
+}
+.logo {
+    margin-top: 20%;
+    display: block;
+    @include CyberPunk;
+    @include font-size(2.6rem);
+    @include font-weight(400);
+    color: $white;
+    padding-bottom: 10px;
+    margin: 0;
+                
+    @media (max-width: 992px) {
+        @include font-size($fs-h1-tablet);
+    }
+                
+    @media (max-width: 768px) {
+        @include font-size($fs-h1-mobile);
+    }
+}
+// Container Layout
+.container {
+    @include display(flex);
+    min-height: 100vh;
+    @include relative;
+    @media (max-width:1000px){
+        display: grid;
+        grid-template-columns: 2 1fr;
+    }
+    @media (max-width:800px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// Main Content
+.main-content {
+    overflow-y: hidden;
+    width: 100%;
+    margin-left: 21vw;
+    padding: 3rem 2rem;
+    height: 100vh;
+
+    @media (max-width: 1000px){
+        margin-left: 0;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    @media (max-width: 768px) {
+        padding: 2rem 1.5rem;
+    }
+
+    .content-header {
+        margin-bottom: 2rem;
+        @include relative;
+        z-index: 1;
+
+        .section-title {
+            @include font-size($fs-h2);
+            @include font-weight(400);
+            color: $slate-blue;
+            @include relative;
+            @include display(flex);
+            @include align-items(center);
+            gap: 1rem;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                flex: 1;
+                height: 1px;
+                margin-top: 18px;
+                background-color: #ffffff59;
+                z-index: 1;
+            }
+            
+            @media (max-width: 768px) {
+                @include font-size(1rem);
+            }
+        }
+    }
+
+    .characters-section {
+        .characters-heading {
+            @include font-size($fs-h1);
+            @include font-weight(400);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #ffffff59;
+            color: $white;
+            
+            @media (max-width: 768px) {
+                @include font-size(2rem);
+            }
+
+            @media (max-width: 480px) {
+                @include font-size(1.8rem);
+            }
+        }
+
+        .character-grid {
+            @include display(flex);
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            
+            @media (max-width: 1200px) {
+                gap: 1.5rem;
+            }
+            
+            @media (max-width: 768px) {
+                @include display(grid);
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+// Character Cards
+.character-card {
+    flex: 1;
+    height: 440px;
+    min-width: 200px;
+    max-width: 350px;
+    @include relative;
+    @include display(flex);
+    @include flex-direction(column);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+    @media (max-width: 768px) {
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+
+        .character-image img {
+            transform: scale(1.05);
+        }
+
+        .character-link img {
+            opacity: 1;
+            transform: translateX(3px);
+        }
+    }
+
+    .character-image {
+        width: 100%;
+        height: 450px;
+        aspect-ratio: 4/5;
+        @include overflow(hidden);
+        border-radius: 8px;
+        margin-bottom: 1.2rem;
+        @include relative;
+
+        @media (max-width: 1200px) {
+            height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            height: 350px;
+        }
+
+        @media (max-width: 480px) {
+            height: 300px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .character-info {
+        @include ClashDisplay;
+        @include display(flex);
+        @include flex-direction(column);
+        gap: 0.5rem;
+        
+        .character-name {
+            @include display(flex);
+            @include align-items(center);
+            @include justify-content(space-between);
+            gap: 0.3rem;
+            @include font-size($fs-body);
+            color: $white;
+            @include ClashDisplay;
+            @include font-weight(400);
+            margin-bottom: 0.5rem;
+            
+            @media (max-width: 768px) {
+                @include font-size(1.1rem);
+                margin-bottom: 0.3rem;
+            }
+            
+            .character-link {
+                @include display(inline-flex);
+                @include align-items(center);
+                transition: transform 0.3s ease;
+                flex-shrink: 0;
+                
+                img {
+                    width: 25px;
+                    height: 25px;
+                    opacity: 0.8;
+                    transition: all 0.3s ease;
+                    
+                    @media (max-width: 768px) {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+        
+        .character-descr {
+            @include ClashDisplay;
+            @include font-weight(200);
+            padding-left: 1.2rem;
+            color: $white;
+            @include relative;
+            
+            @media (max-width: 768px) {
+                padding-left: 1.2rem;
+            }
+            
+            &::before {
+                content: "";
+                @include absolute;
+                left: 0.6rem;
+                top: 0;
+                width: 1.5px;
+                height: 100%;
+                background-color:#ffffff59;
+                
+                @media (max-width: 768px) {
+                    left: 0.3rem;
+                    width: 1.2px;
+                }
+            }
+            
+            .character-actor,
+            .character-role {
+                @include font-size($fs-body);
+                @include font-weight(400);
+                color: $slate-blue;
+                @include Fredoka;
+                line-height: 1.5;
+                
+                @media (max-width: 768px) {
+                    @include font-size(0.9rem);
+                }
+            }
+        }
+    }
+}
+
+// Explore Next Section
+.explore-next {
+    @include ClashDisplay;
+    @include font-weight(500);
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    width: 100%;
+    
+    @media (max-width: 768px) {
+        gap: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: -1rem;
+    }
+
+    .explore-text {
+        @include display(flex);
+        @include align-items(center);
+        @include font-size($fs-h2-tablet);
+        @include font-weight(400);
+        color: $slate-blue;
+        gap: 2rem;
+        flex: 1;
+        min-width: 0;
+        
+        @media (max-width: 768px) {
+            @include font-size(1rem);
+            gap: 1rem;
+        }
+
+        &::after {
+            margin-top: 18px;
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #ffffff59;
+            min-width: 50px;
+        }
+    }
+
+    .explore-link {
+        @include display(flex);
+        @include align-items(center);
+        gap: 1rem;
+        color: $white;
+        @include font-size($fs-h2-tablet);
+        @include font-weight(400);
+        @include ClashDisplay;
+        transition: gap 0.3s ease;
+        flex-shrink: 1;
+        white-space: nowrap;
+        
+        @media (max-width: 768px) {
+            @include font-size(1rem);
+            gap: 0.7rem;
+        }
+
+        &:hover {
+            gap: 1.5rem;
+            
+            img {
+                transform: translateX(5px);
+            }
+        }
+        
+        img {
+            width: 25px;
+            height: auto;
+            transition: transform 0.3s ease;
+            
+            @media (max-width: 768px) {
+                width: 21px;
+                height: 21px;
+            }
+        }
+    }
+}
+
+// Scrollbar styling for sidebar
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

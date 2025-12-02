@@ -102,10 +102,11 @@ const statusHide = document.querySelector(".updates-status__hide");
 const statusShow = document.querySelector(".updates-status__show");
 const arrow = document.querySelector(".top-menu__arrow");
 
-let isTopMenuOpen = true;
+let isTopMenuOpen = false;
 
 function openTopMenu() {
   topMenu.style.height = topMenu.scrollHeight + "px";
+  topMenu.classList.add("top-menu__active");
   statusHide.classList.add("active");
   statusShow.classList.remove("active");
   arrow.classList.add("rotate");
@@ -118,6 +119,7 @@ function closeTopMenu() {
   statusShow.classList.add("active");
   arrow.classList.remove("rotate");
   isTopMenuOpen = false;
+  topMenu.classList.remove("top-menu__active");
 }
 
 function toggleTopMenu() {
@@ -150,7 +152,15 @@ function toggleBottomMenu() {
 
 function updateHeaderHeight() {
   const menuHeight = menu.offsetHeight;
-  header.style.minHeight = `calc(${menuHeight}px + 50px)`;
+  const headerHeight = header.offsetHeight;
+  const requiredHeight = menuHeight + 50;
+
+  if (headerHeight >= requiredHeight) {
+    header.style.minHeight = "";
+    return;
+  }
+
+  header.style.setProperty("min-height", `${requiredHeight}px`, "important");
 }
 
 function resetHeaderHeight() {

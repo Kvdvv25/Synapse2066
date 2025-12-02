@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://synapse-2066/sitemap.xml

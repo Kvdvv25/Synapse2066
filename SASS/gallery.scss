@@ -10,8 +10,8 @@ body {
 }
 .header {
     transition: all ease 0.3s;
-    width: 20%;
-    background-image: url(../images/bg_3.jpg);
+    width: 25%;
+    background-image: url(../images/bg_3.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -24,83 +24,6 @@ body {
     margin-top: 10px;
     margin-bottom: 30px;
     display: block;
-}
-
-// Top Menu
-.top-menu {
-    overflow: hidden;
-    height: 40px;
-    transition: all ease 0.3s;
-    &__item {
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        color: $white;
-        padding: 10px;
-        background-color: $grey-transparent;
-        border-radius: 5px;
-        font-weight: 500;
-        font-size: 1.2rem;
-        position: relative;
-        margin-bottom: 10px;
-        & .arrow {
-            width: 20px;
-        }
-    }
-}
-.updates-status {
-    display: flex;
-    margin-right: 30px;
-    opacity: 0.6;
-    &__item {
-        display: none;
-    }
-    & .active {
-        display: block;
-    }
-}
-.tickets {
-    flex-direction: column;
-    &-header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        position: relative;
-        &:after {
-            content: '';
-            width: 100%;
-            height: 1px;
-            display: block;
-            background-color: rgba(255, 255, 255, 0.4);
-            position: absolute;
-            bottom: -15px;
-        }
-    }
-    &-link{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $white;
-        margin-top: 30px;
-        & .arrow {
-            position: unset;
-        }
-    }
-}
-.newsletters-link {
-    color: $white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.top-menu__arrow {
-    position: absolute;
-    width: 20px;
-    right: 10px;
-    top: 10px;
-    transition: all ease 0.3s;
 }
 
 // Main Section
@@ -155,8 +78,9 @@ body {
     cursor: pointer;
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    align-self: stretch;
     order: 2;
     transition: all ease 0.2s;
     &:hover {
@@ -229,7 +153,7 @@ body {
         width: 200px;
     }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .subtitle, .breadcrumbs__title, .breadcrumbs-link {
         font-size: 1rem;
     }
@@ -241,10 +165,16 @@ body {
         margin-top: 20px;
         display: block;
         &__img {
-            width: 100%;
+            width: 70%;
+            margin: 0 auto;
             height: auto;
             margin-bottom: 20px;
         }
        
+    }
+}
+@media screen and (max-width: 576px) {
+    .gallery__img {
+        width: 100%;
     }
 }

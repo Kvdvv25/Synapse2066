@@ -1,0 +1,81 @@
+// Character cards hover effects
+const characterCards = document.querySelectorAll('.character-card');
+    characterCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.zIndex = '10';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.zIndex = '1';
+        });
+});
+
+// Character card click handler
+characterCards.forEach(card => {
+    card.addEventListener('click', function(e) {
+        if (!e.target.closest('.character-link')) {
+            const link = this.querySelector('.character-link');
+            if (link) {
+                window.location.href = link.getAttribute('href');
+            }
+        }
+    });
+});
+
+// Add loading animation for images
+const images = document.querySelectorAll('.character-image img');
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.style.opacity = '0';
+            setTimeout(() => {
+                this.style.transition = 'opacity 0.5s ease';
+                this.style.opacity = '1';
+            }, 100);
+        });
+});
+
+// Parallax effect on scroll (subtle)
+let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        characterCards.forEach((card, index) => {
+            const speed = 0.5 + (index * 0.1);
+            const yPos = -(scrollTop * speed / 100);
+            card.style.transform = `translateY(${yPos}px)`;
+        });
+        
+        lastScrollTop = scrollTop;
+});
+
+// Add intersection observer for fade-in animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, 100);
+            
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe character cards for animation
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.character-card');
+    cards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
+    });
+});

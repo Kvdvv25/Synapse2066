@@ -1,0 +1,476 @@
+@use 'styles.scss' as *;
+@use 'sidebar.scss';
+@use 'reset.scss';
+
+//Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    height: 100vh;
+    @include ClashDisplay;
+    background-color: $charcoal-black1;
+    color: $white;
+}
+.wrapper-update{
+    max-width: 15vw;
+    @media (max-width:992px)
+    {max-width: none;}
+}
+.header {
+    transition: all ease 0.3s;
+    width: 20vw;
+    background-image: url(../images/bg_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    box-sizing: border-box;
+    @include fixed;
+    top: 0;
+    left: 0;
+    @include overflow(hidden);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    @media (max-width: 1000px){
+        min-height: 30vh;
+        width: 100vw;
+        @include relative;
+    }
+}
+.logo {
+    margin-top: 20%;
+    display: block;
+    @include CyberPunk;
+    @include font-size(2.6rem);
+    @include font-weight(400);
+    color: $white;
+    padding-bottom: 10px;
+    margin: 0;
+                
+    @media (max-width: 992px) {
+        @include font-size($fs-h1-tablet);
+    }
+                
+    @media (max-width: 768px) {
+        @include font-size($fs-h1-mobile);
+    }
+}
+
+// Container Layout
+.container {
+    @include display(flex);
+    min-height: 100vh;
+    @include relative;
+    @media (max-width:1000px){
+        @include display(grid);
+        grid-template-columns: 2 1fr;
+    }
+    @media (max-width:800px){
+        @include display(flex);
+        @include flex-direction(column);
+    }
+}
+
+// Main Content
+.main-content {
+    overflow-y: auto;
+    width: 100%;
+    margin-left: 21vw;
+    padding: 3rem 2rem;
+    height: 100vh;
+
+    @media (max-width: 1000px){
+        margin-left: 0;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    @media (max-width: 768px) {
+        padding: 2rem 1.5rem;
+    }
+
+    .content-header {
+        margin-bottom: 1rem;
+
+        .section-title {
+            @include font-size($fs-h2);
+            @include font-weight(400);
+            color: $slate-blue;
+            @include relative;
+            @include display(flex);
+            @include align-items(center);
+            gap: 1rem;
+
+            &::after {
+                margin-top: 13px;
+                content: "";
+                flex: 1;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.349);
+            }
+        }
+    }
+
+    .team-section {
+        .team-heading {
+            @include font-size($fs-h1);
+            @include font-weight(400);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+            color: $white;
+
+            @media (max-width: 768px) {
+                @include font-size(2rem);
+            }
+
+            @media (max-width: 480px) {
+                @include font-size(1.8rem);
+            }
+        }
+
+        .team-grid {
+            @include display(grid);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+
+            // Tablet - 2 columns
+            @media (max-width: 1200px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+
+            // Mobile - Block
+            @media (max-width: 768px) {
+                @include display(block);
+            }
+        }
+    }
+}
+
+// Team Cards
+.team-card {
+    @include relative;
+    @include display(flex);
+    @include flex-direction(column);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    @media (max-width: 768px) {
+        margin-bottom: 2.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+
+        .team-image {
+            img {
+                transform: scale(1.05);
+            }
+        }
+
+        .team-link {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .team-image {
+        width: 100%;
+        height: 450px;
+        aspect-ratio: 4/5;
+        @include overflow(hidden);
+        border-radius: 8px;
+        margin-bottom: 1.2rem;
+        @include relative;
+
+        @media (max-width: 1200px) {
+            height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            height: 350px;
+        }
+
+        @media (max-width: 480px) {
+            height: 300px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .team-info {
+        @include ClashDisplay;
+        @include display(flex);
+        @include flex-direction(column);
+        gap: 0.5rem;
+        
+        .team-name {
+            @include display(flex);
+            @include align-items(center);
+            @include justify-content(space-between);
+            gap: 0.3rem;
+            @include font-size($fs-body);
+            color: $white;
+            @include ClashDisplay;
+            @include font-weight(400);
+            margin-bottom: 0.5rem;
+            
+            .team-link {
+                @include display(inline-flex);
+                @include align-items(center);
+                transition: transform 0.3s ease;
+                
+                img {
+                    width: 25px;
+                    height: 25px;
+                    opacity: 0.8;
+                }
+                
+                &:hover img {
+                    opacity: 1;
+                    transform: translateX(3px);
+                }
+            }
+        }
+        
+        .team-descr {
+            @include ClashDisplay;
+            @include font-weight(200);
+            padding-left: 1.2rem;
+            color: #efeded;
+            @include relative;
+            
+            &::before {
+                content: "";
+                @include absolute;
+                left: 0;
+                width: 1px;
+                height: 20px;
+                margin-left: 0.6rem;
+                background-color: rgba(255, 255, 255, 0.349);
+            }
+            
+            .team-Name {
+                @include font-size($fs-body);
+                @include font-weight(400);
+                color: $slate-blue;
+                @include Fredoka;
+            }
+        }
+    }
+}
+// General Enquiries Section
+.general-enquiries {
+    @include ClashDisplay;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.349);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+
+    @media (max-width: 768px) {
+        padding: 1.5rem 0;
+    }
+
+    .enquiries-wrapper {
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(space-between);
+        gap: 5rem;
+
+        @media (max-width: 1200px) {
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            @include flex-direction(column);
+            @include align-items(flex-start);
+            gap: 1.5rem;
+        }
+
+        .enquiries-label {
+            @include font-size($fs-body);
+            @include font-weight(400);
+            color: $slate-blue;
+            min-width: 200px;
+            flex-shrink: 0;
+
+            @media (max-width: 768px) {
+                min-width: auto;
+            }
+        }
+
+        .enquiries-links {
+            @include display(flex);
+            @include align-items(center);
+            gap: 10rem;
+            flex: 1;
+
+            @media (max-width: 1200px) {
+                gap: 5rem;
+            }
+
+            @media (max-width: 768px) {
+                @include flex-direction(column);
+                @include align-items(flex-start);
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .enquiry-link {
+                @include display(inline-flex);
+                @include align-items(center);
+                gap: 0.75rem;
+                color: $white;
+                text-decoration: none;
+                @include Fredoka;
+                @include font-size($fs-body);
+                @include font-weight(300);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: $white;
+                    gap: 1rem;
+
+                    i {
+                        transform: translate(2px, -2px);
+                    }
+                }
+
+                i {
+                    @include font-size(1rem);
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+// Explore Next Section
+.explore-next {
+    @include ClashDisplay;
+    @include font-weight(500);
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+    
+    @media (max-width: 768px) {
+        gap: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: -1rem;
+    }
+
+    .explore-text {
+        @include display(flex);
+        @include align-items(center);
+        @include font-size($fs-h2-tablet);
+        @include font-weight(400);
+        color: $slate-blue;
+        gap: 2rem;
+        flex: 1;
+        white-space: nowrap;
+        
+        @media (max-width: 768px) {
+            @include font-size(1rem);
+            gap: 1rem;
+        }
+
+        &::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .explore-link {
+        @include display(flex);
+        @include align-items(center);
+        gap: 1rem;
+        color: $white;
+        
+        @include font-size($fs-h2-tablet);
+        @include font-weight(400);
+        @include ClashDisplay;
+        transition: gap 0.3s ease;
+        flex-shrink: 0;
+        white-space: nowrap;
+        
+        @media (max-width: 768px) {
+            @include font-size(1rem);
+            gap: 0.7rem;
+        }
+
+        &:hover {
+            gap: 1.5rem;
+            
+            img {
+                transform: translateX(5px);
+            }
+        }
+        
+        img {
+            width: 25px;
+            height: auto;
+            transition: transform 0.3s ease;
+            
+            @media (max-width: 768px) {
+                width: 21px;
+                height: 21px;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: visible;
+        overflow-x: hidden;
+    }
+    .container {
+        @include flex-direction(column);
+        max-height: none;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 1.5rem;
+        position: relative;
+        height: auto;
+    }
+
+    .main-content {
+        .characters-section .characters-heading {
+            @include font-size(2rem);
+        }
+    }
+
+    .character-grid {
+        @include display(block);
+    }
+}
