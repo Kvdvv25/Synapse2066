@@ -18,13 +18,13 @@ const content = [
     title: "Cast",
     text: "Explore the film`s characters, who they are and which actors bring them to life",
     button: "Explore the Characters →",
-    link: "#2",
+    link: "cast.html",
   },
   {
     title: "Production Team",
     text: "Explore the individual profile introducing the members of our filming team",
     button: "Discover the team →",
-    link: "#3",
+    link: "productionteam.html",
   },
   {
     title: "Gallery",
@@ -33,10 +33,10 @@ const content = [
     link: "gallery.html",
   },
   {
-    title: "Contribute",
-    text: "Be part of our journey by supporting our Kickstarter and making this dream a reality",
-    button: "Contribute to Kickstarter →",
-    link: "#5",
+    title: "Company",
+    text: "Learn more about Synapse`s Company",
+    button: "Explore the Company →",
+    link: "company.html",
   },
 ];
 

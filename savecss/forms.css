@@ -18,8 +18,14 @@
   font-weight: 700;
 }
 @font-face {
+  font-family: "Monaco";
+  src: url("/fonts/Monaco/Monaco.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
   font-family: "CyberPunk";
-  src: url("/fonts/cyberpunk_style_light.woff2") format("woff");
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
 }
@@ -184,7 +190,7 @@ h2 {
   min-height: 20%;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  background-color: rgba(26, 26, 26, 0.347);
+  background-color: rgba(26, 26, 26, 0.048);
   border-radius: 20px;
   margin: 5vh 0;
 }
@@ -490,7 +496,7 @@ form {
   display: inline-block;
   width: 14px;
   height: 14px;
-  border: 2px solid rgba(100, 100, 100, 0.6431372549);
+  border: 2px solid rgba(46, 45, 45, 0.2156862745);
   border-top-color: #fff;
   border-radius: 50%;
   animation: spin 0.6s linear infinite;

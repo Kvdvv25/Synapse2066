@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-=======
->>>>>>> Danylo
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -64,35 +61,28 @@ a {
 }
 @font-face {
   font-family: "Clash Display";
-<<<<<<< HEAD
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
   font-family: "Clash Display";
-=======
->>>>>>> Danylo
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
-<<<<<<< HEAD
-=======
   font-family: "Monaco";
   src: url("/fonts/Monaco/Monaco.ttf");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
->>>>>>> Danylo
   font-family: "CyberPunk";
   src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
 }
-<<<<<<< HEAD
 .btn_primary {
   font-family: "ClashDisplay-Medium";
   border-radius: 30px;
@@ -155,7 +145,8 @@ a {
   .btn_icon {
     font-size: 0.95rem;
   }
-=======
+}
+
 body {
   background: #151515;
   height: 100vh;
@@ -181,7 +172,6 @@ body {
   font-family: "CyberPunk", sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
->>>>>>> Danylo
 }
 
 body {
@@ -193,42 +183,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   font-family: "Clash Display";
-}
-
-.navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-.navigation .logo {
-  display: inline-block;
-  margin: 3rem 4rem;
-  font-family: "CyberPunk", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #efeded;
-  transition: opacity 0.3s ease;
-}
-.navigation .logo:hover {
-  opacity: 0.8;
-}
-@media (max-width: 1024px) {
-  .navigation .logo {
-    margin: 2rem 3rem;
-  }
-}
-@media (max-width: 768px) {
-  .navigation .logo {
-    margin: 1.5rem 2rem;
-    font-size: 1.5rem;
-  }
-=======
-  font-family: "Clash Display", sans-serif;
->>>>>>> Danylo
 }
 
 .background-layer {

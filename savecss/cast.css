@@ -18,6 +18,12 @@
   font-weight: 700;
 }
 @font-face {
+  font-family: "Monaco";
+  src: url("/fonts/Monaco/Monaco.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
   font-family: "CyberPunk";
   src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
@@ -396,7 +402,7 @@ a {
     height: auto !important;
   }
   .show .bottom-menu__item:not(:last-child):after {
-    height: calc(100% + 10px) !important;
+    height: calc(100% + 5px) !important;
   }
   .header:has(> .show) {
     padding-bottom: 120px;

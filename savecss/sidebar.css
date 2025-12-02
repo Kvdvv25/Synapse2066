@@ -1,61 +1,4 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-=======
->>>>>>> Danylo
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
 @font-face {
   font-family: "Clash Display";
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
@@ -64,35 +7,28 @@ a {
 }
 @font-face {
   font-family: "Clash Display";
-<<<<<<< HEAD
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
   font-family: "Clash Display";
-=======
->>>>>>> Danylo
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
-<<<<<<< HEAD
-=======
   font-family: "Monaco";
   src: url("/fonts/Monaco/Monaco.ttf");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
->>>>>>> Danylo
   font-family: "CyberPunk";
   src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
 }
-<<<<<<< HEAD
 .btn_primary {
   font-family: "ClashDisplay-Medium";
   border-radius: 30px;
@@ -155,33 +91,6 @@ a {
   .btn_icon {
     font-size: 0.95rem;
   }
-=======
-body {
-  background: #151515;
-  height: 100vh;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
-.navigation {
-  padding: 20px 0;
-  position: fixed;
-  left: 30px;
-}
-
-.logo {
-  font-weight: 400;
-  color: #fff;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: "CyberPunk", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 500;
->>>>>>> Danylo
 }
 
 .top-menu {
@@ -196,11 +105,7 @@ body {
   justify-content: space-between;
   color: #fff;
   padding: 10px;
-<<<<<<< HEAD
   background-color: rgba(46, 45, 45, 0.2156862745);
-=======
-  background-color: rgba(100, 100, 100, 0.6431372549);
->>>>>>> Danylo
   border-radius: 5px;
   font-weight: 500;
   font-size: 1.2rem;
@@ -376,11 +281,7 @@ body {
     right: 30px;
     top: unset;
     transition: right 0.3s ease-in-out, transform 0.3s ease-in-out;
-<<<<<<< HEAD
     background-color: rgba(46, 45, 45, 0.2156862745);
-=======
-    background-color: rgba(100, 100, 100, 0.6431372549);
->>>>>>> Danylo
   }
   .bottom-menu__item {
     margin-left: 35px;
@@ -447,11 +348,7 @@ body {
     height: auto !important;
   }
   .show .bottom-menu__item:not(:last-child):after {
-<<<<<<< HEAD
     height: calc(100% + 5px) !important;
-=======
-    height: calc(100% + 10px) !important;
->>>>>>> Danylo
   }
   .header:has(> .show) {
     padding-bottom: 120px;

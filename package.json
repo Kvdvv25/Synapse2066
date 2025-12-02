@@ -1,22 +1,15 @@
 {
   "name": "synapse2066",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "",
   "homepage": "https://github.com/Kvdvv25/Synapse2066#readme",
   "bugs": {
     "url": "https://github.com/Kvdvv25/Synapse2066/issues"
-=======
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> Angela
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kvdvv25/Synapse2066.git"
   },
-<<<<<<< HEAD
   "license": "ISC",
   "author": "",
   "type": "commonjs",
@@ -24,35 +17,14 @@
   "scripts": {
     "test": "jest"
   },
-=======
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kvdvv25/Synapse2066/issues"
-  },
-  "homepage": "https://github.com/Kvdvv25/Synapse2066#readme",
-  "description": "",
->>>>>>> Angela
   "dependencies": {
     "@supabase/supabase-js": "^2.81.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "nodemailer": "^7.0.10"
-<<<<<<< HEAD
   },
   "devDependencies": {
     "jest": "^29.0.0"
   }
 }
-{
-  "name": "Synapse",
-  "version": "1.0.0",
-  "scripts": {
-    "test": "jest"
-  },
-  "devDependencies": {
-    "jest": "^29.0.0"
-=======
->>>>>>> Angela
-  }
-}
+
