@@ -101,6 +101,12 @@ $font-body: "Fredoka-Light";
     font-style: normal;
     font-weight: 700; 
 }
+@font-face {
+    font-family: 'Monaco';
+    src: url('/fonts/Monaco/Monaco.ttf');
+    font-style: normal;
+    font-weight: 500;
+}
 
 @mixin ClashDisplay {font-family: "Clash Display";}
 @mixin Fredoka {

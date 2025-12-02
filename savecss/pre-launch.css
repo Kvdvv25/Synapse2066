@@ -18,11 +18,21 @@
   font-weight: 700;
 }
 @font-face {
+<<<<<<< HEAD
+=======
+  font-family: "Monaco";
+  src: url("/fonts/Monaco/Monaco.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+>>>>>>> Danylo
   font-family: "CyberPunk";
   src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
 }
+<<<<<<< HEAD
 .btn_primary {
   font-family: "ClashDisplay-Medium";
   border-radius: 30px;
@@ -87,6 +97,8 @@
   }
 }
 
+=======
+>>>>>>> Danylo
 * {
   margin: 0;
   padding: 0;

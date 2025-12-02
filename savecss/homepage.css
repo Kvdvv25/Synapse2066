@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+=======
+>>>>>>> Danylo
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,22 +64,35 @@ a {
 }
 @font-face {
   font-family: "Clash Display";
+<<<<<<< HEAD
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
   font-family: "Clash Display";
+=======
+>>>>>>> Danylo
   src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
+<<<<<<< HEAD
+=======
+  font-family: "Monaco";
+  src: url("/fonts/Monaco/Monaco.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+>>>>>>> Danylo
   font-family: "CyberPunk";
   src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
   font-style: normal;
   font-weight: 300;
 }
+<<<<<<< HEAD
 .btn_primary {
   font-family: "ClashDisplay-Medium";
   border-radius: 30px;
@@ -139,6 +155,33 @@ a {
   .btn_icon {
     font-size: 0.95rem;
   }
+=======
+body {
+  background: #151515;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.navigation {
+  padding: 20px 0;
+  position: fixed;
+  left: 30px;
+}
+
+.logo {
+  font-weight: 400;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+>>>>>>> Danylo
 }
 
 body {
@@ -150,6 +193,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   font-family: "Clash Display";
 }
 
@@ -182,6 +226,9 @@ body {
     margin: 1.5rem 2rem;
     font-size: 1.5rem;
   }
+=======
+  font-family: "Clash Display", sans-serif;
+>>>>>>> Danylo
 }
 
 .background-layer {

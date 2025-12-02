@@ -1,0 +1,142 @@
+@use 'main';
+@use 'styles.scss' as *;
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include ClashDisplay;
+}
+.show {
+    display: block !important;
+}
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    &__wrapper {
+        display: flex;
+        min-height: 0;
+        flex-direction: column;
+        border-top: 2px solid $grey-transparent;
+        background-color:  $charcoal-black;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 80%;
+        padding: 50px 30px;
+    }
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 100px;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $grey-transparent;
+            position: absolute;
+            bottom: -50px;
+        }
+    }
+    &-close {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        & span {
+            font-size: 1.3rem;
+            color: $white-transparent;
+            margin-right: 20px;
+        }
+        & img {
+            width: 25px;
+        }
+    }
+    &__title {
+        font-size: 3rem;
+        color: $white;
+    }
+    &-gallery {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        min-height: 0;
+        flex: 1;
+        &__item {
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+        }
+        &__img {
+            flex: 1;
+            min-height: 0;
+            margin-bottom: 20px;
+        }
+        &__header {
+            color: $white;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            & span {
+                font-weight: 500;
+                margin-right: 10px;
+            }
+        }
+        &__text {
+            color: $white-transparent;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popup__wrapper {
+        padding: 30px;
+    }
+    .popup-header {
+        margin-bottom: 60px;
+        &::after {
+            bottom: -30px;
+        }
+    }
+    .popup__title {
+        font-size: 2rem;
+    } 
+    .popup-close span {
+        font-size: 1rem;
+    }
+    .popup-gallery {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: scroll;
+        &__item {
+            margin-bottom: 20px;
+            width: 70%;
+            text-align: center;
+        }
+    }
+    .popup-gallery__img, .popup-gallery__header {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .popup-gallery__item {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .popup__title {
+        font-size: 1.3rem;
+    } 
+    .popup-gallery__header {
+        font-size: 1rem;
+    }
+    .popup-gallery__text {
+        font-size: 0.8rem;
+    }
+}

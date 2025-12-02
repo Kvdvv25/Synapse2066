@@ -12,17 +12,13 @@ const memories = document.querySelector(".memories");
 
 // Open Terminal
 button.addEventListener("click", () => {
-  popup.classList.add("show");
-  terminal.classList.add("show"); // Show terminal
+  popup.classList.toggle("show");
   terminalInput.focus();
 });
 
 // Close Terminal
 const closeTerminal = document.querySelector(".terminal-header__close");
-closeTerminal.addEventListener("click", () => {
-  popup.classList.remove("show");
-  terminal.classList.remove("show"); // Hide terminal
-});
+closeTerminal.addEventListener("click", () => popup.classList.toggle("show"));
 
 terminalMain.addEventListener("click", () => terminalInput.focus());
 
@@ -84,15 +80,15 @@ terminalForm.addEventListener("submit", (e) => {
 
 // Open Memories Popup
 folder.addEventListener("click", () => {
-  terminal.classList.remove("show"); // Hide terminal
-  memories.classList.add("show"); // Show memories
+  terminal.style.display = "none";
+  memories.classList.add("show");
 });
 
 // Close Memories Popup
 const closeMemories = document.querySelector(".memories-header__close");
 closeMemories.addEventListener("click", () => {
-  terminal.classList.add("show"); // Show terminal again
-  memories.classList.remove("show"); // Hide memories
+  terminal.style.display = "block";
+  memories.classList.remove("show");
 });
 
 // Change active Memory Image
@@ -107,3 +103,8 @@ if (window.innerWidth > 768) {
   });
 }
 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    popup.classList.remove("show");
+  }
+});

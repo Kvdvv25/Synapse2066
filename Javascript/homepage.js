@@ -9,22 +9,22 @@ let isScrolling = false;
 
 const content = [
   {
-    title: "Synopsis",
+    title: "Synapsis",
     text: "Learn more about Synapse`s storyline",
     button: "Learn about the film →",
-    link: "synopsis-trailer.html",
+    link: "#1",
   },
   {
     title: "Cast",
     text: "Explore the film`s characters, who they are and which actors bring them to life",
     button: "Explore the Characters →",
-    link: "cast.html",
+    link: "#2",
   },
   {
     title: "Production Team",
     text: "Explore the individual profile introducing the members of our filming team",
     button: "Discover the team →",
-    link: "productionteam.html",
+    link: "#3",
   },
   {
     title: "Gallery",
@@ -33,9 +33,9 @@ const content = [
     link: "gallery.html",
   },
   {
-    title: "Company",
-    text: "Explore the Synapse Corporation - the tech giant behind the neural implants that promise to change everything for better with the chip",
-    button: "See the Company Details →",
+    title: "Contribute",
+    text: "Be part of our journey by supporting our Kickstarter and making this dream a reality",
+    button: "Contribute to Kickstarter →",
     link: "#5",
   },
 ];
@@ -81,7 +81,7 @@ const backgroundLayer = document.querySelector(".background-layer");
 function updateBackground(index) {
   backgroundLayer.classList.add("fade-out");
   setTimeout(() => {
-    backgroundLayer.style.backgroundImage = `url("images/bg_${index}.jpg")`;
+    backgroundLayer.style.backgroundImage = `url("images/bg_${index}.webp")`;
     backgroundLayer.classList.remove("fade-out");
   }, 300);
 }
@@ -162,3 +162,19 @@ window.addEventListener("resize", () => {
 // Init
 document.documentElement.style.setProperty("--radius", `${radius}px`);
 updatePositions();
+
+// For Test
+if (typeof window !== "undefined") {
+  window.updatePositions = updatePositions;
+  window.updateBackground = updateBackground;
+  window.rotateWheel = rotateWheel;
+  window.mobileMenu = mobileMenu;
+}
+if (typeof module !== "undefined") {
+  module.exports = {
+    updatePositions,
+    updateBackground,
+    rotateWheel,
+    mobileMenu,
+  };
+}
