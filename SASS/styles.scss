@@ -15,6 +15,7 @@ $white-transparent: #ffffff99;
 $grey-transparent : #2e2d2d37;
 $black-translucent: rgba(26, 26, 26, 0.048);
 
+
 //Shapes
 $line: 1px solid $slate-blue;
 @mixin dot{
@@ -48,27 +49,6 @@ $line: 1px solid $slate-blue;
 };
 @mixin z-index($value) {z-index: $value;}
 @mixin border-radius($value){border-radius: $value;}
-
-//Font-sizes desktop
-$fs-title: 4rem;
-$fs-h1: 2.6rem;
-$fs-h2: 1.5rem;
-$fs-body: 1.15rem;
-$fs-btn: 1rem;
-
-//Font-sizes tablet
-$fs-title-tablet: 3.5rem;
-$fs-h1-tablet: 1.8rem;
-$fs-h2-tablet: 1.3rem;
-$fs-body-tablet: 1.1rem;
-$fs-btn-tablet: 1rem;
-
-//Font-sizes mobile
-$fs-title-mobile: 2.5rem;
-$fs-h1-mobile: 1.6rem;
-$fs-h2-mobile: 1.15rem;
-$fs-body-mobile: 1rem;
-$fs-btn-mobile: 0.95rem;
 
 //Fonts
 $font-synapse: 'Cyberpunk';
@@ -107,6 +87,9 @@ $font-body: "Fredoka-Light";
     font-style: normal;
     font-weight: 500;
 }
+@mixin CyberPunk{font-family: "CyberPunk", sans-serif;}
+
+
 
 @mixin ClashDisplay {font-family: "Clash Display";}
 @mixin Fredoka {
@@ -123,8 +106,34 @@ $font-body: "Fredoka-Light";
 @mixin CyberPunk{font-family: "CyberPunk", sans-serif;}
 
 //Buttons
+@mixin font-weight($weight) {font-weight: $weight;}
+
+//Font-sizes desktop
+$fs-title: 4rem;
+$fs-h1: 2.6rem;
+$fs-h2: 1.5rem;
+$fs-body: 1.15rem;
+$fs-btn: 1rem;
+
+//Font-sizes tablet
+$fs-title-tablet: 3.5rem;
+$fs-h1-tablet: 1.8rem;
+$fs-h2-tablet: 1.3rem;
+$fs-body-tablet: 1.1rem;
+$fs-btn-tablet: 1rem;
+
+//Font-sizes mobile
+$fs-title-mobile: 2.5rem;
+$fs-h1-mobile: 1.6rem;
+$fs-h2-mobile: 1.15rem;
+$fs-body-mobile: 1rem;
+$fs-btn-mobile: 0.95rem;
+
+@mixin font-size($size) {font-size: $size;}
+
+//Buttons
 @mixin button-base{
-    font-family: 'ClashDisplay-Medium';
+    font-family: $font-title;
     border-radius: 30px;
     @include font-size($fs-btn);
     border: none;

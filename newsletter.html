@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Form</title>
+    <link rel="stylesheet" href="savecss/forms.css">
+</head>
+<body>
+    <main>
+        <div class="bgSection"></div>
+        <section class="contentSection">
+
+            <!-- BIG TITLE -->
+            <div class="filmTitle">
+                <h1>Synapse 2066</h1>
+                <div class="shapes">
+                    <div class="vl"></div>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="contentBox">
+
+                <!-- TITLE -->
+                <div class="titleBox">
+                    <p class="formTitle">Join our newsletter</p>
+                    <button class="btn_icon"><a href="/pre-launch.html"><img src="/images/icons/x-icon.svg" alt=""></a></button>
+                </div>
+
+                <!-- SMALL DESCRIPTION -->
+                <div class="infoBox">
+                    <div class="instructionTexts">
+                        <p>Receive updates, premium insights and behind-the-scenes footage! <br> Please provide your information:</p>
+                    </div>  
+                    
+                    <!-- FORM USED FOR PHP -->
+                    <form action="PHP/newsletter_registration.php" method="post" id="newsletter_form">
+                            <div class="nameBox formBox">
+                                <label class="labelUser" for="name">Name:</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="emailBox formBox">
+                                <label class="labelUser" for="email">Email:</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            
+                            <!-- VALIDATION BUTTON -->
+                            <button class="btn_primary" type="submit" id="subscribeBtn" name="subscribeBtn">Subscribe</button>
+                    </form>
+                </div>
+
+                </div>
+        </section>
+    </main>
+</body>
+</html>

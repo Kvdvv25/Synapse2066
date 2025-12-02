@@ -1,0 +1,211 @@
+@import 'styles';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $white;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+//header - side nav
+.header{
+    width: 50vw;
+    height: 100vh;
+    background-image: url(../images/bg_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: 992px) {
+        width: 30vw;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+// main
+.main{
+    width: 50vw;
+    height: 100vh;
+    padding: 30px 30px 20px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: $black;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @media (max-width: 992px) {
+        width: 70vw;
+    }
+
+    @media (max-width: 768px) {
+        width: 100vw;
+    }
+}
+
+
+// Subheading
+h2{
+    @include heading_style;
+    margin-right: 1vw;
+    color: $slate-blue;
+    font-size: $fs-h2;
+
+    @media (max-width: 768px) {
+        @include font-size($fs-h2-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-h2-mobile);
+    }
+}
+
+.subheading_box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.underlined{
+    border-bottom: $line;
+    width: 100%;
+    margin: 0.5vh
+}
+
+// Main heading
+h1{
+    @include heading_style;
+    font-size: $fs-h1;
+    margin: 4vh 0;
+
+    @media (max-width: 768px) {
+        @include font-size($fs-h1-tablet);
+    }
+    
+    @media (max-width: 480px) {
+        @include font-size($fs-h1-mobile);
+    }
+}
+
+// Carousel
+.carousel_box{
+    position: relative;
+    max-width: 1000px;
+    // margin: auto;
+    height: 60vh;
+    margin-bottom: 4vh;
+}
+
+.slides{
+    display: none;
+    height: 100%;
+}
+
+.carousel_img{
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+    position: absolute;
+}
+
+.numbertext{
+    font-size: $fs-body;
+    font-family: $font-body;
+    position: absolute;
+    margin: 1vw;
+}
+
+.slider_btns{
+    width: 100%;
+    // height: 3vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 48%;
+}
+
+.prev .icon{
+    rotate:90deg;
+}
+
+.next .icon{
+    rotate:-90deg;
+}
+
+//Image description
+.description_box{
+    font-family: $font-body;
+    margin-bottom: 5vh;
+    text-align: justify;
+    text-justify:inter-word;
+
+    p{
+        line-height: 1.5em;
+    }
+}
+
+
+
+// Related page section
+.related_pages_box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: auto;
+
+    h2{
+        color: $slate-blue;
+    }
+}
+
+.related_page{
+    display: flex;
+    align-items: center;
+}
+
+.related_page button{
+    display: inline-flex;
+    align-items: center; 
+    gap: 0.4em;
+    margin-left: 1vw;
+}
+
+.related_page .btn_secondary{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nextPage a{
+    display: flex;flex-direction: row;
+    align-items: center;
+}
+
+// arrows
+.icon{
+    width: 25px;
+    height: auto;
+    margin-left: 1vw;
+}

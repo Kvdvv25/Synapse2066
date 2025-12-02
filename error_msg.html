@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO -->
+        <meta
+        name="description"
+        content="Book your free tickets to the Synapse 2066 Film Premiere."
+      />
+      <meta
+        name="keywords"
+        content="Synapse 2066 reservations, sci-fi short film, student film, sci-fi aesthetics, short film, film premiere, ticket reservations, event, film students, London, university, free"
+      />
+      <meta property="og:title" content="Synapse 2066 — Film Premiere Reservations" />
+      <meta
+        property="og:description"
+        content="Reserve free tickets to attend our film premiere showcase."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://synapse2066.netlify.app/" />
+      <title>Synapse 2066</title>
+      <link rel="stylesheet" href="savecss/pre-launch.css">
+    <title>Reservation Error</title>
+    <link rel="stylesheet" href="../savecss/forms.css">
+</head>
+<body>
+    <main>
+        <div class="bgSection"></div>
+        <section class="contentSection">
+            <div class="filmTitle">
+                <h1>Synapse 2066</h1>
+                <div class="shapes">
+                    <div class="vl"></div>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <!-- TITLE -->
+            <div class="contentBox">
+                <div class="titleBox descrBox">
+                    <p class="formTitle">Reservation Error</p>
+                    <button class="btn_icon"><a href="/index.html"><img src="/images/icons/x-icon.svg" alt=""></a></button>
+                </div>
+  
+                <!-- MESSAGE TO THE USER -->
+                <div class="infoBox success_msg">
+                    <!-- <h2>Thank you!</h2> -->
+                    <p>Unfortunately, your reservation could not be processed at this time.</p>
+                    <p>Please go back to the reservation page and try again.</p>
+                    <div class="btn_box">
+                        <!-- <button type="button" class="btn_secondary" id="backToTickets" name="confirmBtn">More Tickets</button> -->
+                        <button type="button" class="btn_primary" id="toTickets"><a href="/tickets.html">Back to Ticket Reservations</a></button>
+                    </div>
+                </div>
+
+        </section>
+    </main>
+</body>
+<script>
+    let backToTickets = document.getElementById('toTickets');
+    backToTickets.addEventListener("click", function(){
+        window.location.href = '../tickets.html';
+    })
+</script>
+
+</html>
