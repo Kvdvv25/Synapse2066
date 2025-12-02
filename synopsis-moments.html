@@ -4,12 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highlighted Moment</title>
-    <link rel="stylesheet" href="savecss/moments.css">
+    <link rel="stylesheet" href="savecss/synopsis.css">
 </head>
 <body>
      <!-- Side navigation -->
-     <header class="header">
-    </header>
+     <header class="header moments_header">
+      <a href="homepage.html" class="logo">Synapse</a>
+    <div class="top-menu top-menu-moments">
+      <div class="updates top-menu__item">
+        <p class="updates__text">Updates</p>
+        <div class="updates-status">
+          <p class="updates-status__item updates-status__hide">Hide</p>
+          <p class="updates-status__item updates-status__show active">Show</p>
+        </div>
+        <img
+          src="images/arrow.png"
+          alt="Arrow Icon"
+          class="top-menu__arrow"
+        />
+      </div>
+      <div class="tickets top-menu__item">
+        <div class="tickets-header">
+          <p class="tickets-header__text">Film Premier</p>
+          <p class="tickets-header__date">12/12/25</p>
+        </div>
+        <a href="tickets.html" class="tickets-link">
+          <p class="tickets-link__text">Get Free Tickets</p>
+          <img src="images/arrow2.png" alt="Arrow Icon" class="arrow" />
+        </a>
+      </div>
+    </div>
+    <ul class="bottom-menu ">
+      <li class="bottom-menu__item active">
+        <a href="synopsis.html" class="bottom-menu__link active">Synopsis</a>
+        <ul class="bottom-submenu ">
+          <li class="bottom-submenu__item" >
+            <a href="synopsis-trailer.html" class="bottom-submenu__link">Trailer</a>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="synopsis-storyline.html" class="bottom-submenu__link active">Storyline</a>
+          </li>
+        </ul>
+      </li>
+      <li class="bottom-menu__item">
+        <a href="cast.html" class="bottom-menu__link">Cast</a>
+          <ul class="bottom-submenu">
+            <li class="bottom-submenu__item">
+              <a href="anna.html" class="bottom-submenu__link">Anna</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="leo.html" class="bottom-submenu__link">Leo</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="friend.html" class="bottom-submenu__link active">Harry</a>
+            </li>
+        </ul>
+      </li>
+      <li class="bottom-menu__item">
+        <a href="productionteam.html" class="bottom-menu__link">Production Team</a>
+        <ul class="bottom-submenu">
+          <li class="bottom-submenu__item">
+            <a href="director.html" class="bottom-submenu__link">Director</a>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="composer-joseph.html" class="bottom-submenu__link">Composer</a>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="jordan_cinematographer.html" class="bottom-submenu__link">Cinematographer</a>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="charlie-graffer.html" class="bottom-submenu__link">Graffer</a>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="davidigor-firstad.html" class="bottom-submenu__link">First AD</a>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="molly-secondad.html" class="bottom-submenu__link">Second AD</a>
+          </li>
+        </ul>
+      </li>
+      <li class="bottom-menu__item">
+        <a href="gallery.html" class="bottom-menu__link">Gallery</a>
+      </li>
+      <li class="bottom-menu__item">
+        <a href="company.html" class="bottom-menu__link">Company</a>
+      </li>
+    </ul>
+  </header>
     
     <!-- Right section / main section -->
     <section class="main">
@@ -62,7 +143,7 @@
         </div>
 
     </section>
-<script src="/Javascript/moments.js"></script>
-
+<script src="Javascript/moments.js"></script>
+<script src="Javascript/sidebar.js"></script>
 </body>
 </html>

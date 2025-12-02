@@ -9,6 +9,87 @@
 <body>
     <!-- Side navigation -->
     <header class="header">
+        <a href="index.html" class="logo">Synapse</a>
+      <div class="top-menu">
+        <div class="updates top-menu__item">
+          <p class="updates__text">Updates</p>
+          <div class="updates-status">
+            <p class="updates-status__item updates-status__hide">Hide</p>
+            <p class="updates-status__item updates-status__show active">Show</p>
+          </div>
+          <img
+            src="images/arrow.png"
+            alt="Arrow Icon"
+            class="top-menu__arrow"
+          />
+        </div>
+        <div class="tickets top-menu__item">
+          <div class="tickets-header">
+            <p class="tickets-header__text">Film Premier</p>
+            <p class="tickets-header__date">12/12/25</p>
+          </div>
+          <a href="tickets.html" class="tickets-link">
+            <p class="tickets-link__text">Get Free Tickets</p>
+            <img src="images/arrow2.png" alt="Arrow Icon" class="arrow" />
+          </a>
+        </div>
+      </div>
+      <ul class="bottom-menu">
+        <li class="bottom-menu__item active">
+          <a href="synopsis.html" class="bottom-menu__link ">Synopsis</a>
+          <ul class="bottom-submenu">
+            <li class="bottom-submenu__item " >
+              <a href="synopsis-trailer.html" class="bottom-submenu__link active">Watch Now</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="synopsis-storyline.html" class="bottom-submenu__link">Storyline</a>
+            </li>
+          </ul>
+        </li>
+        <li class="bottom-menu__item">
+          <a href="cast.html" class="bottom-menu__link">Cast</a>
+          <ul class="bottom-submenu">
+            <li class="bottom-submenu__item">
+              <a href="anna.html" class="bottom-submenu__link">Anna</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="leo.html" class="bottom-submenu__link">Leo</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="friend.html" class="bottom-submenu__link active">Harry</a>
+            </li>
+          </ul>
+        </li>
+        <li class="bottom-menu__item">
+          <a href="productionteam.html" class="bottom-menu__link">Production Team</a>
+          <ul class="bottom-submenu">
+            <li class="bottom-submenu__item">
+              <a href="director.html" class="bottom-submenu__link">Director</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="composer-joseph.html" class="bottom-submenu__link">Composer</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="jordan_cinematographer.html" class="bottom-submenu__link">Cinematographer</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="charlie-graffer.html" class="bottom-submenu__link">Graffer</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="davidigor-firstad.html" class="bottom-submenu__link">First AD</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="molly-secondad.html" class="bottom-submenu__link">Second AD</a>
+            </li>
+          </ul>
+        </li>
+        <li class="bottom-menu__item">
+          <a href="gallery.html" class="bottom-menu__link">Gallery</a>
+        </li>
+        <li class="bottom-menu__item">
+          <a href="company.html" class="bottom-menu__link">Company</a>
+        </li>
+      </ul>
     </header>
     
     <!-- Right section / main section -->
@@ -22,25 +103,49 @@
 
         <!-- Main heading -->
         <div class="title_box">
-            <h1>Trailer</h1> 
+            <h1>Watch Now</h1> 
+        </div>
+
+         <!-- Description -->
+         <div class="description_storyline">
+          <p>Watch the trailer below and immerse yourself in the world of Synapse by watching the full film through the link below.</p>
         </div>
 
         <!-- Trailer -->
-        <video class="trailer" poster="/images/trailer_vid_cover.png" controls><source src="/images/SYNAPSE_TRAILER.mp4" type="video/mp4"></video>
+        
+        <div class="watch_content">
+          <!-- first video -->
+          <div class="frist_vid content_side_video">
+            <div class="vid" id="vid_box1">
+              <video class="trailer" id="trailer_video" poster="/images/trailer_vid_cover.png" controls src="/images/SYNAPSE_TRAILER.mp4">
+                <!-- <source src="/images/SYNAPSE_TRAILER.mp4" type="video/mp4"> -->
+              </video>
+              <!-- <a class="trailer" href=""><img class="trailer" src="images/ceo_vid_cover.png" alt=""></a> -->
+            </div>
+            <div class="video_info">
+              <h2>Trailer</h2>
+              <p>2 min.</p>
+            </div>
+            <p class="content_description">Watch the trailer below and immerse yourself in the world of Synapse by watching the full film through the link below.</p>
+          </div>
 
-        <!-- Contact info -->
-        <div class="contact_info">
-                <p class="contact_type">Contact:</p>
-                <div class="info">
-                    <a href="" class="contact_links">
-                        <p>Instagram</p><img class="icon" src="/images/icons/arrow_topright.svg" alt="">
-                    </a>
-                    <a href="" class="contact_links">
-                        <p>email</p>
-                        <img class="icon" src="/images/icons/arrow_topright.svg" alt="">
-                    </a>
-                </div>
+          <!-- second video -->
+          <div class="content_side_video">
+            <div class="vid" id="vid_box2">
+              <a class="trailer" href="#"><img class="trailer" src="images/ceo_vid_cover.png" alt=""></a>
+              <img class="play_icon" id="play2" src="/images/icons/arrow_topright.svg" alt="">
+            </div>
+            <div class="video_info">
+              <h2>Full film</h2>
+              <p>10 min.</p>
+            </div>
+            <p class="content_description">Watch the trailer below and immerse yourself in the world of Synapse by watching the full film through the link below. </p>
+          </div>
         </div>
+        <!-- Trailer -->
+        <!-- <button class="btn_primary"><a href="">Watch the film</a></button> -->
+
+
 
         <!-- Related page section -->
         <div class="related_pages_box">
@@ -48,11 +153,10 @@
             <div class="underlined"></div>
             <div class="related_page">
                 <button class="btn_secondary nextPage" ><a href="/synopsis-storyline.html">The&nbspStoryline<img class="icon" src="/images/arrow2.png" alt=""></a></button>
-
             </div>
         </div>
     </section>
-
-<script src="/Javascript/synopsis.js"></script>
+<script src="Javascript/trailer.js"></script>
+<script src="Javascript/sidebar.js"></script>
 </body>
 </html>

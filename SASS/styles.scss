@@ -12,12 +12,13 @@ $red: #b21b1b;
 $black: #151515;
 $white: #fff;
 $white-transparent: #ffffff99;
-$grey-transparent : #2e2d2d37;
-$black-translucent: rgba(26, 26, 26, 0.048);
+$grey-transparent : #65656579;
+$line-color: #ffffff59;
 
+$black-translucent: rgba(26, 26, 26, 0.347);
 
 //Shapes
-$line: 1px solid $slate-blue;
+$line: 1px solid $line-color;
 @mixin dot{
     width: 1.2rem;
     height: 1.2rem;
@@ -57,7 +58,7 @@ $font-body: "Fredoka-Light";
 
 @mixin heading_style{
     @include ClashDisplay;
-    font-weight: 500;
+    font-weight: 400;
 }
 //TEXT
 @mixin text-align {text-align: center;}

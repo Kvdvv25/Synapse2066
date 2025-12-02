@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Synapse - Company</title>
-    <link rel="stylesheet" href="savecss/synopsis.css" />
+    <title>Synapse Corporation</title>
+    <link rel="stylesheet" href="savecss/company.css" />
   </head>
   <body>
+
     <!-- Side navigation -->
     <header class="header">
       <a href="homepage.html" class="logo">Synapse</a>
@@ -35,48 +36,51 @@
         </div>
       </div>
       <ul class="bottom-menu">
-        <li class="bottom-menu__item">
-          <a href="#" class="bottom-menu__link">Synopsis</a>
-          <ul class="bottom-submenu">
-            <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Trailer</a>
+        <li class="bottom-menu__item ">
+          <a href="synopsis.html" class="bottom-menu__link ">Synopsis</a>
+          <ul class="bottom-submenu ">
+            <li class="bottom-submenu__item" >
+              <a href="synopsis-trailer.html" class="bottom-submenu__link">Trailer</a>
             </li>
             <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Storyline</a>
-            </li>
-          </ul>
-        </li>
-        <li class="bottom-menu__item">
-          <a href="#" class="bottom-menu__link">Cast</a>
-          <ul class="bottom-submenu">
-            <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Leo</a>
-            </li>
-            <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Anna</a>
-            </li>
-            <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Friend</a>
+              <a href="synopsis-storyline.html" class="bottom-submenu__link active">Storyline</a>
             </li>
           </ul>
         </li>
         <li class="bottom-menu__item">
-          <a href="#" class="bottom-menu__link">Production Team</a>
+          <a href="cast.html" class="bottom-menu__link">Cast</a>
           <ul class="bottom-submenu">
             <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Director</a>
+              <a href="anna.html" class="bottom-submenu__link">Anna</a>
             </li>
             <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">DOP</a>
+              <a href="leo.html" class="bottom-submenu__link">Leo</a>
             </li>
             <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Light</a>
+              <a href="friend.html" class="bottom-submenu__link active">Harry</a>
+            </li>
+          </ul>
+        </li>
+        <li class="bottom-menu__item">
+          <a href="productionteam.html" class="bottom-menu__link">Production Team</a>
+          <ul class="bottom-submenu">
+            <li class="bottom-submenu__item">
+              <a href="director.html" class="bottom-submenu__link">Director</a>
             </li>
             <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Member</a>
+              <a href="composer-joseph.html" class="bottom-submenu__link">Composer</a>
             </li>
             <li class="bottom-submenu__item">
-              <a href="#" class="bottom-submenu__link">Team Member</a>
+              <a href="jordan_cinematographer.html" class="bottom-submenu__link">Cinematographer</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="charlie-graffer.html" class="bottom-submenu__link">Graffer</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="davidigor-firstad.html" class="bottom-submenu__link">First AD</a>
+            </li>
+            <li class="bottom-submenu__item">
+              <a href="molly-secondad.html" class="bottom-submenu__link">Second AD</a>
             </li>
           </ul>
         </li>
@@ -84,33 +88,227 @@
           <a href="gallery.html" class="bottom-menu__link">Gallery</a>
         </li>
         <li class="bottom-menu__item active">
-          <a href="company.html" class="bottom-menu__link">Company</a>
+          <a href="company.html" class="bottom-menu__link">Corporation</a>
         </li>
       </ul>
     </header>
 
-    <!-- Right section / main section -->
+    <!-- main section -->
     <section class="main">
+      
       <!-- Subheading -->
       <div class="subheading_box">
-        <h2 class="subheading">The&nbspCompany</h2>
+        <h2 class="subheading">The&nbspCorporation</h2>
         <div class="underlined"></div>
       </div>
 
       <!-- Main heading -->
       <div class="title_box">
-        <h1>Discover The World of Synapse</h1>
+        <h1>Synapse Corporation</h1>
       </div>
 
-      <!-- Description -->
-      <div class="video_description">
-        <p>A message straight from Synapse's CEO</p>
-      </div>
+      <!-- Company content -->
+      <!-- CEO message-->  
+       <div class="section">
+        <div class="info_title">
+          <span class="dot"></span>
+          <h2>Message From The CEO</h2>
+          <img src="/images/arrow.png" class="icon drop_down_info" alt="">
+        </div>
+          <div class="info_columns activeContent">
+            <div class="left">
+              <video id="trailer_video" poster="/images/trailer_vid_cover.png" controls src="/images/SYNAPSE_TRAILER.mp4"></video>
+            </div>
+            <div class="right">
+                <h2>"Connecting Minds. <br> Empowering Worlds."</h2>
+            </div>
+          </div>
+       </div>
 
-      <!-- Trailer -->
-      <video class="trailer" controls poster="/images/ceo_vid_cover.png">
-        <source src="/images/ceo_speech.mov" type="video/mp4" />
-      </video>
+       <!-- About us -->
+       <div class="section">
+        <div class="info_title">
+            <span class="dot"></span>
+            <h2>About Us</h2>
+            <img src="/images/arrow.png" class="icon drop_down_info" alt="">
+          </div>
+            <div class="info_columns">
+                <div class="left">
+                    <div class="p_title">
+                        <h2>Who&nbspWe&nbspAre</h2>
+                        <div class="underlined"></div>
+                    </div>
+                    <p>
+                        SYNAPSE Corporation (commonly stylised as SYNAPSE) is a multinational neurotechnology
+                        and biotechnology conglomerate founded in 2041. The company is best known for developing
+                        the Neuro-Link series of neural implants and for its extensive influence in cognitive computing,
+                        data integration, and neural-assistive medical systems throughout the mid-21st century.
+                        SYNAPSE is headquartered in Megazone, with operations in over 80 countries as of 2066. It is
+                        considered a “Chaebol” a family controlled conglomerate.
+                      </p>    
+                </div>
+                <!-- company image and info -->
+                <div class="right">
+                    <img class="company_img" src="images/corporation.jpg" alt="">
+                    <div class="info_box">
+                      <p class="info_type info">Founded:</p>
+                      <p class="info_value info">2041</p>
+                      <p class="info_type info">Founder:</p>
+                      <p class="info_value info">XX XXXXX</p>
+                      <p class="info_type info">Inustry:</p>
+                      <p class="info_value info">Biotechnology</p>
+                    </div>
+                </div>
+              </div>
+       </div>
+
+       <!-- History -->
+       <div class="section">
+        <div class="info_title">
+            <span class="dot"></span>
+            <h2>History</h2>
+            <img src="/images/arrow.png" class="icon drop_down_info" alt="">
+          </div>
+        <div class="info_columns">
+            <div class="left">
+                <div class="p_title">
+                    <h2>2041 - 2050:</h2>
+                    <div class="underlined"></div>
+                    <h2>Founding & <br>Early Development</h2>
+                </div>
+                <p class="p_content">
+                    SYNAPSE began as a medical research startup focused on software designed to assist patients
+                    with degenerative neurological disorders. Early prototypes of what would later become the
+                    Neuro-Link Interface were initially created as external devices.
+                    By 2047, SYNAPSE released the Neuro-Link V1, the first commercially available implanted
+                    neural interface for cognitive enhancement and pain regulation.
+                </p>
+                <div class="p_title">
+                    <h2>2050 - 2066:</h2><br>
+                    <div class="underlined"></div>
+                    <h2>Global Expansion</h2>
+                </div>
+                <p class="p_content">
+                    Through a series of mergers and acquisitions, SYNAPSE expanded rapidly into military
+                    contracting, healthcare infrastructure, and data-storage services.
+                    The company’s Neuro-Link V3 and V4 models became widely adopted for both medical and
+                    civilian use.
+                    During this period, several activist groups and independent researchers raised concerns
+                    regarding data privacy, user tracking, and the corporation’s growing political influence.
+                </p>
+                <div class="p_title">
+                  <h2>2060 - 2066:</h2>
+                  <div class="underlined"></div>
+                  <h2>Controversies & Allegations</h2>
+                </div>
+                <p >
+                    In 2063, leaked files allegedly showing unauthorized human trials related to “neural
+                    synchronization experiments” appeared online. SYNAPSE denied the authenticity of the
+                    materials, stating they were fabricated by former employees.
+                    In 2064, two SYNAPSE research contractors, Leo and Anna reportedly attempted to
+                    whistleblow internal research data. Both individuals disappeared shortly after the incident.
+                    While SYNAPSE never publicly acknowledged involvement, several independent sources allege
+                    that the corporation conducted a covert retrieval operation targeting the pair.
+                    Anna was believed to have been abducted following audio logs recovered by underground
+                    networks. Some speculate she is being held inside a SYNAPSE-controlled neural simulation
+                    environment, though this has never been confirmed.
+                    Leo remains unaccounted for and is the subject of an ongoing international warrant for
+                    unauthorized breaches into SYNAPSE server infrastructure. Multiple intrusion attempts traced
+                    to his identifier have been recorded since 2065.
+                </p>
+            </div>
+        </div>
+       </div>
+
+       <!-- Technology -->
+       <div class="section">
+        <div class="info_title" data-column="column1">
+            <span class="dot"></span>
+            <h2>Technology</h2>
+            <img src="/images/arrow.png" class="icon drop_down_info" alt="">
+        </div>
+        <div class="info_columns" id="column1">
+            <div class="left">
+                <div class="p_title">
+                    <h2>Neurolink&nbspInterface</h2>
+                    <div class="underlined"></div>
+                </div>
+                <p>
+                    The Neuro-Link line is SYNAPSE’s flagship neural implant technology. It provides:
+                </p>
+                <ul>
+                    <li class="list_style">sensory regulation</li>
+                    <li class="list_style">pain suppression</li>
+                    <li class="list_style">cognitive support</li>
+                    <li class="list_style">neural-to-network communication</li>
+                </ul>
+                <p class="p_content">Later generations included experimental features related to cross-neural data transmission,
+                   though SYNAPSE denies pursuing mind-to-mind synchronization research.
+                </p>
+
+                <div class="p_title">
+                    <h2>Neural&nbspContainment&nbspSimulation</h2>
+                    <div class="underlined"></div>
+                    <h2>(Unverified)</h2>
+                </div>
+                <p class="p_content">
+                    Some whistleblower accounts reference a closed neural ecosystem allegedly used to preserve
+                    or stabilize compromised Neuro-Link users.
+                    SYNAPSE maintains that no such platform exists.
+                  </p>
+            </div>
+            <div class="right">
+              <img class="company_img" src="images/brains.jpg" alt="">
+              <div class="info_box">
+                <p class="">Neuro-Spectra scan visualizing real-time neural pathways through Neuro-Link.</p>
+              </div>
+            </div>
+        </div>
+       </div>
+
+       <!-- Public reception section -->
+       <div class="section">
+        <div class="info_title" data-column="column2">
+          <div class="dot_title">
+            <span class="dot"></span>
+            <h2>Public Reception</h2>
+          </div>
+          <img src="/images/arrow.png" class="icon drop_down_info" alt="">
+        </div>
+        <div class="info_columns" id="column2">
+            <div class="left">
+                <p>
+                    SYNAPSE holds a dominant market position and maintains high approval ratings in medical and
+                    commercial sectors. <br>
+                    However, the corporation is a frequent subject of criticism regarding:
+                    <ul>
+                        <li class="list_style">alleged user surveillance</li>
+                        <li class="list_style">aggressive corporate security tactics</li>
+                        <li class="list_style">potential human rights violations</li>
+                        <li class="list_style">lack of transparency in neural-research programs</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+       </div>
+
+       <!-- Popular culture -->
+        <div class="section">
+            <div class="info_title" data-column="column3">
+                <span class="dot"></span>
+                <h2>In Popular Culture</h2>
+                <img src="/images/arrow.png" class="icon drop_down_info" alt="">
+            </div>
+            <div class="info_columns" id="column3">
+                <div class="left">
+                    <p class="p_content">
+                        SYNAPSE is often depicted in media as a symbol of technological overreach and government-
+                        corporate entanglement. The unexplained disappearance of Leo and Anna has become a
+                        recurring subject of documentaries, conspiracy forums, and investigative journalism.
+                    </p>
+                </div>
+            </div>
+        </div>
 
       <!-- Related page section -->
       <div class="related_pages_box">
@@ -118,16 +316,16 @@
         <div class="underlined"></div>
         <div class="related_page">
           <button class="btn_secondary nextPage">
-            <a href="/synopsis-storyline.html"
-              >The&nbspStoryline<img
+            <a href="/synopsis-storyline.html">The&nbspStoryline
+              <img
                 class="icon"
                 src="/images/arrow2.png"
-                alt=""
-            /></a>
+                alt=""/></a>
           </button>
         </div>
       </div>
     </section>
     <script src="/Javascript/sidebar.js"></script>
+    <script src="Javascript/company.js"></script>
   </body>
 </html>

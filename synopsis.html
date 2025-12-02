@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synopsis - Storyline</title>
+    <title>Synopsis</title>
     <link rel="stylesheet" href="savecss/synopsis.css">
 </head>
 <body>
@@ -34,15 +34,15 @@
           </a>
         </div>
       </div>
-      <ul class="bottom-menu">
+      <ul class="bottom-menu ">
         <li class="bottom-menu__item active">
-          <a href="synopsis.html" class="bottom-menu__link">Synopsis</a>
-          <ul class="bottom-submenu">
-            <li class="bottom-submenu__item">
+          <a href="synopsis.html" class="bottom-menu__link ">Synopsis</a>
+          <ul class="bottom-submenu ">
+            <li class="bottom-submenu__item" >
               <a href="synopsis-trailer.html" class="bottom-submenu__link">Watch Now</a>
             </li>
             <li class="bottom-submenu__item">
-              <a href="synopsis-storyline.html" class="bottom-submenu__link active">Storyline</a>
+              <a href="synopsis-storyline.html" class="bottom-submenu__link">Storyline</a>
             </li>
           </ul>
         </li>
@@ -103,69 +103,79 @@
 
         <!-- Main heading -->
         <div class="title_box">
-            <h1>The Storyline</h1> 
+            <h1 class="synopsis_title">Synapse 2066</h1> 
         </div>
 
-        <!-- Description -->
-        <div class="description_storyline">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-
-        <!-- Higlighted Moments -->
-        <div class="moments_box">
-            <h2>Highlighted Moments</h2>
-
-            <!-- Moments -->
-            <div class="all_moments">
-                <div class="moment1 moment">
-                    <a href="/synopsis-moments.html?moment=1" class="moment_link">Title1<img class="icon" src="/images/arrow2.png" alt=""></a>
-                    <div class="img_box" id="box1">
-                        <img class="moment_img" src="/images/bg_4.jpg" alt="">
-                        <div class="shapes">
-                            <span class="vl"></span>
-                            <span class="dot"></span>
+        <!-- Body -->
+        <div class="content">
+            <div class="content_side poster">
+                <img class="poster_img" src="images/poster_light.jpeg" alt="">
+            </div>
+            <div class="content_side film_info">
+                <div class="movie_facts">
+                    <div class="film_info_box ">
+                        <p class="info_type ">Year:</p>
+                        <p>2025</p>
+                    </div>
+                    <div class="film_info_box ">
+                        <p class="info_type ">Runtime:</p>
+                        <p>10 min.</p>
+                    </div>
+                    <div class="film_info_box ">
+                      <p class="info_type ">Location:</p>
+                      <p>London, UK</p>
+                  </div>
+                </div>
+                <div class="movie_facts">
+                    <div class="film_info_box ">
+                        <p class="info_type ">Genres:</p>
+                        <div class="genres">
+                            <p class="genre_type">Sci-Fi</p>
+                            <p class="genre_type">Drama</p>
                         </div>
                     </div>
                 </div>
-                <div class="moment2 moment">
-                    <a href="/synopsis-moments.html?moment=2" class="moment_link">Title2<img class="icon" src="/images/arrow2.png" alt=""></a>
-                    <div class="img_box" id="box2">
-                        <img class="moment_img" src="/images/bg_4.jpg" alt="">
-                        <div class="shapes">
-                            <span class="vl"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>                
-                </div>
-                <div class="moment3 moment">
-                    <a href="/synopsis-moments.html?moment=3" class="moment_link">Title3<img class="icon" src="/images/arrow2.png" alt=""></a>
-                    <div class="img_box" id="box3">
-                        <img class="moment_img" src="/images/bg_4.jpg" alt="">
-                        <div class="shapes">
-                            <span class="vl"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>                
-                </div>
-                <div class="horizontal_box">
-                    <span class="hl"></span>
-    
-                </div>
-            </div>
 
+                <div class="movie_facts">
+                    <p class="info_type ">Overview:</p>
+                    <!-- Synopsis Text -->
+                    <p id="overview">Desperate to save his sick daughter, working-class Ben Richards is convinced by The Running Man's charming but ruthless producer to enter the deadly competition game as a last resort. But Ben's defiance, instincts, and grit turn him into an unexpected fan favorite - and a threat to the entire system. As ratings skyrocket, so does the danger, and Ben must outwit not just the Hunters, but a nation addicted to watching him fall.</p>
+
+                </div>
+
+
+                 <!-- Contact info -->
+                <div class="contact_info">
+                    <p class="contact_type">Contact:</p>
+                    <div class="info">
+
+                        <a href="" class="contact_links">
+                            <p>Instagram</p><img class="icon" src="/images/icons/arrow_topright.svg" alt="">
+                        </a>
+                        <a href="" class="contact_links">
+                            <p>email</p>
+                            <img class="icon" src="/images/icons/arrow_topright.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    
+
+
+
         <!-- Related page section -->
         <div class="related_pages_box">
-            <h2>Explore</h2>
+            <h2>Next</h2>
             <div class="underlined"></div>
             <div class="related_page">
-                <button class="btn_secondary nextPage"><a href="/synopsis-moments.html?moment=1">Moment&nbsp1<img class="icon" src="/images/arrow2.png" alt="arrow pointing right"></a></button>
+                <button class="btn_secondary nextPage" ><a href="/synopsis-trailer.html">Trailer<img class="icon" src="/images/arrow2.png" alt=""></a></button>
+
             </div>
         </div>
     </section>
 
-<script src="/Javascript/storyline.js"></script>
+<!-- <script src="/Javascript/synopsis.js"></script> -->
 <script src="Javascript/sidebar.js"></script>
 </body>
 </html>

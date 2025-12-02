@@ -12,9 +12,9 @@
     width: 100vw;
     height: 100vh;
     background-color: rgb(47, 47, 47);
-    background: url('../images/background_comingsoon.jpg') center;
+    background: url('../images/bg7.jpg') center;
     background-size: cover;
-    filter: brightness(50%);
+    // filter: brightness(50%);
     position: relative;
 }
 
@@ -26,7 +26,6 @@ section{
     flex-direction: column;
     position: absolute;
     top: 0;
-    
 }
 
 //Synapse title
