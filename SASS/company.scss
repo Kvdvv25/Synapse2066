@@ -1,0 +1,499 @@
+@use 'main.scss';
+@use 'styles.scss' as *;
+@use 'sidebar.scss';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+// Main - the same for all synopsis pages
+body {
+    display: flex;
+    height: 100dvh;
+}
+
+//Header - Danylo's part
+    .header {
+        width: 20%;
+        transition: all ease 0.3s;
+        background-image: url(../images/bg_3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 20px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: block;
+        font-family: $font-synapse;
+        font-size: $fs-h1;
+
+        @media (max-width: 768px) {
+            @include font-size($fs-h1-tablet);
+        }
+        
+        @media (max-width: 480px) {
+            @include font-size($fs-h1-mobile);
+        }
+    }
+
+    // Top Menu
+    .top-menu {
+        p{
+            @include ClashDisplay;
+            font-weight: 400;
+        }
+        overflow: hidden;
+       
+        // height: 18vh;
+        transition: all ease 0.3s;
+        &__item {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            color: $white;
+            padding: 0 10px;
+            background-color: $grey-transparent;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 1.2rem;
+            position: relative;
+            margin-bottom: 10px;
+            & .arrow {
+                width: 20px;
+            }
+        }
+    }
+
+    .updates-status {
+        display: flex;
+        margin-right: 30px;
+        opacity: 0.6;
+        &__item {
+            display: none;
+        }
+        & .active {
+            display: block;
+        }
+    }
+    .tickets {
+        flex-direction: column;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            &:after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                display: block;
+                background-color: rgba(255, 255, 255, 0.4);
+                position: absolute;
+                bottom: -1px;
+            }
+        }
+        &-link{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $white;
+            // margin-top: 20px;
+            & .arrow {
+                position: unset;
+            }
+        }
+    }
+    .newsletters-link {
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .top-menu__arrow {
+        position: absolute;
+        width: 20px;
+        right: 10px;
+        top: 10px;
+        transition: all ease 0.3s;
+    }
+
+// Main Section - the same for all pages
+    .main {
+        padding: 30px 30px 20px 30px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        background-color: $black;
+        overflow-y: scroll;
+
+        @media (max-width: 992px) {
+            padding: 20px;
+            overflow-y: visible;
+        }
+    }
+
+    // Subheading
+    h2{
+        @include heading_style;
+        margin-right: 1vw;
+        color: $slate-blue;
+        font-size: $fs-h2;
+
+        @media (max-width: 768px) {
+            @include font-size($fs-h2-tablet);
+        }
+        
+        @media (max-width: 480px) {
+            font-size: 1rem;
+        }
+    }
+
+    .subheading_box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .underlined{
+        border-bottom: $line;
+        width: 100%;
+        margin: 0.5vh
+    }
+
+    // Main heading
+    h1{
+        @include heading_style;
+        font-size: $fs-h1;
+        margin: 4vh 0;
+        border-bottom: $line;
+        padding-bottom: 4vh;
+
+        @media (max-width: 768px) {
+            @include font-size($fs-h1-tablet);
+        }
+        
+        @media (max-width: 480px) {
+            @include font-size($fs-h1-mobile);
+        }
+    }
+
+    // Contact info
+    p{
+        @include Fredoka;
+        line-height: 2;
+        font-size: $fs-body;
+        text-align: justify;
+
+        @media (max-width: 768px) {
+            @include font-size($fs-body-tablet);
+        }
+        
+        @media (max-width: 480px) {
+            @include font-size($fs-body-mobile);
+        }
+    }
+
+// Related page section
+     .related_pages_box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: auto;
+        padding-bottom: 1vh;
+        
+        h2{
+            color: $slate-blue;
+            @include heading_style;
+            font-size: $fs-h2-tablet;
+
+            @media (max-width: 768px) {
+                @include font-size($fs-h2-tablet);
+            }
+            
+            @media (max-width: 480px) {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            padding-bottom: 3vh;
+        }
+        
+    }
+
+    .related_page{
+        display: flex;
+        align-items: center;
+    }
+
+    .related_page button{
+        display: inline-flex;
+        align-items: center; 
+        gap: 0.4em;
+        margin-left: 1vw;
+        @include heading_style;
+        font-size: $fs-h2-tablet;
+
+        @media (max-width: 768px) {
+            @include font-size($fs-h2-tablet);
+        }
+        
+        @media (max-width: 480px) {
+            font-size: 1rem;
+        }
+    }
+
+    .related_page .btn_secondary{
+        padding: 0;
+    }
+
+    .nextPage a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+// arrows
+    .icon{
+        width: 25px;
+        height: auto;
+        margin-left: 1vw;
+
+        @media (max-width: 768px) {
+            width: 21px;
+            margin-left: 2vw;
+        }
+    }
+
+    .drop_down_info{
+        display: none;
+
+        @media (max-width: 458px) {
+            display: flex;
+        }
+    }
+
+    // Header media query - responsiveness
+    @media screen and (max-width: 992px) {
+        body {
+            flex-direction: column;
+        }
+        .header {
+            width: 100%;
+            height: auto;
+
+        }
+        .top-menu {
+            width: 200px;
+        }
+    }
+
+// info sections
+    .info_title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: space-between;
+        margin-top: 2vh;
+        
+        h2{
+            color: $white;
+            @media (max-width: 768px) {
+                font-size: $fs-h2-tablet;
+            }
+    
+            @media (max-width: 480px) {
+                font-size: $fs-h2-mobile;
+            }
+        
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 2vh;
+        }
+
+        @media (max-width: 458px) {
+            padding-bottom: 2vh;
+            border-bottom: 1px solid white;
+        }
+
+    }
+
+    .dot_title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dot{
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: $slate-blue;
+        border-radius: 50%; 
+        margin-right: 1vw;
+
+        @media (max-width: 1024px) {
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            margin-right: 2vw;
+        }
+    }
+
+    .hl{
+        border-bottom: 0;
+
+        @media (max-width: 458px) {
+            width: 100%;
+            border-bottom: 1px solid $white;
+            margin-bottom: 2vh;
+        }
+        
+    }
+
+    .info_columns{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 3vh;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 458px) {
+            display: none;
+        }
+    }
+
+    .activeContent{
+        display: flex;
+    }
+
+    .left{
+        width: 47vw;
+        margin: 2vw;
+
+        @media (max-width: 1024px) {
+            margin-right: 4vw;
+            width: 55vw;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    video{
+        width: 100%;
+    }
+
+    .right{
+        width: 30%;
+        margin-top: 2vw;
+        background-color: rgba(77, 77, 77, 0.449);
+        border-radius: 10px;
+        padding: 1.5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2{color: $white;
+            font-size: 2.2em;
+            line-height: 1.4;
+            margin-bottom: 1.5vh;
+
+            @media (max-width: 768px) {
+                font-size: $fs-h2;
+            }
+
+            @media (max-width: 480px) {
+                font-size: $fs-h2-tablet;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            width: 40%;
+            padding: 1.5vw;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media (max-width: 458px) {
+            padding: 5vw;
+        }
+    }
+
+    .p_title{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 1.5vh;
+
+        h2{
+            font-size: $fs-body;
+            line-height: 1.5;
+
+            @media (max-width: 768px) {
+                font-size: $fs-h2-tablet;
+            }
+
+            @media (max-width: 450px) {
+                font-size: $fs-h2-mobile;
+            }
+        }
+    } 
+
+    .p_content{
+        margin-bottom: 4vh;
+    }
+
+    .company_img{
+        width: 100%;
+    }
+
+    .list_style{
+        list-style: disc;
+        list-style-position: inside;
+        @include Fredoka;
+        font-size: $fs-body;
+        line-height: 1.7;
+        margin-left: 1vw;
+    }
+
+    .info_box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 2vh;
+    }
+
+    .info{
+        width: 50%;
+        margin-top: 0.5vh;
+    }
+
+    .info_type{
+        @include ClashDisplay;
+        @include heading_style;
+        color: $slate-blue;
+    }

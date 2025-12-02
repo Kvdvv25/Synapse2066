@@ -32,7 +32,7 @@
   cursor: pointer;
   color: white;
   padding: 1vh 5vh;
-  border: 1px solid #b3bfbf;
+  border: 1px solid rgba(255, 255, 255, 0.3490196078);
   margin: 2vh auto;
 }
 @media (max-width: 768px) {
@@ -98,9 +98,8 @@
   width: 100vw;
   height: 100vh;
   background-color: rgb(47, 47, 47);
-  background: url("../images/background_comingsoon.jpg") center;
+  background: url("../images/bg7.jpg") center;
   background-size: cover;
-  filter: brightness(50%);
   position: relative;
 }
 
@@ -134,7 +133,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-family: "Clash Display";
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1vh;
 }
 @media (max-width: 768px) {
@@ -156,7 +155,7 @@ h2 {
 }
 
 .vl {
-  border-left: 1px solid #b3bfbf;
+  border-left: 1px solid rgba(255, 255, 255, 0.3490196078);
   height: 10vh;
   position: absolute;
 }
@@ -207,7 +206,7 @@ h2 {
 .formTitle {
   font-size: 1.5rem;
   font-family: "Clash Display";
-  font-weight: 500;
+  font-weight: 400;
 }
 @media (max-width: 768px) {
   .formTitle {
@@ -225,7 +224,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #b3bfbf;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
 }
 @media (max-width: 768px) {
   .titleBox {
@@ -242,7 +241,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #b3bfbf;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
 }
 
 @media (max-width: 768px) {
@@ -259,12 +258,12 @@ h2 {
 @media (max-width: 768px) {
   #location {
     text-align: right;
-    border-bottom: 1px solid #b3bfbf;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
   }
 }
 @media (max-width: 480px) {
   #location {
-    border-bottom: 1px solid #b3bfbf;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
     padding: 2.5vw 4vw;
   }
 }
@@ -282,7 +281,7 @@ h2 {
 }
 
 #date {
-  border-left: 1px solid #b3bfbf;
+  border-left: 1px solid rgba(255, 255, 255, 0.3490196078);
 }
 @media (max-width: 768px) {
   #date {
@@ -417,8 +416,8 @@ form {
 
 .formBox {
   width: 100%;
-  border-left: 1px solid #b3bfbf;
-  border-right: 1px solid #b3bfbf;
+  border-left: 1px solid rgba(255, 255, 255, 0.3490196078);
+  border-right: 1px solid rgba(255, 255, 255, 0.3490196078);
   padding: 1vh 2vh;
   display: flex;
   flex-direction: row;
@@ -438,19 +437,19 @@ form {
   width: 100%;
   margin-top: 2vh;
   border-radius: 10px 10px 0 0;
-  border-top: 1px solid #b3bfbf;
+  border-top: 1px solid rgba(255, 255, 255, 0.3490196078);
 }
 
 .emailBox {
-  border-bottom: 1px solid #b3bfbf;
-  border-top: 1px solid #b3bfbf;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
+  border-top: 1px solid rgba(255, 255, 255, 0.3490196078);
   border-radius: 0 0 10px 10px;
 }
 
 .ticketBox {
   margin-top: 2vh;
   border-radius: 10px;
-  border: 1px solid #b3bfbf;
+  border: 1px solid rgba(255, 255, 255, 0.3490196078);
   display: flex;
   justify-content: space-between;
 }
@@ -490,7 +489,7 @@ form {
   display: inline-block;
   width: 14px;
   height: 14px;
-  border: 2px solid rgba(100, 100, 100, 0.6431372549);
+  border: 2px solid rgba(101, 101, 101, 0.4745098039);
   border-top-color: #fff;
   border-radius: 50%;
   animation: spin 0.6s linear infinite;

@@ -1,11 +1,88 @@
 @use 'main.scss';
 @use 'styles.scss' as *;
 
+// Top Menu
+.top-menu {
+    width: 200px;
+    overflow: hidden;
+    height: 40px;
+    transition: all ease 0.3s;
+    &__item {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        padding: 10px;
+        background-color: $grey-transparent;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 1.2rem;
+        position: relative;
+        margin-bottom: 10px;
+        & .arrow {
+            width: 20px;
+        }
+    }
+}
+.updates-status {
+    display: flex;
+    margin-right: 30px;
+    opacity: 0.6;
+    &__item {
+        display: none;
+    }
+    & .active {
+        display: block;
+    }
+}
+.tickets {
+    flex-direction: column;
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.4);
+            position: absolute;
+            bottom: -15px;
+        }
+    }
+    &-link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        margin-top: 30px;
+        & .arrow {
+            position: unset;
+        }
+    }
+}
+.newsletters-link {
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.top-menu__arrow {
+    position: absolute;
+    width: 20px;
+    right: 10px;
+    top: 10px;
+    transition: all ease 0.3s;
+}
+
 // Bottom Menu
 .bottom-menu {
     z-index: 999;
     margin-top: auto;
-    @include ClashDisplay;
     &__item {
         display: block;
         margin-left: 50px;
@@ -51,11 +128,11 @@
 }
 
 // Submenus
-.bottom-menu__item.active > .bottom-submenu {
+.bottom-submenu {
     position: relative;
     margin-left: 20px;
     margin-top: 10px;
-    .bottom-submenu:before {
+    &:before {
         content: '';
         display: block;
         position: absolute;
@@ -81,8 +158,32 @@
   text-underline-offset: 4px; 
   color: $white;
 }
+.bottom-menu__item:not(:last-child):after {
+    height: calc(100% + 10px) !important;
+}
 
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+    .header {
+        width: 100% !important;
+        height: auto !important;
+        overflow: unset !important;
+        position: unset !important;
+        min-height: unset !important;
+
+    }
+    .top-menu {
+        width: 200px;
+    }
+    .logo {
+        margin-bottom: 30px !important;
+    }
+    .bottom-menu .active {
+        width: 0;
+    }
     .bottom-menu {
         text-align: end;
         padding: 5px 0;
@@ -113,10 +214,18 @@
         text-align: end !important;
         margin-left: 0 !important;
         margin-top: 0 !important;
+        margin-right: 20px;
         height: 0 !important;
         & .bottom-submenu__link  {
             font-size: 0 !important;
         }
+        &::before {
+            left: unset;
+            right: -20px;
+        }
+    }
+    .bottom-menu__item:not(:last-child):after {
+        height: 70% !important;
     }
     .show {
         top: 30px;
@@ -130,7 +239,7 @@
             right: -30px;
         }
         .bottom-menu__item:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             &:after {
                 height: 150%;
                 left: unset !important;
@@ -138,10 +247,10 @@
             }
         }
         .bottom-menu__link {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
         }
         .bottom-menu__item.active > .bottom-submenu .bottom-submenu__link {
-            font-size: 1.3rem !important;
+            font-size: 1.1rem !important;
         }
         .bottom-menu__item.active > .bottom-submenu {
             margin-left: 20px !important;
@@ -155,16 +264,14 @@
     .header:has(> .show) {
         padding-bottom: 120px;
     }
-    // .header:has( .rotate) .bottom-menu__item {
-    //     margin-bottom: 20px;
-    // }
-    // .header:has( .rotate) .bottom-menu__item:after {
-    //     height: 160%;
-    // }
+    .header:has(> .show) .active {
+        width: unset;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .header:has(> .show) .top-menu { 
         width: 0;
+        height: 40px !important;
     }
 }
