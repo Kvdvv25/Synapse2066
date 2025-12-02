@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,94 +51,6 @@ table {
 
 a {
   text-decoration: none;
-}
-
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
-  font-style: normal;
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "CyberPunk";
-  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
-  font-style: normal;
-  font-weight: 300;
-}
-.btn_primary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-  border: 1px solid #b3bfbf;
-  margin: 2vh auto;
-}
-@media (max-width: 768px) {
-  .btn_primary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_primary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_secondary {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-  padding: 1vh 5vh;
-}
-@media (max-width: 768px) {
-  .btn_secondary {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_secondary {
-    font-size: 0.95rem;
-  }
-}
-
-.btn_icon {
-  font-family: "ClashDisplay-Medium";
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-}
-@media (max-width: 768px) {
-  .btn_icon {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .btn_icon {
-    font-size: 0.95rem;
-  }
 }
 
 @font-face {
@@ -451,4 +362,4 @@ body {
   .mobile-menu {
     display: none;
   }
-}/*# sourceMappingURL=homepage.css.map */
+}
