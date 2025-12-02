@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "CyberPunk";
+  src: url("/fonts/CyberpunkStyle/cyberpunk_style_light.woff2") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+.btn_primary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+  border: 1px solid #b3bfbf;
+  margin: 2vh auto;
+}
+@media (max-width: 768px) {
+  .btn_primary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_primary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_secondary {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding: 1vh 5vh;
+}
+@media (max-width: 768px) {
+  .btn_secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_secondary {
+    font-size: 0.95rem;
+  }
+}
+
+.btn_icon {
+  font-family: "ClashDisplay-Medium";
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .btn_icon {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn_icon {
+    font-size: 0.95rem;
+  }
+}
+
+body {
+  background-color: #151f20;
+  position: relative;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: "Clash Display";
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.navigation .logo {
+  display: inline-block;
+  margin: 3rem 4rem;
+  font-family: "CyberPunk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #efeded;
+  transition: opacity 0.3s ease;
+}
+.navigation .logo:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1024px) {
+  .navigation .logo {
+    margin: 2rem 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .navigation .logo {
+    margin: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  opacity: 1;
+}
+.background-layer.fade-out {
+  opacity: 0;
+}
+
+.circle-menu {
+  clip-path: polygon(60% -20%, 200% -20%, 110% 200%, 60% 200%);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -55%);
+  width: 50%;
+  height: 100vh;
+  border-radius: 50%;
+  transition: transform 1s ease;
+}
+.circle-menu::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  width: calc(var(--radius, 40vh) * 3);
+  height: calc(var(--radius, 40vh) * 2.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+@media (min-width: 1440px) {
+  .circle-menu {
+    left: -5%;
+  }
+}
+@media (min-width: 1920px) {
+  .circle-menu {
+    left: -10%;
+  }
+}
+@media (min-width: 2560px) {
+  .circle-menu {
+    left: -15%;
+  }
+}
+@media (max-height: 700px) {
+  .circle-menu {
+    left: -8%;
+  }
+}
+@media (min-height: 701px) and (max-height: 900px) {
+  .circle-menu {
+    left: -10%;
+  }
+}
+@media (min-height: 901px) and (max-height: 1200px) {
+  .circle-menu {
+    left: -20%;
+  }
+}
+@media (min-height: 1201px) {
+  .circle-menu {
+    left: -25%;
+  }
+}
+@media (max-width: 1024px) {
+  .circle-menu {
+    display: none;
+  }
+}
+
+.item {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 4rem;
+  font-weight: 400;
+  transform-origin: center center;
+  --count: 10;
+  --step: calc(360deg / var(--count));
+  --angle: calc(var(--i) * var(--step));
+  transform: rotate(var(--angle)) translate(50.5vh) rotate(calc(var(--angle) * -1));
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+.item.active {
+  opacity: 1;
+}
+
+.text {
+  color: #fff;
+  width: 50%;
+  margin-left: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+.text .title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.text .subtitle {
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.text .button {
+  padding: 10px 50px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .text {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.mobile-menu {
+  color: #fff;
+  text-align: end;
+  position: fixed;
+  right: 50px;
+  top: 25px;
+}
+.mobile-menu__item {
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+.mobile-menu__item:not(:last-child)::before {
+  width: 1px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  right: -20px;
+  top: 14px;
+  background-color: rgba(255, 255, 255, 0.6);
+  content: "";
+}
+.mobile-menu__item:after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.6);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  right: -25px;
+  top: 4px;
+}
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.mobile-menu__item.active {
+  color: #fff;
+}
+.mobile-menu__item.active::after {
+  background-color: #fff;
+}
+@media (min-width: 1025px) {
+  .mobile-menu {
+    display: none;
+  }
+}

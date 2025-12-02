@@ -27,15 +27,6 @@ function updateCountdown() {
 
 updateCountdown();
 
-// Parallax effect
-document.addEventListener('mousemove', (e) => {
-    const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-    const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-    
-    document.querySelector('.background').style.transform = 
-        `translate(${moveX}px, ${moveY}px) scale(1.1)`;
-});
-
 // Trailer Modal Functions
 function openTrailerModal() {
     document.getElementById('trailerModal').style.display = 'flex';
