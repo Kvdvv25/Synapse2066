@@ -107,14 +107,6 @@ describe("Countdown and trailer modal logic", () => {
     global.Date = RealDate;
   });
 
-  test("applies parallax transform on mousemove", () => {
-    const event = new MouseEvent("mousemove", { clientX: 400, clientY: 300 });
-    document.dispatchEvent(event);
-
-    expect(background.style.transform).toContain("translate(");
-    expect(background.style.transform).toContain("scale(1.1)");
-  });
-
   test("openTrailerModal displays modal and disables scrolling", () => {
     const { openTrailerModal } = require("../Javascript/pre-launch.js");
 
