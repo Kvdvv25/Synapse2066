@@ -94,7 +94,7 @@
 }
 
 .top-menu {
-  width: 200px;
+  width: 250px;
   overflow: hidden;
   height: 40px;
   transition: all ease 0.3s;
@@ -1373,7 +1373,7 @@ body {
 @media (max-width: 768px) {
   .memories-main__active {
     order: 1;
-    min-height: 300px;
+    min-height: 150px;
   }
 }
 .memories-main-list {
@@ -1384,7 +1384,7 @@ body {
   grid-template-rows: repeat(4, calc(25% - 8px));
   row-gap: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .memories-main-list {
     display: flex;
     flex-direction: column;

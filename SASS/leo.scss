@@ -947,7 +947,7 @@ body {
             
             @media (max-width: 768px){
                 order: 1;
-                min-height: 300px;
+                min-height: 150px;
             }
         }
         
@@ -959,7 +959,7 @@ body {
             grid-template-rows: repeat(4, calc(25% - 8px));
             row-gap: 10px;
             
-            @media (max-width: 768px){
+            @media (max-width: 576px){
                 display: flex;
                 flex-direction: column;
                 gap: 10px;

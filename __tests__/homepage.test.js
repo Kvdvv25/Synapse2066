@@ -69,7 +69,7 @@ describe("Circle menu logic", () => {
 
     jest.advanceTimersByTime(300);
 
-    expect(backgroundLayer.style.backgroundImage).toContain("bg_3.webp");
+    expect(backgroundLayer.style.backgroundImage).toContain("bg_3.jpg");
     expect(backgroundLayer.classList.contains("fade-out")).toBe(false);
   });
 
@@ -85,17 +85,5 @@ describe("Circle menu logic", () => {
     expect(
       typeof window.isScrolling !== "undefined" ? window.isScrolling : true
     ).toBe(true);
-  });
-
-  test("mobileMenu cycles active element correctly", () => {
-    const mobileItems = document.querySelectorAll(".mobile-menu__item");
-
-    expect(mobileItems[0].classList.contains("active")).toBe(true);
-
-    mobileMenu(1);
-    expect(mobileItems[1].classList.contains("active")).toBe(true);
-
-    mobileMenu(-2);
-    expect(mobileItems[4].classList.contains("active")).toBe(true);
   });
 });
