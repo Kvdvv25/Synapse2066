@@ -190,3 +190,8 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 576px) {
+  .text .button {
+    padding: 10px 20px;
+  }
+}
