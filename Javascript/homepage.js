@@ -122,6 +122,40 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
+let touchStartY = 0;
+let touchEndY = 0;
+
+window.addEventListener("touchstart", (e) => {
+  touchStartY = e.changedTouches[0].clientY;
+});
+
+window.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false }
+);
+
+window.addEventListener("touchend", (e) => {
+  if (isScrolling) return;
+
+  touchEndY = e.changedTouches[0].clientY;
+  const diff = touchEndY - touchStartY;
+  if (Math.abs(diff) < 40) return;
+
+  isScrolling = true;
+
+  const direction = diff < 0 ? 1 : -1;
+
+  rotateWheel(direction);
+  mobileMenu(direction);
+
+  setTimeout(() => {
+    isScrolling = false;
+  }, 500);
+});
+
 // Main Rotaiting Wheel Function
 function rotateWheel(direction) {
   const step = 360 / count;
