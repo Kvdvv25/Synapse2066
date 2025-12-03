@@ -39,24 +39,24 @@ let moments_content = [
         image1: 'images/First_Connection.png',
         image2: 'images/Final_Connection.png',
         description:"The eye-opening shot is when Leo enters the simulation for the first time. He can see Anna's POV feed and is shocked that his hacking attempt worked.",
-        next: 'Digital&nbspDance<img class="icon" src="/images/arrow2.png" alt="arrow pointing right">',
+        next: "Leo's&nbspHand&nbspin&nbspSync<img class='icon' src='/images/arrow2.png' alt='arrow pointing right'>",
         nextLink: '/synopsis-moments.html?moment=2'
     },
     {
         moment: '2',
-        title: 'Digital Dance',
-        image1: 'images/Digital_Dance.jpg',
-        image2: 'images/Thinking_of_Anna.jpg',
-        description:"This is a symbolic scene where Leo and Anna are synced together; it appears as if they are truly together in this happy, dreamy moment. In reality, Anna is still unaware of everything in the simulation, and this is Leo's last attempt to share a moment with her. <br><br> Things take a down turn after this scene leading up to the climax.",
-        next: 'Final&nbspConnection<img class="icon" src="/images/arrow2.png" alt="arrow pointing right">',
-        nextLink: '/synopsis-moments.html?moment=3'
-    },
-    {
-        moment: '3',
         title: "Leo's Hand in Sync",
         image1: 'images/Anna_Sync.png',
         image2: 'images/Leo_Sync.png',
         description:"When Leo tries to move his hand, it leads to Anna's hand trembling, and instantly Leo tries to stabilize his hand and makes a fist as if h e is holding Anna's hand. This actually works, and Anna's hand stabilizes.",
+        next: 'Digital&nbspDance<img class="icon" src="/images/arrow2.png" alt="arrow pointing right">',
+        nextLink: '/synopsis-moments.html?moment=3'
+    },
+    {
+        moment: '3',
+        title: 'Digital Dance',
+        image1: 'images/Digital_Dance.jpg',
+        image2: 'images/Thinking_of_Anna.jpg',
+        description:"This is a symbolic scene where Leo and Anna are synced together; it appears as if they are truly together in this happy, dreamy moment. In reality, Anna is still unaware of everything in the simulation, and this is Leo's last attempt to share a moment with her. <br><br> Things take a down turn after this scene leading up to the climax.",
         next: 'Cast<img class="icon" src="/images/arrow2.png" alt="arrow pointing right">',
         nextLink: '/cast.html'
     }

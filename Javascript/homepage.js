@@ -12,7 +12,7 @@ const content = [
     title: "Synapsis",
     text: "Learn more about Synapse`s storyline",
     button: "Learn about the film →",
-    link: "#1",
+    link: "synopsis.html",
   },
   {
     title: "Cast",
@@ -33,9 +33,9 @@ const content = [
     link: "gallery.html",
   },
   {
-    title: "Company",
-    text: "Learn more about Synapse`s Company",
-    button: "Explore the Company →",
+    title: "Corporation",
+    text: "Learn more about Synapse`s Corporation",
+    button: "Explore the Corporation →",
     link: "company.html",
   },
 ];
