@@ -105,7 +105,7 @@
   justify-content: space-between;
   color: #fff;
   padding: 10px;
-  background-color: rgba(46, 45, 45, 0.2156862745);
+  background-color: rgba(101, 101, 101, 0.4745098039);
   border-radius: 5px;
   font-weight: 500;
   font-size: 1.2rem;
@@ -282,7 +282,6 @@
     top: unset;
     transition: right 0.3s ease-in-out, transform 0.3s ease-in-out;
     background-color: rgba(101, 101, 101, 0.4745098039);
-    background-color: rgba(46, 45, 45, 0.2156862745);
   }
   .bottom-menu__item {
     margin-left: 35px;
