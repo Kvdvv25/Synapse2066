@@ -48,88 +48,14 @@ body {
         }
     }
 
-    // Top Menu
+      // // Top Menu
     .top-menu {
-        p{
-            @include ClashDisplay;
-            font-weight: 400;
-        }
-        overflow: hidden;
-       
-        // height: 18vh;
-        transition: all ease 0.3s;
-        &__item {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            color: $white;
-            padding: 0 10px;
-            background-color: $grey-transparent;
-            border-radius: 5px;
-            font-weight: 500;
-            font-size: 1.2rem;
-            position: relative;
-            margin-bottom: 10px;
-            & .arrow {
-                width: 20px;
+            p{
+                @include ClashDisplay;
+                font-weight: 400;
+                line-height: normal;
             }
         }
-    }
-
-    .updates-status {
-        display: flex;
-        margin-right: 30px;
-        opacity: 0.6;
-        &__item {
-            display: none;
-        }
-        & .active {
-            display: block;
-        }
-    }
-    .tickets {
-        flex-direction: column;
-        &-header {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            position: relative;
-            &:after {
-                content: '';
-                width: 100%;
-                height: 1px;
-                display: block;
-                background-color: rgba(255, 255, 255, 0.4);
-                position: absolute;
-                bottom: -1px;
-            }
-        }
-        &-link{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: $white;
-            // margin-top: 20px;
-            & .arrow {
-                position: unset;
-            }
-        }
-    }
-    .newsletters-link {
-        color: $white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .top-menu__arrow {
-        position: absolute;
-        width: 20px;
-        right: 10px;
-        top: 10px;
-        transition: all ease 0.3s;
-    }
 
 // Main Section - the same for all pages
     .main {
@@ -642,6 +568,14 @@ body {
         border-radius: 50%;
         position: absolute;
         z-index: 1;
+        cursor: pointer;
+    }
+
+    .dot_link{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        position: absolute;
     }
 
     .vl{
@@ -709,6 +643,7 @@ body {
         width: 100%;
         height: 100%;
         position: absolute;
+        object-fit: cover;
     }
 
     .numbertext{

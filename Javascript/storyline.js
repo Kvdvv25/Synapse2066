@@ -4,6 +4,11 @@ const box1 = document.getElementById('box1');
 const box2 = document.getElementById('box2');
 const box3 = document.getElementById('box3');
 const moments = document.querySelectorAll('.moment');
+// const dots = document.querySelectorAll('.dot');
+const dot1 = document.getElementById('moment_dot1');
+const dot2 = document.getElementById('moment_dot2');
+const dot3 = document.getElementById('moment_dot3');
+
 
 function handleMobileMode (event) {
 
@@ -21,6 +26,7 @@ function handleMobileMode (event) {
             window.location.href='/synopsis-moments.html?moment=3'
             console.log('clicked')
         })
+
     }
     else{
         console.log('desktop window size')
@@ -43,6 +49,25 @@ function handleMobileMode (event) {
                 })
             
                 link.addEventListener('mouseleave', function(){
+                    imgTarget.style.display = 'none';
+                })
+            })
+
+            moments.forEach( dot => {
+                const dotLink = dot.querySelector(".dot");
+                const imgTarget = dot.querySelector('.moment_img');
+            
+                if(imgTarget||dotLink){
+                    console.log('Both exist');
+                } else {
+                    console.log('Image or link do not exist');
+                }
+            
+                dotLink.addEventListener('mouseenter', function(){
+                    imgTarget.style.display = 'flex';
+                })
+            
+                dotLink.addEventListener('mouseleave', function(){
                     imgTarget.style.display = 'none';
                 })
             })

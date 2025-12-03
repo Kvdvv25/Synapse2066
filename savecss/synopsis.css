@@ -495,85 +495,10 @@ body {
   }
 }
 
-.top-menu {
-  overflow: hidden;
-  transition: all ease 0.3s;
-}
 .top-menu p {
   font-family: "Clash Display";
   font-weight: 400;
-}
-.top-menu__item {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  padding: 0 10px;
-  background-color: rgba(101, 101, 101, 0.4745098039);
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 1.2rem;
-  position: relative;
-  margin-bottom: 10px;
-}
-.top-menu__item .arrow {
-  width: 20px;
-}
-
-.updates-status {
-  display: flex;
-  margin-right: 30px;
-  opacity: 0.6;
-}
-.updates-status__item {
-  display: none;
-}
-.updates-status .active {
-  display: block;
-}
-
-.tickets {
-  flex-direction: column;
-}
-.tickets-header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-}
-.tickets-header:after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.4);
-  position: absolute;
-  bottom: -1px;
-}
-.tickets-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-}
-.tickets-link .arrow {
-  position: unset;
-}
-
-.newsletters-link {
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.top-menu__arrow {
-  position: absolute;
-  width: 20px;
-  right: 10px;
-  top: 10px;
-  transition: all ease 0.3s;
+  line-height: normal;
 }
 
 .main {
@@ -1098,6 +1023,14 @@ a {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
+  cursor: pointer;
+}
+
+.dot_link {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
 }
 
 .vl {
@@ -1167,6 +1100,8 @@ a {
   width: 100%;
   height: 100%;
   position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .numbertext {
@@ -1219,4 +1154,4 @@ a {
   .top-menu {
     width: 200px;
   }
-}
+}/*# sourceMappingURL=synopsis.css.map */
