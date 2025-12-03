@@ -458,6 +458,7 @@ body {
 .header {
   transition: all ease 0.3s;
   width: 25%;
+  min-width: 290px;
   background-image: url(../images/bg_3.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -631,6 +632,8 @@ body {
 }
 @media screen and (max-width: 576px) {
   .gallery__img {
-    width: 100%;
+    height: 200px;
+    -o-object-fit: unset;
+       object-fit: unset;
   }
 }/*# sourceMappingURL=gallery.css.map */

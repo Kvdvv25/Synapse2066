@@ -4,15 +4,14 @@ const circleMenu = document.getElementById("circleMenu");
 radius = circleMenu.offsetWidth / 2.2;
 
 let currentAngle = 0;
-let currentIndex = 0;
 let isScrolling = false;
 
 const content = [
   {
-    title: "Synapsis",
-    text: "Learn more about Synapse`s storyline",
-    button: "Learn about the film →",
-    link: "synopsis.html",
+    title: "Corporation",
+    text: "Learn more about Synapse`s Corporation",
+    button: "Explore the Corporation →",
+    link: "company.html",
   },
   {
     title: "Cast",
@@ -33,10 +32,10 @@ const content = [
     link: "gallery.html",
   },
   {
-    title: "Corporation",
-    text: "Learn more about Synapse`s Corporation",
-    button: "Explore the Corporation →",
-    link: "company.html",
+    title: "Synopsis",
+    text: "Learn more about Synapse`s storyline",
+    button: "Learn about the film →",
+    link: "synopsis.html",
   },
 ];
 
@@ -81,7 +80,7 @@ const backgroundLayer = document.querySelector(".background-layer");
 function updateBackground(index) {
   backgroundLayer.classList.add("fade-out");
   setTimeout(() => {
-    backgroundLayer.style.backgroundImage = `url("images/bg_${index}.webp")`;
+    backgroundLayer.style.backgroundImage = `url("images/bg_${index}.jpg")`;
     backgroundLayer.classList.remove("fade-out");
   }, 300);
 }
@@ -134,21 +133,44 @@ function rotateWheel(direction) {
   }, 500);
 }
 
+function isMobile() {
+  return window.innerWidth <= 1024;
+}
+
 function mobileMenu(direction) {
+  if (!isMobile()) return;
+
   const mobileMenuItemsList = document.querySelectorAll(".mobile-menu__item");
 
-  mobileMenuItemsList.forEach((item, index) => {
-    item.classList.contains("active") ? (currentIndex = index) : currentIndex;
-    item.classList.remove("active");
-  });
+  const activeIndex = [...mobileMenuItemsList].findIndex((item) =>
+    item.classList.contains("active")
+  );
 
-  currentIndex += direction;
-  if (currentIndex > 4) {
-    currentIndex = 0;
-  } else if (currentIndex < 0) {
-    currentIndex = 4;
-  }
-  mobileMenuItemsList[currentIndex].classList.add("active");
+  mobileMenuItemsList.forEach((item) => item.classList.remove("active"));
+  let newIndex = activeIndex + direction;
+
+  if (newIndex > mobileMenuItemsList.length - 1) newIndex = 0;
+  if (newIndex < 0) newIndex = mobileMenuItemsList.length - 1;
+
+  const newActiveItem = mobileMenuItemsList[newIndex];
+  newActiveItem.classList.add("active");
+
+  const dataIndex = parseInt(newActiveItem.dataset.index, 10);
+
+  updateMobileContent(dataIndex);
+}
+
+function updateMobileContent(index) {
+  const title = document.querySelector(".title");
+  const text = document.querySelector(".subtitle");
+  const button = document.querySelector(".button");
+
+  title.textContent = content[index - 1].title;
+  text.textContent = content[index - 1].text;
+  button.textContent = content[index - 1].button;
+  button.href = content[index - 1].link;
+
+  updateBackground(index);
 }
 
 // Resizing
