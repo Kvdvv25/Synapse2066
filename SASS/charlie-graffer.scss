@@ -27,7 +27,7 @@ body {
 .header {
     transition: all ease 0.3s;
     width: 50vw;
-    background-image: url(../images/Crew/camera\ man.jpg);
+    background-image: url(../images/Crew/Charlie_Graffer.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -41,6 +41,16 @@ body {
     @include display(flex);
     flex-direction: column;
     z-index: 100;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.415);
+        z-index: -1;
+    }
     
     @media (max-width: 1000px){
         background-position: center 40%;

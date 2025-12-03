@@ -27,7 +27,7 @@ body {
 .header {
     transition: all ease 0.3s;
     width: 50vw;
-    background-image: url(../images/Crew/woman-director.jpg);
+    background-image: url(../images/Crew/Molly-placeholder.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -341,7 +341,7 @@ body {
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
-    margin-top: 1.6rem;
+    margin-top: 18.5rem;
     
     @media (max-width: 768px) {
         gap: 1rem;
