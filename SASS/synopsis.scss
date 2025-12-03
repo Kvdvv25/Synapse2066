@@ -66,13 +66,9 @@ body {
         box-sizing: border-box;
         background-color: $black;
         overflow-y: scroll;
-        // @media (max-width: 1200px) {
-        //     min-height: 120vh;
-        //     overflow-y: scroll;
-        // }
 
         @media (max-width: 992px) {
-            // min-height: 65vh;
+            padding: 20px;
             overflow-y: visible;
         }
     }
@@ -651,11 +647,15 @@ body {
         @include Fredoka;
         position: absolute;
         margin: 1vw;
+
+        @media screen and (max-width: 992px) {
+            margin: 2vw;
+        }
+        
     }
 
     .slider_btns{
-        width: 100%;
-        // height: 3vh;
+        width: 98%;
         position: absolute;
         z-index: 1;
         display: flex;

@@ -407,7 +407,6 @@ body {
         list-style: disc;
         list-style-position: inside;
         @include Fredoka;
-        font-size: $fs-body;
         line-height: 1.7;
         margin-left: 1vw;
     }
