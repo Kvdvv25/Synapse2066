@@ -225,11 +225,18 @@ h2 {
   }
 }
 
+.category_title {
+  font-family: "Clash Display";
+  font-family: "Clash Display";
+  font-weight: 400;
+}
+
 .titleBox {
   padding: 0.6vw 1vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
 }
 @media (max-width: 768px) {
@@ -501,6 +508,10 @@ form {
   animation: spin 0.6s linear infinite;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+#submit {
+  margin-bottom: 1vh;
 }
 
 @keyframes spin {

@@ -121,7 +121,7 @@ body {
     // Contact info
     p{
         @include Fredoka;
-        line-height: 2;
+        line-height: 1.6;
         font-size: $fs-body;
         text-align: justify;
 
@@ -235,8 +235,7 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        // justify-content: space-between;
-        margin-top: 2vh;
+        // margin-top: 2vh;
         
         h2{
             color: $white;
@@ -256,7 +255,7 @@ body {
 
         @media (max-width: 458px) {
             padding-bottom: 2vh;
-            border-bottom: 1px solid white;
+            border-bottom: $line;
         }
 
     }
@@ -331,6 +330,11 @@ body {
 
     video{
         width: 100%;
+        border-radius: 8px;
+    }
+
+    video:hover{
+        box-shadow: 0 0 11px rgba(0, 0, 0, 0.653); 
     }
 
     .right{
@@ -401,6 +405,7 @@ body {
 
     .company_img{
         width: 100%;
+        border-radius: 8px;
     }
 
     .list_style{
@@ -409,6 +414,15 @@ body {
         @include Fredoka;
         line-height: 1.7;
         margin-left: 1vw;
+        font-size: $fs-body;
+
+        @media (max-width: 768px) {
+            font-size: $fs-body-tablet;
+        }
+
+        @media (max-width: 450px) {
+            font-size: $fs-body-mobile;
+        }
     }
 
     .info_box{

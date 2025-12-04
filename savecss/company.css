@@ -570,7 +570,7 @@ p {
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.6;
   font-size: 1.15rem;
   text-align: justify;
 }
@@ -687,7 +687,6 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 2vh;
 }
 .info_title h2 {
   color: #fff;
@@ -710,7 +709,7 @@ p {
 @media (max-width: 458px) {
   .info_title {
     padding-bottom: 2vh;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
   }
 }
 
@@ -790,6 +789,11 @@ p {
 
 video {
   width: 100%;
+  border-radius: 8px;
+}
+
+video:hover {
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.653);
 }
 
 .right {
@@ -865,6 +869,7 @@ video {
 
 .company_img {
   width: 100%;
+  border-radius: 8px;
 }
 
 .list_style {
@@ -875,6 +880,17 @@ video {
   font-weight: 300;
   line-height: 1.7;
   margin-left: 1vw;
+  font-size: 1.15rem;
+}
+@media (max-width: 768px) {
+  .list_style {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 450px) {
+  .list_style {
+    font-size: 1rem;
+  }
 }
 
 .info_box {

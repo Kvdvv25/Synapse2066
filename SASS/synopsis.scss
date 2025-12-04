@@ -120,14 +120,14 @@ body {
 
     .synopsis_title{
         border-bottom: $line;
-        margin: 4vh 0;
-        padding-bottom: 4vh;
+        margin: 2rem 0;
+        padding-bottom: 2rem;
     }
 
     // Contact info
     p{
         @include Fredoka;
-        line-height: 2;
+        line-height: 1.6;
         font-size: $fs-body;
 
         @media (max-width: 768px) {
@@ -311,6 +311,7 @@ body {
         .poster_img{
             width: 75%;
             margin-left:5vw;
+            border-radius: 8px;
 
             @media (max-width: 992px) {
                 width: 90%;
@@ -342,6 +343,7 @@ body {
     }
 
     .content_description{
+        text-align: justify;
         @media (max-width: 1200px) {
             margin-bottom: 4vh;
         }
@@ -396,7 +398,6 @@ body {
     }
 
     #overview{
-        margin-bottom: 3vh;
         text-align: justify;
     }
 
@@ -412,6 +413,7 @@ body {
     // Video
     .trailer{
         width: 100%;
+        border-radius: 8px;
     }
    
     .video_info{
@@ -467,7 +469,7 @@ body {
         padding-bottom: 3vh;
 
         p{
-            line-height: 1.5em;
+            line-height: 1.6em;
         }
     }
 
@@ -539,6 +541,7 @@ body {
         height: 23vh;
         object-fit: cover;
         display: none;
+        border-radius: 8px;
     
         @media (max-width: 480px) {
             display: block;
@@ -680,7 +683,7 @@ body {
         text-justify:inter-word;
 
         p{
-            line-height: 1.5em;
+            line-height: 1.6em;
         }
     }
 

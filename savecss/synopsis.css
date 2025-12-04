@@ -566,15 +566,15 @@ h1 {
 
 .synopsis_title {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
-  margin: 4vh 0;
-  padding-bottom: 4vh;
+  margin: 2rem 0;
+  padding-bottom: 2rem;
 }
 
 p {
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.6;
   font-size: 1.15rem;
 }
 @media (max-width: 768px) {
@@ -769,6 +769,7 @@ a {
 .content_side .poster_img {
   width: 75%;
   margin-left: 5vw;
+  border-radius: 8px;
 }
 @media (max-width: 992px) {
   .content_side .poster_img {
@@ -799,6 +800,9 @@ a {
   }
 }
 
+.content_description {
+  text-align: justify;
+}
 @media (max-width: 1200px) {
   .content_description {
     margin-bottom: 4vh;
@@ -856,7 +860,6 @@ a {
 }
 
 #overview {
-  margin-bottom: 3vh;
   text-align: justify;
 }
 
@@ -869,6 +872,7 @@ a {
 
 .trailer {
   width: 100%;
+  border-radius: 8px;
 }
 
 .video_info {
@@ -923,7 +927,7 @@ a {
   padding-bottom: 3vh;
 }
 .description_storyline p {
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 @media (max-width: 480px) {
@@ -1000,6 +1004,7 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   display: none;
+  border-radius: 8px;
 }
 @media (max-width: 480px) {
   .moment_img {
@@ -1146,7 +1151,7 @@ a {
   text-justify: inter-word;
 }
 .description_box p {
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 @media screen and (max-width: 992px) {
