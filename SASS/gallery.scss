@@ -10,7 +10,7 @@ body {
 }
 .header {
     transition: all ease 0.3s;
-    width: 25%;
+    width: 20%;
     min-width: 290px;
     background-image: url(../images/gallery_bg.JPG);
     background-repeat: no-repeat;
@@ -37,20 +37,20 @@ body {
 }
 .subtitle {
     color: $white-transparent;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     display: flex;
     &:before {
         content: "";
         flex: 1;
         height: 1px;
-        background-color: $white-transparent;
+        background-color: rgba(255, 255, 255, 0.349);
         margin-left: 30px;
         order: 2;
         margin-top: 15px;
     }
 }
 .title {
-    font-size: 3rem;
+    font-size: 2.6rem;
     color: $white;
     margin: 30px 0;
     position: relative;
@@ -58,7 +58,7 @@ body {
         content: '';
         width: 100%;
         height: 1px;
-        background-color: $white-transparent;
+        background-color: rgba(255, 255, 255, 0.349);
         bottom: -30px;
         position: absolute;
         display: block;
@@ -66,10 +66,10 @@ body {
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(5, calc(20% - 30px));
+  grid-template-columns: repeat(5, calc(20% - 20px));
   grid-template-rows: repeat(4, 25%);
   gap: 10px;
-  column-gap: 30px;
+  column-gap: 20px;
   height: calc(100% - 250px);
   box-sizing: border-box;
   margin-left: 20px;
@@ -84,6 +84,7 @@ body {
     align-self: stretch;
     order: 2;
     transition: all ease 0.2s;
+    border-radius: 8px;
     &:hover {
         border: 1px solid $white-transparent;
     }
@@ -110,13 +111,13 @@ body {
         content: "";
         flex: 1;
         height: 1px;
-        background-color: $white-transparent;
+        background-color: rgba(255, 255, 255, 0.349);
         margin: 0 10px;
         order: 2;
         margin-top: 15px;
     }
     &__title {
-        color: $white;
+        color: $slate-blue;
         font-size: 1.3rem;
         order: 1;
     }
@@ -156,10 +157,10 @@ body {
 }
 @media screen and (max-width: 768px) {
     .subtitle, .breadcrumbs__title, .breadcrumbs-link {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .gallery {
         margin-left: 0;
@@ -175,8 +176,16 @@ body {
     }
 }
 @media screen and (max-width: 576px) {
+    .subtitle, .breadcrumbs__title, .breadcrumbs-link {
+        font-size: 1rem;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
     .gallery__img {
         height: 200px;
-        object-fit: unset;
+    }
+    .breadcrumbs {
+        gap: 0;
     }
 }

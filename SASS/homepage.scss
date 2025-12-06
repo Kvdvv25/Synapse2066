@@ -121,11 +121,13 @@ body {
     text-align: center;
     height: 100vh;
     & .title {
-      font-size: 2rem;
+      font-size: 2.6rem;
       margin-bottom: 30px;
       font-weight: 500;
     }
     & .subtitle {
+      font-family: 'Fredoka';
+      font-size: 1.15rem;
       margin-bottom: 30px;
       font-weight: 400;
     }
@@ -191,6 +193,14 @@ body {
   }
 }
 @media screen and (max-width: 576px) {
+  .text .title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  .text .subtitle {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
   .text .button {
     padding: 10px 20px;
   }
