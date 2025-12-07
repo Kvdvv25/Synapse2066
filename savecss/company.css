@@ -518,7 +518,7 @@ body {
 }
 
 .main::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 h2 {
