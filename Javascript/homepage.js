@@ -95,7 +95,7 @@ window.addEventListener(
     if (Math.abs(e.deltaY) < 30) return;
 
     isScrolling = true;
-    rotateWheel(e.deltaY > 0 ? 1 : -1);
+    rotateWheel(e.deltaY > 0 ? -1 : 1);
     mobileMenu(e.deltaY > 0 ? 1 : -1);
   },
   { passive: false }
