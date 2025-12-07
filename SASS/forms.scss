@@ -119,11 +119,17 @@ h2{
     }
 }
 
+.category_title{
+    @include ClashDisplay;
+    @include heading_style;
+}
+
 .titleBox{
     padding: 0.6vw 1vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     border-bottom: $line;
 
     @media (max-width: 768px) {
@@ -371,6 +377,10 @@ form{
     animation: spin 0.6s linear infinite;
     margin-right: 8px;
     vertical-align: middle;
+}
+
+#submit{
+    margin-bottom: 1vh;
 }
 
 @keyframes spin {

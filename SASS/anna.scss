@@ -595,6 +595,7 @@ body {
             font-size: 1.3rem;
             color: $white-transparent;
             margin-right: 20px;
+            font-weight: 500;
 
             @media (max-width: 768px) {
                 font-size: 1rem;
@@ -654,16 +655,11 @@ body {
             width: 32%;
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: right;
 
             @media (max-width: 768px) {
                 margin-bottom: 20px;
-                width: 70%;
-                text-align: center;
-            }
-
-            @media (max-width: 576px) {
-                width: 100%;
+                width: fit-content;
             }
         }
 
@@ -673,6 +669,7 @@ body {
             margin-bottom: 20px;
             max-width: 500px;
             max-height: 500px;
+            border-radius: 8px;
 
             @media (max-width: 768px) {
                 margin: 0 auto;
@@ -680,6 +677,10 @@ body {
                 width: 300px;
                 height: 300px;
                 flex: none;
+            }
+            @media (max-width: 425px) {
+                width: 250px;
+                height: 250px;
             }
         }
 
@@ -713,6 +714,7 @@ body {
 
         &__text {
             color: $white-transparent;
+            font-family: 'Fredoka';
 
             @media (max-width: 768px) {
                 font-size: 0.9rem;
