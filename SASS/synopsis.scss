@@ -18,6 +18,7 @@ body {
 //Header - Danylo's part
     .header {
         width: 20%;
+        min-width: 290px;
         transition: all ease 0.3s;
         background-image: url(../images/bg2.jpg);
         background-repeat: no-repeat;
@@ -65,12 +66,15 @@ body {
         flex-direction: column;
         box-sizing: border-box;
         background-color: $black;
-        overflow-y: scroll;
 
         @media (max-width: 992px) {
             padding: 20px;
-            overflow-y: visible;
+            overflow-y: visible;  
         }
+    }
+
+    .main::-webkit-scrollbar {
+        display: none; 
     }
 
     // Subheading

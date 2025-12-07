@@ -8,25 +8,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     @include ClashDisplay;
-    background-color: $charcoal-black1;
+    background-color: $black;
     color: $white;
+    overflow-x: hidden;
 }
+
 .wrapper-update{
-    max-width: 15vw;
-    @media (max-width:992px)
-    {max-width: none;}
+    max-width: 200px;
+    @media (max-width:992px) {
+        max-width: none;
+    }
 }
+
+// Sidebar 
 .header {
     transition: all ease 0.3s;
-    width: 20vw;
+    width: 20%;
     background-image: url(../images/bg_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
     @include fixed;
     top: 0;
@@ -36,63 +42,95 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 100;
+    
     @media (max-width: 1000px){
+        position: relative;
+        width: 100%;
+        max-width: 100%;
         min-height: 30vh;
-        width: 100vw;
-        @include relative;
     }
 }
+
 .logo {
-    margin-top: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
     display: block;
-    @include CyberPunk;
-    @include font-size(2.6rem);
-    @include font-weight(400);
+    font-family: $font-synapse;
+    font-size: $fs-h1;
     color: $white;
-    padding-bottom: 10px;
-    margin: 0;
-                
-    @media (max-width: 992px) {
+
+    @media (max-width: 768px) {
         @include font-size($fs-h1-tablet);
     }
-                
-    @media (max-width: 768px) {
+        
+    @media (max-width: 480px) {
         @include font-size($fs-h1-mobile);
     }
 }
+
 // Container Layout
 .container {
     @include display(flex);
     min-height: 100vh;
+    width: 100%;
     @include relative;
+    
     @media (max-width:1000px){
-        display: grid;
-        grid-template-columns: 2 1fr;
-    }
-    @media (max-width:800px){
         display: flex;
         flex-direction: column;
     }
 }
 
-// Main Content
+// Main Content - Full height layout with flexbox for bottom positioning
 .main-content {
-    overflow-y: hidden;
-    width: 100%;
-    margin-left: 21vw;
-    padding: 3rem 2rem;
-    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    margin-left: 20%;
+    padding: 30px;
+    min-height: 100vh;
+    @include display(flex);
+    @include flex-direction(column);
 
     @media (max-width: 1000px){
         margin-left: 0;
-        height: auto;
+        width: 100%;
+        min-height: auto;
         overflow-y: visible;
     }
 
     @media (max-width: 768px) {
         padding: 2rem 1.5rem;
     }
+    
+    @media (max-width: 480px) {
+        padding: 1.5rem 1rem;
+    }
+}
 
+// Content wrapper to push explore section to bottom
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+}
+
+.content-top {
+    flex: 0 0 auto;
+}
+
+.content-bottom {
+    margin-top: auto;
+    padding-top: 3rem;
+    
+    @media (max-width: 768px) {
+        padding-top: 2rem;
+    }
+}
+
+// Nested sections
+.main-content {
     .content-header {
         margin-bottom: 2rem;
         @include relative;
@@ -113,7 +151,7 @@ body {
                 flex: 1;
                 height: 1px;
                 margin-top: 18px;
-                background-color: #ffffff59;
+                background-color: rgba(255, 255, 255, 0.349);
                 z-index: 1;
             }
             
@@ -129,22 +167,22 @@ body {
             @include font-weight(400);
             margin-bottom: 2rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid #ffffff59;
+            border-bottom: $line;
             color: $white;
             
             @media (max-width: 768px) {
-                @include font-size(2rem);
+                @include font-size($fs-h1-tablet);
             }
 
             @media (max-width: 480px) {
-                @include font-size(1.8rem);
+                @include font-size($fs-h1-mobile);
             }
         }
 
         .character-grid {
             @include display(flex);
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
             
             @media (max-width: 1200px) {
@@ -155,7 +193,6 @@ body {
                 @include display(grid);
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
-                margin-bottom: 2rem;
             }
             
             @media (max-width: 480px) {
@@ -169,8 +206,7 @@ body {
 // Character Cards
 .character-card {
     flex: 1;
-    height: 440px;
-    min-width: 200px;
+    min-width: 250px;
     max-width: 350px;
     @include relative;
     @include display(flex);
@@ -198,26 +234,17 @@ body {
 
     .character-image {
         width: 100%;
-        height: 450px;
-        aspect-ratio: 4/5;
+        height: 0;
+        padding-bottom: 125%; 
+        @include relative;
         @include overflow(hidden);
         border-radius: 8px;
         margin-bottom: 1.2rem;
-        @include relative;
-
-        @media (max-width: 1200px) {
-            height: 400px;
-        }
-
-        @media (max-width: 768px) {
-            height: 350px;
-        }
-
-        @media (max-width: 480px) {
-            height: 300px;
-        }
 
         img {
+            @include absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -235,16 +262,18 @@ body {
             @include display(flex);
             @include align-items(center);
             @include justify-content(space-between);
-            gap: 0.3rem;
+            gap: 0.5rem;
             @include font-size($fs-body);
             color: $white;
             @include ClashDisplay;
             @include font-weight(400);
-            margin-bottom: 0.5rem;
             
             @media (max-width: 768px) {
-                @include font-size(1.1rem);
-                margin-bottom: 0.3rem;
+                @include font-size($fs-body-tablet);
+            }
+            
+            @media (max-width: 480px) {
+                @include font-size($fs-body-mobile);
             }
             
             .character-link {
@@ -260,8 +289,8 @@ body {
                     transition: all 0.3s ease;
                     
                     @media (max-width: 768px) {
-                        width: 16px;
-                        height: 16px;
+                        width: 20px;
+                        height: 20px;
                     }
                 }
             }
@@ -275,7 +304,7 @@ body {
             @include relative;
             
             @media (max-width: 768px) {
-                padding-left: 1.2rem;
+                padding-left: 1rem;
             }
             
             &::before {
@@ -285,10 +314,10 @@ body {
                 top: 0;
                 width: 1.5px;
                 height: 100%;
-                background-color:#ffffff59;
+                background-color: rgba(255, 255, 255, 0.349);
                 
                 @media (max-width: 768px) {
-                    left: 0.3rem;
+                    left: 0.5rem;
                     width: 1.2px;
                 }
             }
@@ -296,20 +325,23 @@ body {
             .character-actor,
             .character-role {
                 @include font-size($fs-body);
-                @include font-weight(400);
                 color: $slate-blue;
                 @include Fredoka;
-                line-height: 1.5;
+                line-height: 1.3;
                 
                 @media (max-width: 768px) {
-                    @include font-size(0.9rem);
+                    @include font-size($fs-body-tablet);
+                }
+                
+                @media (max-width: 480px) {
+                    @include font-size($fs-body-mobile);
                 }
             }
         }
     }
 }
 
-// Explore Next Section
+// Explore Next Section - Grid automatically positions at bottom
 .explore-next {
     @include ClashDisplay;
     @include font-weight(500);
@@ -317,25 +349,25 @@ body {
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
-    margin-top: 1rem;
-    margin-bottom: -1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     width: 100%;
     
     @media (max-width: 768px) {
         gap: 1rem;
-        margin-top: 1.5rem;
-        margin-bottom: -1rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
 
     .explore-text {
         @include display(flex);
         @include align-items(center);
         @include font-size($fs-h2-tablet);
-        @include font-weight(400);
         color: $slate-blue;
         gap: 2rem;
         flex: 1;
         min-width: 0;
+        white-space: nowrap;
         
         @media (max-width: 768px) {
             @include font-size(1rem);
@@ -343,11 +375,11 @@ body {
         }
 
         &::after {
-            margin-top: 18px;
+            margin-top: 14px;
             content: "";
             flex: 1;
             height: 1px;
-            background-color: #ffffff59;
+            background-color: rgba(255, 255, 255, 0.1);
             min-width: 50px;
         }
     }
@@ -357,11 +389,12 @@ body {
         @include align-items(center);
         gap: 1rem;
         color: $white;
+        text-decoration: none;
         @include font-size($fs-h2-tablet);
         @include font-weight(400);
         @include ClashDisplay;
         transition: gap 0.3s ease;
-        flex-shrink: 1;
+        flex-shrink: 0;
         white-space: nowrap;
         
         @media (max-width: 768px) {
@@ -383,14 +416,14 @@ body {
             transition: transform 0.3s ease;
             
             @media (max-width: 768px) {
-                width: 21px;
-                height: 21px;
+                width: 20px;
+                height: 20px;
             }
         }
     }
 }
 
-// Scrollbar styling for sidebar
+// Scrollbar styling
 .sidebar::-webkit-scrollbar {
     width: 6px;
 }

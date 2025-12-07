@@ -463,6 +463,7 @@ body {
 
 .header {
   width: 20%;
+  min-width: 290px;
   transition: all ease 0.3s;
   background-image: url(../images/bg13.jpg);
   background-position: 70%;
@@ -508,13 +509,17 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   background-color: #151515;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 @media (max-width: 992px) {
   .main {
     padding: 20px;
     overflow-y: visible;
   }
+}
+
+.main::-webkit-scrollbar {
+  display: none;
 }
 
 h2 {
@@ -758,6 +763,7 @@ p {
 @media (max-width: 768px) {
   .info_columns {
     flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 458px) {
@@ -832,6 +838,11 @@ video:hover {
   }
 }
 @media (max-width: 768px) {
+  .right {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
   .right {
     width: 100%;
   }
@@ -910,4 +921,4 @@ video:hover {
   font-family: "Clash Display";
   font-weight: 400;
   color: #b3bfbf;
-}
+}/*# sourceMappingURL=company.css.map */

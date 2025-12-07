@@ -18,6 +18,7 @@ body {
 //Header - Danylo's part
     .header {
         width: 20%;
+        min-width: 290px;
         transition: all ease 0.3s;
         background-image: url(../images/bg13.jpg);
         background-position: 70%;
@@ -65,7 +66,8 @@ body {
         flex-direction: column;
         box-sizing: border-box;
         background-color: $black;
-        overflow-y: scroll;
+        overflow-y:auto;
+        // height: 100vh;
 
         @media (max-width: 992px) {
             padding: 20px;
@@ -73,6 +75,10 @@ body {
         }
     }
 
+    .main::-webkit-scrollbar {
+        display: none; 
+    }
+    
     // Subheading
     h2{
         @include heading_style;
@@ -294,6 +300,7 @@ body {
         
     }
 
+    //information text and images (left and right)
     .info_columns{
         display: flex;
         flex-direction: row;
@@ -302,6 +309,7 @@ body {
 
         @media (max-width: 768px) {
             flex-direction: column;
+            align-items: center;
         }
 
         @media (max-width: 458px) {
@@ -371,6 +379,10 @@ body {
         }
 
         @media (max-width: 768px) {
+            width: 60%;
+        }
+
+        @media (max-width: 576px) {
             width: 100%;
         }
 

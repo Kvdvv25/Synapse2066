@@ -11,78 +11,62 @@
 
 body {
     @include display(flex);
-    height: 100vh;
+    min-height: 100vh;
     @include ClashDisplay;
-    background-color: $charcoal-black1;
+    background-color: $black;
     color: $white;
+    overflow-x: hidden;
 }
 
 .wrapper-update{
-    max-width: 15vw;
-    @media (max-width:992px)
-    {max-width: none;}
+    max-width: 200px;
+    @media (max-width:992px) {
+        max-width: none;
+    }
 }
 
-//Sidebar
+//Sidebar - Fixed percentage width instead of viewport units
 .header {
     transition: all ease 0.3s;
-    width: 50vw;
+    width: 50%;
     background-image: url(../images/Cast/anna-new.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    box-sizing: border-box;
-    position: fixed;
+    min-height: 100vh;
+    @include fixed;
     top: 0;
     left: 0;
     @include overflow(hidden);
     padding: 25px;
     @include display(flex);
-    flex-direction: column;
-    z-index: 100;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.415);
-        z-index: -1;
-    }
+    @include flex-direction(column);
+    @include z-index(100);
 
     @media (max-width: 1000px) {
-        background-position: center 20%;
-        min-height: 40vh;
-        width: 100vw;
         @include relative;
+        width: 100%;
+        max-width: 100%;
+        min-height: 70vh;
+        background-position: center 20%;
         height: auto;
     }
 }
 
 .logo {
-    margin-top: 30%;
+    margin-top: 10px;
+    margin-bottom: 30px;
     display: block;
-    @include CyberPunk;
-    @include font-size(2rem);
-    @include font-weight(500);
-    padding-bottom: 5%;
+    font-family: $font-synapse;
+    font-size: $fs-h1;
     color: $white;
-    margin: 0;
-
-    @media (max-width: 992px) {
-        @include font-size(1.9rem);
-        padding-bottom: 5vw;
-    }
 
     @media (max-width: 768px) {
-        @include font-size(1.8rem);
+        @include font-size($fs-h1-tablet);
     }
-
+        
     @media (max-width: 480px) {
-        @include font-size(1.7rem);
+        @include font-size($fs-h1-mobile);
     }
 }
 
@@ -90,45 +74,60 @@ body {
 .container {
     @include display(flex);
     min-height: 100vh;
+    width: 100%;
     @include relative;
 
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;
-        width: 100%;
     }
 }
 
-// Main Content
+// Main Content 
 .main-content {
     flex: 1;
-    margin-left: 50vw;
-    padding: 3rem 4rem;
-    height: 100vh;
+    margin-left: 50%;
+    padding: 30px 30px 20px 30px;
+    min-height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
     @include display(flex);
     @include flex-direction(column);
-    gap: 2rem;
 
     @media (max-width: 1000px) {
         margin-left: 0;
-        height: auto;
+        width: 100%;
+        min-height: auto;
         overflow-y: visible;
     }
 
     @media (max-width: 768px) {
         padding: 2rem 1.5rem;
-        gap: 1.5rem;
     }
 
     @media (max-width: 480px) {
         padding: 1.5rem 1rem;
-        gap: 1rem;
     }
+}
+
+.content-wrapper {
+    @include display(flex);
+    @include flex-direction(column);
+    flex: 1;
+    min-height: 100%;
+}
+.content-top {
+    flex: 0 0 auto;
+}
+.content-bottom {
+    margin-top: auto;
+    padding-top: 2rem;
 }
 
 // Character Header
 .character-header {
+    margin-bottom: 1.5rem;
+    
     .header-info {
         @include display(flex);
         @include align-items(center);
@@ -141,16 +140,11 @@ body {
 
         .who-label {
             @include ClashDisplay;
-            @include font-weight(400);
-            @include font-size(1rem);
+            @include font-size($fs-body);
             color: $slate-blue;
 
             @media (max-width: 768px) {
-                @include font-size(0.85rem);
-            }
-
-            @media (max-width: 480px) {
-                @include font-size(0.75rem);
+                @include font-size($fs-body-tablet);
             }
         }
 
@@ -158,20 +152,19 @@ body {
             margin-top: 13px;
             flex: 1;
             height: 1px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.349);
         }
 
         .role-label {
-            @include font-size(1rem);
-            color: #efeded;
-            @include font-weight(400);
+            @include font-size($fs-body);
+            color: $white;
 
             @media (max-width: 768px) {
-                @include font-size(0.85rem);
+                @include font-size($fs-body-tablet);
             }
 
             @media (max-width: 480px) {
-                @include font-size(0.75rem);
+                @include font-size($fs-body-mobile);
             }
         }
     }
@@ -179,28 +172,25 @@ body {
 
 // Character Title
 .character-title {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: $line;
+    margin-bottom: 2rem;
 
     h1 {
-        @include font-size(2.6rem);
-        @include font-weight(500);
-        color: #efeded;
+        @include font-size($fs-h1);
+        @include font-weight(400);
+        color: $white;
         letter-spacing: 0.05em;
         @include ClashDisplay;
         margin-bottom: 1rem;
 
         @media (max-width: 768px) {
-            @include font-size(1.6rem);
+            @include font-size($fs-h1-tablet);
             letter-spacing: 0.02em;
         }
 
         @media (max-width: 480px) {
-            @include font-size(1.3rem);
+            @include font-size($fs-h1-mobile);
             letter-spacing: 0;
-        }
-
-        @media (max-width: 380px) {
-            @include font-size(1.1rem);
         }
     }
 }
@@ -210,56 +200,60 @@ body {
     @include display(flex);
     @include flex-direction(column);
     gap: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
 
     .detail-row {
         @include display(flex);
         gap: 3rem;
+        align-items: flex-start;
 
         @media (max-width: 768px) {
-            gap: 1rem;
+            gap: 1.5rem;
             flex-direction: column;
         }
 
         .detail-label {
-            @include font-size(1rem);
+            @include font-size($fs-body);
             color: $slate-blue;
-            @include font-weight(500);
+            @include font-weight(400);
             min-width: 150px;
             flex-shrink: 0;
+            padding-top: 0;
 
             @media (max-width: 768px) {
-                @include font-size(0.9rem);
+                @include font-size($fs-body-tablet);
+                min-width: auto;
             }
 
             @media (max-width: 480px) {
-                @include font-size(0.85rem);
+                @include font-size($fs-body-mobile);
             }
         }
 
         .detail-value {
-            @include font-size(1rem);
-            color: #fff;
-            @include font-weight(400);
+            @include font-size($fs-body);
+            color: $white;
+            @include Fredoka;
             flex: 1;
+            padding-top: 0;
 
             @media (max-width: 768px) {
-                @include font-size(0.9rem);
+                @include font-size($fs-body-tablet);
             }
 
             @media (max-width: 480px) {
-                @include font-size(0.85rem);
+                @include font-size($fs-body-mobile);
             }
 
             &.description-text {
                 @include display(flex);
                 @include flex-direction(column);
-                gap: 2rem;
+                gap: 1.5rem;
 
                 p {
                     line-height: 1.6;
                     text-align: justify;
+                    margin: 0;
 
                     @media (max-width: 768px) {
                         text-align: left;
@@ -270,28 +264,30 @@ body {
                     @include display(inline-flex);
                     @include align-items(center);
                     @include justify-content(center);
-                    @include text-align;
                     @include ClashDisplay;
-                    gap: 1.5rem;
-                    padding: 10px 20px;
+                    gap: 1rem;
+                    padding: 12px 24px;
                     background: transparent;
-                    border: 1px solid #fff;
+                    border: 1px solid $white;
                     border-radius: 50px;
-                    color: #fff;
+                    color: $white;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
                     text-decoration: none;
-                    @include font-size(1rem);
+                    @include font-size($fs-body);
                     transition: all 0.3s ease;
                     cursor: pointer;
+                    max-width: fit-content;
 
                     @media (max-width: 768px) {
-                        @include font-size(0.9rem);
-                        padding: 8px 16px;
+                        @include font-size($fs-body-tablet);
+                        padding: 10px 20px;
                     }
 
                     @media (max-width: 480px) {
-                        @include font-size(0.85rem);
-                        padding: 8px 14px;
-                        gap: 1rem;
+                        @include font-size($fs-body-mobile);
+                        padding: 8px 16px;
+                        gap: 0.75rem;
                     }
 
                     &:hover {
@@ -299,14 +295,15 @@ body {
                         gap: 1.5rem;
 
                         @media (max-width: 480px) {
-                            gap: 1.2rem;
+                            gap: 1rem;
                         }
                     }
 
-                    img {
+                    i {
+                        font-size: 1rem;
+                        
                         @media (max-width: 768px) {
-                            width: 14px;
-                            height: 14px;
+                            font-size: 0.9rem;
                         }
                     }
                 }
@@ -315,32 +312,35 @@ body {
     }
 }
 
-// Socials Section
+// Socials Section - Aligned with other details
 .socials-section {
-    padding: 1rem 0 2rem;
+    padding: 0;
+    margin-bottom: 0;
 
     .socials-header {
         @include display(flex);
         gap: 3rem;
+        align-items: flex-start;
 
         @media (max-width: 768px) {
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .socials-label {
-            @include font-size(1rem);
+            @include font-size($fs-body);
             color: $slate-blue;
-            @include font-weight(500);
             min-width: 150px;
             flex-shrink: 0;
+            padding-top: 0;
 
             @media (max-width: 768px) {
-                @include font-size(0.9rem);
+                @include font-size($fs-body-tablet);
+                min-width: auto;
             }
 
             @media (max-width: 480px) {
-                @include font-size(0.85rem);
+                @include font-size($fs-body-mobile);
             }
         }
 
@@ -348,6 +348,7 @@ body {
             @include display(flex);
             gap: 2rem;
             flex: 1;
+            flex-wrap: wrap;
 
             @media (max-width: 768px) {
                 gap: 1.5rem;
@@ -357,18 +358,18 @@ body {
                 @include display(inline-flex);
                 @include align-items(center);
                 gap: 0.5rem;
-                color: #fff;
+                color: $white;
                 text-decoration: none;
-                @include font-size(1rem);
-                @include font-weight(400);
+                @include Fredoka;
+                @include font-size($fs-body);
                 transition: all 0.3s ease;
 
                 @media (max-width: 768px) {
-                    @include font-size(0.9rem);
+                    @include font-size($fs-body-tablet);
                 }
 
                 @media (max-width: 480px) {
-                    @include font-size(0.85rem);
+                    @include font-size($fs-body-mobile);
                 }
 
                 &:hover {
@@ -377,10 +378,13 @@ body {
                 }
 
                 i {
-                    @include font-size(0.8rem);
+                    @include font-size($fs-body);
                 }
 
                 img {
+                    width: 16px;
+                    height: 16px;
+
                     @media (max-width: 768px) {
                         width: 14px;
                         height: 14px;
@@ -391,45 +395,64 @@ body {
     }
 }
 
-// Explore Next Section
+// Explore Next Section - Text at bottom, line below at very bottom
 .explore-next {
     @include ClashDisplay;
-    @include font-weight(500);
     @include display(flex);
-    @include justify-content(space-between);
-    @include align-items(center);
-    gap: 2rem;
-    margin-top: 2.5rem;
-
+    @include flex-direction(column);
+    gap: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 0;
+    
+    @media (max-width: 1000px) {
+        padding-top: 2rem;
+    }
+    
     @media (max-width: 768px) {
+        padding-top: 1.5rem;
         gap: 1rem;
-        margin-top: 1.5rem;
+    }
+
+    .explore-content {
+        @include display(flex);
+        @include justify-content(space-between);
+        @include align-items(center);
+        gap: 2rem;
+        padding-bottom: 1.5rem;
+        
+        @media (max-width: 768px) {
+            
+            align-items: flex-start;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 
     .explore-text {
         @include display(flex);
         @include align-items(center);
-        @include font-size(1.1rem);
-        color: #efeded;
+        @include font-size($fs-body);
+        color: $slate-blue;
         gap: 2rem;
         flex: 1;
         white-space: nowrap;
-
+        
+        
         @media (max-width: 768px) {
-            @include font-size(0.9rem);
+            @include font-size(1.05rem);
             gap: 1rem;
         }
-
+        
         @media (max-width: 480px) {
-            @include font-size(0.85rem);
+            @include font-size(1rem);
         }
 
         &::after {
             content: "";
-            margin-top: 13px;
             flex: 1;
             height: 1px;
-            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 14px;
+            background-color: rgba(255, 255, 255, 0.349);
         }
     }
 
@@ -437,35 +460,36 @@ body {
         @include display(flex);
         @include align-items(center);
         gap: 1rem;
-        color: #efeded;
+        color: $white;
         text-decoration: none;
-        @include font-size(1.1rem);
-        @include Fredoka;
-        @include font-weight(200);
+        @include font-size($fs-body);
+        @include ClashDisplay;
         transition: gap 0.3s ease;
-        flex-shrink: 0;
         white-space: nowrap;
-
+        flex-shrink: 0;
+        
         @media (max-width: 768px) {
-            @include font-size(0.9rem);
+            @include font-size($fs-body-tablet);
             gap: 0.7rem;
         }
-
+        
         @media (max-width: 480px) {
-            @include font-size(0.85rem);
+            @include font-size($fs-body-mobile);
         }
 
         &:hover {
             gap: 1.5rem;
-
+            
             img {
                 transform: translateX(5px);
             }
         }
-
+        
         img {
             transition: transform 0.3s ease;
-
+            width: 16px;
+            height: 16px;
+            
             @media (max-width: 768px) {
                 width: 14px;
                 height: 14px;
@@ -477,40 +501,36 @@ body {
 // Responsive Design
 @media (max-width: 1200px) {
     .character-details .detail-row {
-        @include flex-direction(column);
-        gap: 0.5rem;
-    }
-
-    .socials-section .socials-header {
-        @include flex-direction(column);
-        gap: 1rem;
+        gap: 2rem;
     }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 768px) {
     .container {
         @include flex-direction(column);
-        max-width: 100%;
-    }
-
-    .header {
-        width: 100%;
-        min-height: 70vh;
-        padding: 1.5rem;
     }
 
     .main-content {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1rem;
     }
 
     .character-title h1 {
         @include font-size(2rem);
     }
+}
 
-    .explore-next {
-        @include align-items(flex-start);
-        gap: 1rem;
-        margin-top: 0;
+@media (min-width: 425px) and (max-width: 1000px) {
+    .header {
+        min-height: 45vh !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header {
+        min-height: 30vh !important;
+    }
+    .header:has(.top-menu__active) {
+        min-height: 45vh !important;
     }
 }
 
@@ -728,19 +748,5 @@ body {
                 font-size: 0.8rem;
             }
         }
-    }
-}
-
-@media (min-width: 425px) and (max-width: 1000px) {
-  .header {
-    min-height: 45% !important;
-  }
-}
-@media screen and (max-width: 425px) {
-    .header {
-        min-height: 25% !important;
-    }
-    .header:has(.top-menu__active) {
-        min-height: 45% !important;
     }
 }
