@@ -181,12 +181,13 @@ body {
 
         .character-grid {
             @include display(flex);
-            gap: 2rem;
+            gap: 2.5rem;  // Increased from 2rem
             margin-bottom: 2rem;
             flex-wrap: wrap;
+            justify-content: space-between;  // Better distribution
             
             @media (max-width: 1200px) {
-                gap: 1.5rem;
+                gap: 2rem;
             }
             
             @media (max-width: 768px) {
@@ -203,11 +204,11 @@ body {
     }
 }
 
-// Character Cards
+// Character Cards - Larger to fill width
 .character-card {
     flex: 1;
-    min-width: 250px;
-    max-width: 350px;
+    min-width: 300px;  // Increased from 250px
+    max-width: 450px;  // Increased from 350px
     @include relative;
     @include display(flex);
     @include flex-direction(column);

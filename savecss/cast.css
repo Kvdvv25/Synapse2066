@@ -597,13 +597,14 @@ body {
 }
 .main-content .characters-section .character-grid {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 @media (max-width: 1200px) {
   .main-content .characters-section .character-grid {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 }
 @media (max-width: 768px) {
@@ -622,8 +623,8 @@ body {
 
 .character-card {
   flex: 1;
-  min-width: 250px;
-  max-width: 350px;
+  min-width: 300px;
+  max-width: 450px;
   position: relative;
   display: flex;
   flex-direction: column;
