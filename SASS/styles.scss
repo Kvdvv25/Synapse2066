@@ -48,6 +48,12 @@ $line: 1px solid $line-color;
 @mixin flex-direction($value){
     flex-direction: $value;
 };
+@mixin column{
+    flex-direction: column;
+}
+@mixin block{display: block;}
+@mixin flex{display: flex;}
+@mixin z-hundred{z-index: 100;}
 @mixin z-index($value) {z-index: $value;}
 @mixin border-radius($value){border-radius: $value;}
 

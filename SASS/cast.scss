@@ -29,7 +29,6 @@ body {
 .header {
     transition: all ease 0.3s;
     width: 20%;
-    max-width: 320px;
     background-image: url(../images/bg_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,14 +81,16 @@ body {
     }
 }
 
-// Main Content 
+// Main Content - Full height with flexbox for bottom positioning
 .main-content {
     overflow-y: auto;
     overflow-x: hidden;
     flex: 1;
     margin-left: 20%;
-    padding: 30px 30px 20px 30px;
+    padding: 30px;
     min-height: 100vh;
+    @include display(flex);
+    @include flex-direction(column);
 
     @media (max-width: 1000px){
         margin-left: 0;
@@ -105,7 +106,31 @@ body {
     @media (max-width: 480px) {
         padding: 1.5rem 1rem;
     }
+}
 
+// Content wrapper structure for bottom positioning
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+}
+
+.content-top {
+    flex: 0 0 auto;
+}
+
+.content-bottom {
+    margin-top: auto;
+    padding-top: 3rem;
+    
+    @media (max-width: 768px) {
+        padding-top: 2rem;
+    }
+}
+
+// Nested sections
+.main-content {
     .content-header {
         margin-bottom: 2rem;
         @include relative;
@@ -157,7 +182,7 @@ body {
         .character-grid {
             @include display(flex);
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
             
             @media (max-width: 1200px) {
@@ -168,7 +193,6 @@ body {
                 @include display(grid);
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
-                margin-bottom: 2rem;
             }
             
             @media (max-width: 480px) {
@@ -290,7 +314,7 @@ body {
                 top: 0;
                 width: 1.5px;
                 height: 100%;
-                background-color: rgba(255, 255, 255, 0.3490196078);
+                background-color: rgba(255, 255, 255, 0.349);
                 
                 @media (max-width: 768px) {
                     left: 0.5rem;
@@ -317,7 +341,7 @@ body {
     }
 }
 
-// Explore Next Section
+// Explore Next Section - Now at bottom
 .explore-next {
     @include ClashDisplay;
     @include font-weight(500);
@@ -325,13 +349,14 @@ body {
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     width: 100%;
     
     @media (max-width: 768px) {
         gap: 1rem;
-        margin-top: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
 
     .explore-text {
@@ -350,11 +375,11 @@ body {
         }
 
         &::after {
-            margin-top: 18px;
+            margin-top: 14px;
             content: "";
             flex: 1;
             height: 1px;
-            background-color: rgba(255, 255, 255, 0.349);
+            background-color: rgba(255, 255, 255, 0.1);
             min-width: 50px;
         }
     }
