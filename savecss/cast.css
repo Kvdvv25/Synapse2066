@@ -766,8 +766,6 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
   width: 100%;
 }
 @media (max-width: 768px) {
