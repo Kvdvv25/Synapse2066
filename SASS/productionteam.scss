@@ -18,10 +18,10 @@ body {
     overflow-x: hidden;
 }
 
-// Sidebar/Header - Using fixed pixel widths instead of vw
+// Sidebar/Header - Us
 .header {
     transition: all ease 0.2s;
-    width: 320px; // Fixed width instead of 20vw
+    width: 320px; 
     max-width: 320px;
     background-image: url(../images/bg11.JPG);
     background-repeat: no-repeat;
@@ -81,11 +81,10 @@ body {
     }
 }
 
-// Main Content - Using calculated width instead of vw
+// Main Content 
 .main-content {
     overflow-y: auto;
     overflow-x: hidden;
-    width: calc(100% - 320px); // Calculated from fixed sidebar width
     flex: 1;
     margin-left: 320px;
     background-color: $black;

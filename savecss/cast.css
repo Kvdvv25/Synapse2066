@@ -427,7 +427,7 @@ body {
   display: flex;
   min-height: 100vh;
   font-family: "Clash Display";
-  background-color: #0c1111;
+  background-color: #151515;
   color: #fff;
   overflow-x: hidden;
 }
@@ -503,7 +503,7 @@ body {
 .main-content {
   overflow-y: auto;
   overflow-x: hidden;
-  width: 80%;
+  flex: 1;
   margin-left: 20%;
   padding: 30px 30px 20px 30px;
   min-height: 100vh;

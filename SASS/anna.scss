@@ -13,7 +13,7 @@ body {
     @include display(flex);
     min-height: 100vh;
     @include ClashDisplay;
-    background-color: $charcoal-black1;
+    background-color: $black;
     color: $white;
     overflow-x: hidden;
 }
@@ -84,10 +84,9 @@ body {
     }
 }
 
-// Main Content - Full height layout with flexbox
+// Main Content 
 .main-content {
     flex: 1;
-    width: 50%;
     margin-left: 50%;
     padding: 30px 30px 20px 30px;
     min-height: 100vh;
@@ -112,18 +111,15 @@ body {
     }
 }
 
-// Content wrapper to push explore section to bottom
 .content-wrapper {
     @include display(flex);
     @include flex-direction(column);
     flex: 1;
     min-height: 100%;
 }
-
 .content-top {
     flex: 0 0 auto;
 }
-
 .content-bottom {
     margin-top: auto;
     padding-top: 2rem;

@@ -501,7 +501,6 @@ body {
 .main-content {
   overflow-y: auto;
   overflow-x: hidden;
-  width: calc(100% - 320px);
   flex: 1;
   margin-left: 320px;
   background-color: #151515;
