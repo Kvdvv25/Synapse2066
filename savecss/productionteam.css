@@ -443,9 +443,10 @@ body {
 .header {
   transition: all ease 0.3s;
   width: 20vw;
-  background-image: url(../images/bg_2.jpg);
+  background-image: url(../images/bg11.JPG);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right 10%;
   height: 100vh;
   box-sizing: border-box;
   position: fixed;
@@ -508,7 +509,7 @@ body {
   overflow-y: auto;
   width: 100%;
   margin-left: 21vw;
-  padding: 3rem 2rem;
+  padding: 30px 30px 20px 30px;
   height: 100vh;
 }
 @media (max-width: 1000px) {
