@@ -13,7 +13,7 @@ body {
     @include display(flex);
     min-height: 100vh;
     @include ClashDisplay;
-    background-color: $charcoal-black1;
+    background-color: $black;
     color: $white;
     overflow-x: hidden;
 }
@@ -25,7 +25,7 @@ body {
     }
 }
 
-//Sidebar - Fixed percentage width instead of viewport units
+//Sidebar 
 .header {
     transition: all ease 0.3s;
     width: 50%;
@@ -88,7 +88,6 @@ body {
 // Main Content - Full height layout with flexbox
 .main-content {
     flex: 1;
-    width: 50%;
     margin-left: 50%;
     padding: 30px 30px 20px 30px;
     min-height: 100vh;
