@@ -65,11 +65,10 @@ body {
         flex-direction: column;
         box-sizing: border-box;
         background-color: $black;
-        overflow-y: scroll;
 
         @media (max-width: 992px) {
             padding: 20px;
-            overflow-y: visible;
+            overflow-y: visible;  
         }
     }
 

@@ -65,14 +65,17 @@ body {
         flex-direction: column;
         box-sizing: border-box;
         background-color: $black;
-        overflow-y: scroll;
+        overflow-y:auto;
+        // height: 100vh;
 
         @media (max-width: 992px) {
             padding: 20px;
             overflow-y: visible;
         }
     }
-
+    .main::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
     // Subheading
     h2{
         @include heading_style;
@@ -302,6 +305,7 @@ body {
 
         @media (max-width: 768px) {
             flex-direction: column;
+            align-items: center;
         }
 
         @media (max-width: 458px) {
@@ -371,6 +375,10 @@ body {
         }
 
         @media (max-width: 768px) {
+            width: 60%;
+        }
+
+        @media (max-width: 576px) {
             width: 100%;
         }
 
