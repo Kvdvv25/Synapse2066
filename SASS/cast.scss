@@ -13,7 +13,7 @@ body {
     display: flex;
     min-height: 100vh;
     @include ClashDisplay;
-    background-color: $charcoal-black1;
+    background-color: $black;
     color: $white;
     overflow-x: hidden;
 }
@@ -25,7 +25,7 @@ body {
     }
 }
 
-// Sidebar - Using percentage width instead of viewport units
+// Sidebar 
 .header {
     transition: all ease 0.3s;
     width: 20%;
@@ -82,11 +82,11 @@ body {
     }
 }
 
-// Main Content - Using calculated width with percentage
+// Main Content 
 .main-content {
     overflow-y: auto;
     overflow-x: hidden;
-    width: 80%;
+    flex: 1;
     margin-left: 20%;
     padding: 30px 30px 20px 30px;
     min-height: 100vh;
