@@ -41,17 +41,7 @@ body {
     @include display(flex);
     flex-direction: column;
     z-index: 100;
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.415);
-        z-index: -1;
-    }
-    
+
     @media (max-width: 1000px){
         background-position: center 40%;
         min-height: 70vh;
@@ -62,24 +52,19 @@ body {
 }
 
 .logo {
-    margin-top: 30%;
+    margin-top: 10px;
+    margin-bottom: 30px;
     display: block;
-    @include CyberPunk;
-    @include font-size(2rem);
-    @include font-weight(500);
-    padding-bottom: 5%;
+    font-family: $font-synapse;
+    font-size: $fs-h1;
     color: $white;
-    margin: 0;
-    
-    @media (max-width: 992px) {
-        @include font-size(1.9rem);
-        padding-bottom: 5vw;
-    }           
+
     @media (max-width: 768px) {
-        @include font-size(1.8rem);
+        @include font-size($fs-h1-tablet);
     }
+        
     @media (max-width: 480px) {
-        @include font-size(1.7rem);
+        @include font-size($fs-h1-mobile);
     }
 }
 

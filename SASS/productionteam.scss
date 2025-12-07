@@ -8,26 +8,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     @include ClashDisplay;
-    background-color: $charcoal-black1;
+    background-color: $black;
     color: $white;
+    overflow-x: hidden;
 }
-.wrapper-update{
-    max-width: 15vw;
-    @media (max-width:992px)
-    {max-width: none;}
-}
+
+// Sidebar/Header - Using fixed pixel widths instead of vw
 .header {
-    transition: all ease 0.3s;
-    width: 20vw;
+    transition: all ease 0.2s;
+    width: 320px; // Fixed width instead of 20vw
+    max-width: 320px;
     background-image: url(../images/bg11.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right 10%;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
     @include fixed;
     top: 0;
@@ -37,27 +37,34 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 100;
-    @media (max-width: 1000px){
-        min-height: 30vh;
-        width: 100vw;
-        @include relative;
+    
+    @media (max-width: 1200px) {
+        width: 280px;
+        max-width: 280px;
+    }
+    
+    @media (max-width: 1000px) {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        height: auto;
     }
 }
+
 .logo {
-    margin-top: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
     display: block;
-    @include CyberPunk;
-    @include font-size(2.6rem);
-    @include font-weight(400);
+    font-family: $font-synapse;
+    font-size: $fs-h1;
     color: $white;
-    padding-bottom: 10px;
-    margin: 0;
-                
-    @media (max-width: 992px) {
+    
+    @media (max-width: 768px) {
         @include font-size($fs-h1-tablet);
     }
-                
-    @media (max-width: 768px) {
+    
+    @media (max-width: 480px) {
         @include font-size($fs-h1-mobile);
     }
 }
@@ -66,47 +73,57 @@ body {
 .container {
     @include display(flex);
     min-height: 100vh;
+    width: 100%;
     @include relative;
-    @media (max-width:1000px){
-        @include display(grid);
-        grid-template-columns: 2 1fr;
-    }
-    @media (max-width:800px){
-        @include display(flex);
+    
+    @media (max-width: 1000px) {
         @include flex-direction(column);
     }
 }
 
-// Main Content
+// Main Content - Using calculated width instead of vw
 .main-content {
     overflow-y: auto;
-    width: 100%;
-    margin-left: 21vw;
-    padding: 30px 30px 20px 30px;
-    height: 100vh;
-
-    @media (max-width: 1000px){
-        margin-left: 0;
-        height: auto;
-        overflow-y: visible;
+    overflow-x: hidden;
+    width: calc(100% - 320px); // Calculated from fixed sidebar width
+    flex: 1;
+    margin-left: 320px;
+    background-color: $black;
+    padding: 30px;
+    min-height: 100vh;
+    
+    @media (max-width: 1200px) {
+        width: calc(100% - 280px);
+        margin-left: 280px;
     }
-
+    
+    @media (max-width: 1000px) {
+        margin-left: 0;
+        width: 100%;
+        min-height: auto;
+        overflow-y: visible;
+        padding: 30px 20px;
+    }
+    
     @media (max-width: 768px) {
         padding: 2rem 1.5rem;
     }
-
+    
+    @media (max-width: 480px) {
+        padding: 1.5rem 1rem;
+    }
+    
     .content-header {
         margin-bottom: 1rem;
-
+        
         .section-title {
             @include font-size($fs-h2);
-            @include font-weight(400);
             color: $slate-blue;
             @include relative;
             @include display(flex);
             @include align-items(center);
             gap: 1rem;
-
+            
             &::after {
                 margin-top: 13px;
                 content: "";
@@ -116,40 +133,46 @@ body {
             }
         }
     }
-
+    
     .team-section {
         .team-heading {
             @include font-size($fs-h1);
-            @include font-weight(400);
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+            border-bottom: $line;
             color: $white;
-
+            
             @media (max-width: 768px) {
-                @include font-size(2rem);
+                @include font-size($fs-h1-tablet);
             }
-
+            
             @media (max-width: 480px) {
-                @include font-size(1.8rem);
+                @include font-size($fs-h1-mobile);
             }
         }
-
+        
         .team-grid {
             @include display(grid);
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
-
+            max-width: 100%;
+            
+            // For exactly 3 columns on larger screens
+            @media (min-width: 1201px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
             // Tablet - 2 columns
-            @media (max-width: 1200px) {
+            @media (max-width: 1200px) and (min-width: 769px) {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.25rem;
             }
-
-            // Mobile - Block
+            
+            // Mobile - 1 column
             @media (max-width: 768px) {
-                @include display(block);
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
         }
     }
@@ -162,59 +185,44 @@ body {
     @include flex-direction(column);
     cursor: pointer;
     transition: transform 0.3s ease;
-
-    @media (max-width: 768px) {
-        margin-bottom: 2.5rem;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
+    width: 100%;
+    max-width: 100%;
+    
     &:hover {
         transform: translateY(-8px);
-
+        
         .team-image {
             img {
                 transform: scale(1.05);
             }
         }
-
+        
         .team-link {
             opacity: 1;
             transform: translateX(0);
         }
     }
-
+    
     .team-image {
         width: 100%;
-        height: 450px;
-        aspect-ratio: 4/5;
+        height: 0;
+        padding-bottom: 125%; // 4:5 aspect ratio (500/400 = 1.25)
+        @include relative;
         @include overflow(hidden);
         border-radius: 8px;
         margin-bottom: 1.2rem;
-        @include relative;
-
-        @media (max-width: 1200px) {
-            height: 400px;
-        }
-
-        @media (max-width: 768px) {
-            height: 350px;
-        }
-
-        @media (max-width: 480px) {
-            height: 300px;
-        }
-
+        
         img {
+            @include absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
     }
-
+    
     .team-info {
         @include ClashDisplay;
         @include display(flex);
@@ -276,6 +284,7 @@ body {
         }
     }
 }
+
 // General Enquiries Section
 .general-enquiries {
     @include ClashDisplay;
@@ -283,56 +292,56 @@ body {
     margin-bottom: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.349);
     border-bottom: 1px solid rgba(255, 255, 255, 0.349);
-
+    
     @media (max-width: 768px) {
         padding: 1.5rem 0;
     }
-
+    
     .enquiries-wrapper {
         @include display(flex);
         @include align-items(center);
         @include justify-content(space-between);
-        gap: 5rem;
-
+        gap: 3rem;
+        
         @media (max-width: 1200px) {
-            gap: 3rem;
+            gap: 2rem;
         }
-
+        
         @media (max-width: 768px) {
             @include flex-direction(column);
             @include align-items(flex-start);
             gap: 1.5rem;
         }
-
+        
         .enquiries-label {
             @include font-size($fs-body);
-            @include font-weight(400);
             color: $slate-blue;
             min-width: 200px;
             flex-shrink: 0;
-
+            
             @media (max-width: 768px) {
                 min-width: auto;
             }
         }
-
+        
         .enquiries-links {
             @include display(flex);
             @include align-items(center);
-            gap: 10rem;
+            gap: 3rem;
             flex: 1;
-
+            flex-wrap: wrap;
+            
             @media (max-width: 1200px) {
-                gap: 5rem;
+                gap: 2rem;
             }
-
+            
             @media (max-width: 768px) {
                 @include flex-direction(column);
                 @include align-items(flex-start);
                 gap: 1rem;
                 width: 100%;
             }
-
+            
             .enquiry-link {
                 @include display(inline-flex);
                 @include align-items(center);
@@ -343,16 +352,16 @@ body {
                 @include font-size($fs-body);
                 @include font-weight(300);
                 transition: all 0.3s ease;
-
+                
                 &:hover {
                     color: $white;
                     gap: 1rem;
-
+                    
                     i {
                         transform: translate(2px, -2px);
                     }
                 }
-
+                
                 i {
                     @include font-size(1rem);
                     transition: transform 0.3s ease;
@@ -370,15 +379,14 @@ body {
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
-    margin-top: 3rem;
-    margin-bottom: -1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     
     @media (max-width: 768px) {
         gap: 1rem;
         margin-top: 1.5rem;
-        margin-bottom: -1rem;
     }
-
+    
     .explore-text {
         @include display(flex);
         @include align-items(center);
@@ -393,7 +401,7 @@ body {
             @include font-size(1rem);
             gap: 1rem;
         }
-
+        
         &::after {
             content: "";
             flex: 1;
@@ -401,13 +409,12 @@ body {
             background-color: rgba(255, 255, 255, 0.1);
         }
     }
-
+    
     .explore-link {
         @include display(flex);
         @include align-items(center);
         gap: 1rem;
         color: $white;
-        
         @include font-size($fs-h2-tablet);
         @include font-weight(400);
         @include ClashDisplay;
@@ -419,7 +426,7 @@ body {
             @include font-size(1rem);
             gap: 0.7rem;
         }
-
+        
         &:hover {
             gap: 1.5rem;
             
@@ -441,7 +448,7 @@ body {
     }
 }
 
-// Responsive Design
+// Additional responsive improvements
 @media (max-width: 1200px) {
     .character-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -450,28 +457,42 @@ body {
 
 @media (max-width: 768px) {
     body {
-        overflow: visible;
         overflow-x: hidden;
     }
+    
     .container {
         @include flex-direction(column);
         max-height: none;
     }
-
+    
     .sidebar {
         width: 100%;
         padding: 1.5rem;
         position: relative;
         height: auto;
     }
-
+    
     .main-content {
         .characters-section .characters-heading {
             @include font-size(2rem);
         }
     }
-
+    
     .character-grid {
         @include display(block);
+    }
+}
+
+// Zoom-resistant classes
+.max-content-width {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Prevent layout shift on zoom / Ios specific
+@supports (-webkit-touch-callout: none) {
+    body {
+        -webkit-text-size-adjust: 100%;
     }
 }

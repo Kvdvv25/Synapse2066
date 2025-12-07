@@ -469,20 +469,12 @@ body {
 }
 
 .logo {
-  margin-top: 30%;
+  margin-top: 10px;
+  margin-bottom: 30px;
   display: block;
-  font-family: "CyberPunk", sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
-  padding-bottom: 5%;
+  font-family: "Cyberpunk";
+  font-size: 2.6rem;
   color: #fff;
-  margin: 0;
-}
-@media (max-width: 992px) {
-  .logo {
-    font-size: 1.9rem;
-    padding-bottom: 5vw;
-  }
 }
 @media (max-width: 768px) {
   .logo {
@@ -491,7 +483,7 @@ body {
 }
 @media (max-width: 480px) {
   .logo {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -865,4 +857,4 @@ body {
   .header:has(.top-menu__active) {
     min-height: 45% !important;
   }
-}
+}/*# sourceMappingURL=jordan_cinematography.css.map */

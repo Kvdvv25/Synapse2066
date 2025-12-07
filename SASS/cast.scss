@@ -43,20 +43,18 @@ body {
     }
 }
 .logo {
-    margin-top: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
     display: block;
-    @include CyberPunk;
-    @include font-size(2.6rem);
-    @include font-weight(400);
+    font-family: $font-synapse;
+    font-size: $fs-h1;
     color: $white;
-    padding-bottom: 10px;
-    margin: 0;
-                
-    @media (max-width: 992px) {
+
+    @media (max-width: 768px) {
         @include font-size($fs-h1-tablet);
     }
-                
-    @media (max-width: 768px) {
+        
+    @media (max-width: 480px) {
         @include font-size($fs-h1-mobile);
     }
 }
