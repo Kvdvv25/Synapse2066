@@ -89,6 +89,7 @@ body {
     margin-left: 20%;
     padding: 30px;
     min-height: 100vh;
+    height: 100vh; // Important for Safari/Firefox
     @include display(flex);
     @include flex-direction(column);
 
@@ -96,6 +97,7 @@ body {
         margin-left: 0;
         width: 100%;
         min-height: auto;
+        height: auto; // Reset height on mobile
         overflow-y: visible;
     }
 
@@ -112,17 +114,20 @@ body {
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-height: 100%;
+    flex: 1 1 auto; // Changed from flex: 1
+    min-height: 0; // Important for Firefox
+    height: 100%; // Important for Safari
 }
 
 .content-top {
     flex: 0 0 auto;
+    width: 100%; // Ensure full width
 }
 
 .content-bottom {
     margin-top: auto;
     padding-top: 3rem;
+    width: 100%; // Ensure full width
     
     @media (max-width: 768px) {
         padding-top: 2rem;
@@ -351,7 +356,8 @@ body {
     gap: 2rem;
     padding-top: 3rem;
     padding-bottom: 2rem;
-    width: 100%;
+    width: 100%; // Ensure full width
+    box-sizing: border-box; // Include padding in width
     
     @media (max-width: 768px) {
         gap: 1rem;
@@ -365,7 +371,7 @@ body {
         @include font-size($fs-h2-tablet);
         color: $slate-blue;
         gap: 2rem;
-        flex: 1;
+        flex: 1 1 auto; // Allow it to grow and shrink
         min-width: 0;
         white-space: nowrap;
         
@@ -377,7 +383,7 @@ body {
         &::after {
             margin-top: 14px;
             content: "";
-            flex: 1;
+            flex: 1 1 auto; // Allow line to grow
             height: 1px;
             background-color: rgba(255, 255, 255, 0.1);
             min-width: 50px;
