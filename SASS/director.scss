@@ -25,11 +25,10 @@ body {
     }
 }
 
-//Sidebar - Fixed percentage width instead of viewport units
+//Sidebar 
 .header {
     transition: all ease 0.3s;
     width: 50%;
-    max-width: 800px;
     background-image: url(../images/Crew/yash-director-new.jpg);
     background-repeat: no-repeat;
     background-size: cover;

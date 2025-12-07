@@ -444,7 +444,6 @@ body {
 .header {
   transition: all ease 0.3s;
   width: 20%;
-  max-width: 320px;
   background-image: url(../images/bg_2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -505,8 +504,10 @@ body {
   overflow-x: hidden;
   flex: 1;
   margin-left: 20%;
-  padding: 30px 30px 20px 30px;
+  padding: 30px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 1000px) {
   .main-content {
@@ -526,6 +527,28 @@ body {
     padding: 1.5rem 1rem;
   }
 }
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+}
+
+.content-top {
+  flex: 0 0 auto;
+}
+
+.content-bottom {
+  margin-top: auto;
+  padding-top: 3rem;
+}
+@media (max-width: 768px) {
+  .content-bottom {
+    padding-top: 2rem;
+  }
+}
+
 .main-content .content-header {
   margin-bottom: 2rem;
   position: relative;
@@ -575,7 +598,7 @@ body {
 .main-content .characters-section .character-grid {
   display: flex;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 @media (max-width: 1200px) {
@@ -588,7 +611,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    margin-bottom: 2rem;
   }
 }
 @media (max-width: 480px) {
@@ -706,7 +728,7 @@ body {
   top: 0;
   width: 1.5px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.3490196078);
+  background-color: rgba(255, 255, 255, 0.349);
 }
 @media (max-width: 768px) {
   .character-card .character-info .character-descr::before {
@@ -743,14 +765,15 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   width: 100%;
 }
 @media (max-width: 768px) {
   .explore-next {
     gap: 1rem;
-    margin-top: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 }
 .explore-next .explore-text {
@@ -770,11 +793,11 @@ body {
   }
 }
 .explore-next .explore-text::after {
-  margin-top: 18px;
+  margin-top: 14px;
   content: "";
   flex: 1;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.349);
+  background-color: rgba(255, 255, 255, 0.1);
   min-width: 50px;
 }
 .explore-next .explore-link {
