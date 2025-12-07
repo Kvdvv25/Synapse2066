@@ -73,9 +73,11 @@ body {
             overflow-y: visible;
         }
     }
+
     .main::-webkit-scrollbar {
-        display: none; /* Chrome, Safari */
+        display: none; 
     }
+    
     // Subheading
     h2{
         @include heading_style;
