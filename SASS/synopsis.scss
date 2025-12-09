@@ -66,6 +66,7 @@ body {
         flex-direction: column;
         box-sizing: border-box;
         background-color: $black;
+        overflow-y:auto;
 
         @media (max-width: 992px) {
             padding: 20px;
@@ -239,6 +240,19 @@ body {
     .related_page{
         display: flex;
         align-items: center;
+
+        &:hover {
+
+            
+            a{
+                transition: gap 0.3s ease;
+
+            }
+            
+            img {
+                transform: translateX(10px);
+            }
+        }
     }
 
     .related_page button{
