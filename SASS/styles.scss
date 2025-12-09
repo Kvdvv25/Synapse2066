@@ -141,7 +141,7 @@ $fs-btn-mobile: 0.95rem;
 //Buttons
 @mixin button-base{
     @include ClashDisplay;
-    font-family: $font-title;
+    // font-family: $font-title;
     border-radius: 30px;
     @include font-size($fs-btn);
     border: none;
