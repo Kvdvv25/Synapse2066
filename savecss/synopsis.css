@@ -569,12 +569,6 @@ h1 {
   }
 }
 
-.synopsis_title {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3490196078);
-  margin: 2rem 0;
-  padding-bottom: 2rem;
-}
-
 p {
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
@@ -884,6 +878,22 @@ a {
 .trailer {
   width: 100%;
   border-radius: 8px;
+}
+
+.tr {
+  margin-bottom: 3vh;
+}
+
+.link_YT {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+.link_YT a {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5vw;
+  text-decoration: underline;
 }
 
 .video_info {

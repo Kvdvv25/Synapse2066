@@ -123,12 +123,6 @@ body {
         }
     }
 
-    .synopsis_title{
-        border-bottom: $line;
-        margin: 2rem 0;
-        padding-bottom: 2rem;
-    }
-
     // Contact info
     p{
         @include Fredoka;
@@ -420,7 +414,7 @@ body {
     }
 
 
-//Company & trailer page    
+//trailer page    
     .video_description{
         padding-top: 2vh;
         margin-bottom: 2vh;
@@ -432,6 +426,23 @@ body {
     .trailer{
         width: 100%;
         border-radius: 8px;
+    }
+
+    .tr{
+        margin-bottom: 3vh;
+    }
+
+    .link_YT{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1vh;
+        
+        a{
+            display: flex;
+            align-items: center;
+            margin-left: 1.5vw;
+            text-decoration: underline;
+        }
     }
    
     .video_info{
