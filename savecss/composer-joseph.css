@@ -780,7 +780,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding-top: 6rem;
+  padding-top: 6.8rem;
 }
 @media (max-width: 1000px) {
   .explore-next {
