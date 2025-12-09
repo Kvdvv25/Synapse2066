@@ -289,32 +289,8 @@ body {
         }
     }
 
-    .watch_content{
-        align-items: center;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 4vh;
-
-        @media (max-width: 597px) {
-            margin-bottom: 2vh;
-        }
-       
-        @media (max-width: 1200px) {
-            flex-direction: column;
-        }
-    }
-
     .poster{
         margin-right: 3vw;
-    }
-
-    .frist_vid{
-        margin-right: 3vw;
-
-        @media (max-width: 1200px) {
-            margin-right: 0;
-        }
     }
 
     .leftS{
@@ -326,7 +302,9 @@ body {
     }
 
     .content_side{
-        // width: 50%;
+        @media (max-width: 597px) {
+            width: 100%;
+        }
 
         .poster_img{
             width: 100%;
@@ -342,27 +320,6 @@ body {
                 margin-left: 0;
                 
             }
-        }
-
-        @media (max-width: 597px) {
-            width: 100%;
-        }
-    }
-
-    .content_side_video{
-        width: 50%;
-        position: relative;
-
-        @media (max-width: 1200px) {
-            width: 100%;
-            // min-height: 20vh;
-        }
-    }
-
-    .content_description{
-        text-align: justify;
-        @media (max-width: 1200px) {
-            margin-bottom: 4vh;
         }
     }
 
@@ -384,7 +341,6 @@ body {
         }
     }
 
-
     .genres{
         display: flex;
         flex-direction: row;
@@ -398,7 +354,7 @@ body {
 
     .genre_type{
         text-align: center;
-        padding: 1px 20px;
+        padding: 0.8vh 3vh;
         border: $line;
         border-radius: 30px;
         margin-right:10px;
@@ -416,15 +372,6 @@ body {
 
     #overview{
         text-align: justify;
-    }
-
-
-//trailer page    
-    .video_description{
-        padding-top: 2vh;
-        margin-bottom: 2vh;
-        border-top: $line;
-        justify-content: space-between;
     }
 
     // Video
@@ -472,49 +419,6 @@ body {
             align-items: center;
         }
     
-    }
-   
-    .video_info{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 2vh 0;
-        border-bottom: $line;
-        padding-bottom: 1.5vh;
-    }
-
-    .vid{
-        position: relative;
-        width: 100%;
-    }
-
-    .vid:hover {
-        box-shadow: 0 0 11px rgba(0, 0, 0, 0.653); 
-      }
-    
-    .play_icon{
-        padding: 5px;
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        border-radius: 100%;
-        backdrop-filter: blur(6px);
-        border: $line;
-        width: 40px;
-      }
-
-    .company_info{
-       border: $line;
-       padding: 2vw;
-       border-radius: 10px;
-    }
-
-    .about{
-        border-bottom: $line;
-        padding-bottom: 2vh;
-        margin-bottom: 2vh;
     }
 
 //Storyline page
