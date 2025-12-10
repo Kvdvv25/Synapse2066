@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About the Film</title>
+    <title>Festivals</title>
     <link rel="stylesheet" href="savecss/synopsis.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
               <a href="synopsis-storyline.html" class="bottom-submenu__link">Storyline</a>
             </li>
             <li class="bottom-submenu__item">
-              <a href="synopsis-festivals.html" class="bottom-submenu__link">Festivals</a>
+              <a href="synopsis-festivals.html" class="bottom-submenu__link active">Festivals</a>
             </li>
           </ul>
         </li>
@@ -106,83 +106,53 @@
 
         <!-- Main heading -->
         <div class="title_box">
-          <h1>About the Film</h1> 
+          <h1>Festival Submissions</h1> 
         </div>
 
         <!-- Description -->
         <div class="description_storyline">
-          <p>Welcome to the world of Synapse! Scroll down for more information.</p>
+          <p>A list of the festivals to which we submitted our works.</p>
         </div>
 
         <!-- Body -->
-         <div class="trailer_box">
-          <div class="tr">
-            <div class="link_YT">
-              <p>Watch the trailer below or on: </p>
-              <a href="https://youtu.be/Du9rKfrybeo?si=2nUhCeWiMwe7EXKe" class="btn_primary">YouTube
-                <img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
-              </a> 
+        <div class="festival_section">  
+          <div class="festival_div" id="festival_link1">
+            <img class="festival_logo_img" src="images/festival1scifi.png" alt="">
+            <h2>Sci-Fi London</h2>
+            <div class="festival_descr">
+              <ul class="list_festivals">
+                <li class="list_style_title"><span>Location:</span> London</li>
+                <li class="list_style_title"><span>Audience:</span> Sci-Fi Enthusiasts</li>
+                <li class="list_style_title"><span>Category:</span> Best Student Film</li>
+                <li class="list_style_title"><span>Submission Status:</span> Pending</li>
+              </ul>
             </div>
-            <video class="trailer" id="trailer_video" poster="images/trailer_vid_cover.png" controls src="images/trailer.mp4">
-            </video>            
-          </div>
-         </div>
-        <div class="content">
-            <div class="content_side leftS poster">
-                <img class="poster_img" src="images/poster_light.jpeg" alt="Film Poster (Light Version)">
+          </div> 
+          <div class="festival_div" id="festival_link2">
+            <img class="festival_logo_img" src="images/festival2.png" alt="">
+            <h2>May 4th Ireland</h2>
+            <div class="festival_descr">
+              <ul class="list_festivals">
+                <li class="list_style_title"><span>Location:</span> Ireland</li>
+                <li class="list_style_title"><span>Audience:</span> Sci-Fi Enthusiasts</li>
+                <li class="list_style_title"><span>Categories:</span> All</li>
+                <li class="list_style_title"><span>Submission Status:</span> Pending</li>
+              </ul>
             </div>
-            <div class="content_side rightS film_info">
-                <div class="movie_facts">
-                    <div class="film_info_box ">
-                        <p class="info_type ">Year:</p>
-                        <p>2025</p>
-                    </div>
-                    <div class="film_info_box ">
-                        <p class="info_type ">Runtime:</p>
-                        <p>10 min.</p>
-                    </div>
-                    <div class="film_info_box ">
-                      <p class="info_type ">Location:</p>
-                      <p>London, UK</p>
-                  </div>
-                </div>
-                <div class="movie_facts">
-                    <div class="film_info_box ">
-                        <p class="info_type ">Genres:</p>
-                        <div class="genres">
-                            <p class="genre_type">Sci-Fi</p>
-                            <p class="genre_type">Drama</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="movie_facts">
-                    <p class="info_type ">Overview:</p>
-                    <!-- Synopsis Text -->
-                    <p id="overview">
-                      In a dystopian future ruled by SYNAPSE, a corporation that controls society through implant technology, a former employee Leo lives in isolation, obsessed with finding his wife Anna, who was taken after they exposed the company's dark secrets. Leo hacks into the neural network and reconnects with Anna who's held captive at SYNAPSE corporation in simulation, experiencing her senses and even influencing her movements. As Synapse tracks his location, Leo shares one final, synchronized dance with Anna before his friend Harry pulls him
-                      from the system to escape. The connection is severed, but it sparks a flicker of memory in Anna.
-                    </p>
-
-                </div>
-
-
-                 <!-- Contact info -->
-                <div class="contact_info">
-                    <p class="contact_type">Contact:</p>
-                    <div class="info">
-
-                        <a href="https://www.instagram.com/synapse_film/" class="contact_links">
-                            <p>Instagram</p><img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
-                        </a>
-                        <a href="#" class="contact_links " id="emailSyn">
-                            <span class="email"></span>
-                            <img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
-                        </a>
-                    </div>
-                </div>
-                
+          </div> 
+          <div class="festival_div" id="festival_link3">
+            <img class="festival_logo_img" src="images/festival4.webp" alt="">
+            <h2>Oxford International <br> Film Festival</h2>
+            <div class="festival_descr">
+              <ul class="list_festivals">
+                <li class="list_style_title"><span>Location:</span> Oxford</li>
+                <li class="list_style_title"><span>Category:</span> Best Student Film</li>
+                <li class="list_style_title"><span>Submission Status:</span> Pending</li>
+              </ul>
             </div>
+          </div> 
+        </div>
+
         </div>
 
         <!-- Related page section -->
@@ -190,7 +160,7 @@
             <h2>Next</h2>
             <div class="underlined"></div>
             <div class="related_page">
-                <button class="btn_secondary nextPage" ><a href="/synopsis-storyline.html">Storyline<img class="icon" src="/images/arrow2.png" alt="Arrow right"></a></button>
+                <button class="btn_secondary nextPage" ><a href="/cast.html">Cast<img class="icon" src="/images/arrow2.png" alt="Arrow right"></a></button>
 
             </div>
         </div>
@@ -199,9 +169,16 @@
 <!-- <script src="/Javascript/synopsis.js"></script> -->
 <script src="Javascript/sidebar.js" defer></script>
 <script>
-  // email
-  document.getElementById('emailSyn').addEventListener('click', function(){
-      window.location.href = 'mailto:' + 'synapse2066' + '@gmail.com';
+  document.getElementById('festival_link1').addEventListener('click', function(){
+    window.location.href  = 'https://sci-fi-london.com/';
+  })
+
+  document.getElementById('festival_link2').addEventListener('click', function(){
+    window.location.href  = 'https://filmfreeway.com/MayThe4thSciFiFilmFestival?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn2NpWQdsyFzHmWHN0gBv3e_c2s2T9xUq6jI8KS4xmvwTVj9YEnaJk5xQh8FY_aem_7XWsgXDCu8bvO9lSgXG_YA';
+  })
+
+  document.getElementById('festival_link3').addEventListener('click', function(){
+    window.location.href  = 'https://www.oxiff.com/';
   })
 </script>
 </body>

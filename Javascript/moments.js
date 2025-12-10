@@ -57,8 +57,8 @@ let moments_content = [
         image1: 'images/Digital_Dance.jpg',
         image2: 'images/Thinking_of_Anna.jpg',
         description:"This is a symbolic scene where Leo and Anna are synced together; it appears as if they are truly together in this happy, dreamy moment. In reality, Anna is still unaware of everything in the simulation, and this is Leo's last attempt to share a moment with her. <br><br> Things take a down turn after this scene leading up to the climax.",
-        next: 'Cast<img class="icon" src="/images/arrow2.png" alt="arrow pointing right">',
-        nextLink: '/cast.html'
+        next: 'Festivals<img class="icon" src="/images/arrow2.png" alt="arrow pointing right">',
+        nextLink: '/synopsis-festivals.html'
     }
 ]
 
