@@ -1213,6 +1213,11 @@ a {
   height: 20vh;
   margin-bottom: 4vh;
 }
+@media (max-width: 658px) {
+  .festival_div img {
+    margin-top: 4vh;
+  }
+}
 
 .festival_div:hover {
   transform: translateY(-2vh);

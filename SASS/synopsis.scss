@@ -739,6 +739,10 @@ body {
          img{
             height: 20vh;
             margin-bottom: 4vh;
+
+            @media (max-width: 658px) {
+                margin-top: 4vh;
+            }
         }
     }
 
