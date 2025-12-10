@@ -259,6 +259,13 @@ body {
   transition: all ease 0.3s;
 }
 
+.press-kit .tickets-link {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .bottom-menu {
   z-index: 999;
   margin-top: auto;
@@ -447,6 +454,9 @@ body {
   .header:has(> .show) .top-menu {
     width: 0;
     height: 40px !important;
+  }
+  .top-menu__item {
+    font-size: 1rem;
   }
 }
 body {
@@ -644,4 +654,4 @@ body {
   .breadcrumbs {
     gap: 0;
   }
-}/*# sourceMappingURL=gallery.css.map */
+}

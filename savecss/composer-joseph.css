@@ -173,6 +173,13 @@
   transition: all ease 0.3s;
 }
 
+.press-kit .tickets-link {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .bottom-menu {
   z-index: 999;
   margin-top: auto;
@@ -361,6 +368,9 @@
   .header:has(> .show) .top-menu {
     width: 0;
     height: 40px !important;
+  }
+  .top-menu__item {
+    font-size: 1rem;
   }
 }
 html, body, div, span, applet, object, iframe,
@@ -780,7 +790,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding-top: 6rem;
+  padding-top: 6.8rem;
 }
 @media (max-width: 1000px) {
   .explore-next {
@@ -895,4 +905,4 @@ body {
   .header:has(.top-menu__active) {
     min-height: 45vh !important;
   }
-}/*# sourceMappingURL=composer-joseph.css.map */
+}

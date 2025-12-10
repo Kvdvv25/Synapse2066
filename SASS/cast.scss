@@ -28,7 +28,7 @@ body {
 // Sidebar 
 .header {
     transition: all ease 0.3s;
-    width: 20%;
+    width: 320px;
     background-image: url(../images/bg_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,12 +81,12 @@ body {
     }
 }
 
-// Main Content - Full height layout with flexbox for bottom positioning
+// Main Content 
 .main-content {
     overflow-y: auto;
     overflow-x: hidden;
     flex: 1;
-    margin-left: 20%;
+    margin-left: 320px;
     padding: 30px;
     min-height: 100vh;
     @include display(flex);
@@ -181,10 +181,10 @@ body {
 
         .character-grid {
             @include display(flex);
-            gap: 2.5rem;  // Increased from 2rem
+            gap: 2.5rem;
             margin-bottom: 2rem;
             flex-wrap: wrap;
-            justify-content: space-between;  // Better distribution
+            justify-content: space-between; 
             
             @media (max-width: 1200px) {
                 gap: 2rem;
@@ -207,8 +207,8 @@ body {
 // Character Cards - Larger to fill width
 .character-card {
     flex: 1;
-    min-width: 300px;  // Increased from 250px
-    max-width: 450px;  // Increased from 350px
+    min-width: 300px;
+    max-width: 450px;  
     @include relative;
     @include display(flex);
     @include flex-direction(column);

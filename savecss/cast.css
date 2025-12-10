@@ -227,6 +227,13 @@ a {
   transition: all ease 0.3s;
 }
 
+.press-kit .tickets-link {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .bottom-menu {
   z-index: 999;
   margin-top: auto;
@@ -416,6 +423,9 @@ a {
     width: 0;
     height: 40px !important;
   }
+  .top-menu__item {
+    font-size: 1rem;
+  }
 }
 * {
   margin: 0;
@@ -443,7 +453,7 @@ body {
 
 .header {
   transition: all ease 0.3s;
-  width: 20%;
+  width: 320px;
   background-image: url(../images/bg_2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -503,7 +513,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   flex: 1;
-  margin-left: 20%;
+  margin-left: 320px;
   padding: 30px;
   min-height: 100vh;
   display: flex;
@@ -851,4 +861,4 @@ body {
 
 .sidebar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
-}/*# sourceMappingURL=cast.css.map */
+}
