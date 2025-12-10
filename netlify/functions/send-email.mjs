@@ -87,12 +87,12 @@ export const handler = async function (event){
                         <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="margin-right:10px;">Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
                         <br>
                         <div style="width:100%; display: flex; align-items:center; ">
-                            <p style="margin-right: 10px;">For more information, photos and insights: </p>
-                            <a href='https://synapse2066.netlify.app/' style="padding: 10px 30px; border: 1px solid black; border-radius: 30px;background-color: #b3bfbf ; text-decoration:none; color:black;">Visit Website</a>
+                            <p style="margin-right: 5px; ">For more information, photos and insights: </p>
+                            <a href='https://synapse2066.netlify.app/' style="padding: 10px 18px; border: 1px solid black; border-radius: 30px;background-color: #b3bfbf ; text-decoration:none; color:black;">Visit Website</a>
                         </div>
-                        <div style="width:100%; display: flex; align-items:center; margin-bottom:30px">
-                            <p style="margin-right: 10px;">Watch the trailer on YouTube: </p>
-                            <a href='https://youtu.be/Du9rKfrybeo?si=2nUhCeWiMwe7EXKe' style='color:black'>Synapse - Trailer</a>
+                        <div style="width:100%; display: flex; align-items:center; margin-bottom:30px; ">
+                            <p style="padding-right: 5px;">Watch the trailer on YouTube: <a href='https://youtu.be/Du9rKfrybeo?si=2nUhCeWiMwe7EXKe' style='color:black'>Synapse - Trailer</a></p>
+                            
                         </div>
                         <p>Best regards, <br> Synapse Team</p>
                         </body>
