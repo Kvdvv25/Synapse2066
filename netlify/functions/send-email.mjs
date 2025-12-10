@@ -82,13 +82,11 @@ export const handler = async function (event){
                         <body style="margin:0; padding:0;">
                         <h2 style="margin:0; font-size:24px; color:#333333;">Hello ${name}, </h2>
                         <p>Thank you for your reservation!</p>
-                        <p style="margin:0; font-size:16px; line-height:1.5;";><strong style="color: #b3bfbf; margin-right:1vw;">Tickets reserved:</strong>${numberOfTickets}</p>
-                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="color: #b3bfbf; margin-right:1vw;">Event date:</strong>12/12/2025</p>
-                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="color: #b3bfbf; margin-right:1vw;">Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
-                        <a href='https://synapse2066.netlify.app/' style="color: #b3bfbf; padding: 1vh 5vh; border: 1px solid #b3bfbf; border-radius: 30px; margin: 1vh 0; ">Explore our Website</a>
-                        <p style="margin:0; font-size:16px; line-height:1.5;">We're excited to see you soon!</p>
-
-
+                        <p style="margin:0; font-size:16px; line-height:1.5;";><strong style="margin-right:10px;">Tickets reserved:</strong>${numberOfTickets}</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="margin-right:10px;">Event date:</strong>12/12/2025</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="margin-right:10px;">Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;">We're excited to see you soon!</p><br>
+                        <a href='https://synapse2066.netlify.app/' style="padding: 10px 30px; border: 1px solid #b3bfbf; border-radius: 30px;; ">Visit Website</a>
                         </body>
                     </html>`    
         });
