@@ -33,14 +33,17 @@
             <img src="images/arrow2.png" alt="Arrow Icon" class="arrow" />
           </a>
         </div>
+        <div class="press-kit top-menu__item">
+          <a href="./EPK/EPK.pdf" download="" class="tickets-link">
+            <p class="tickets-link__text">Download EPK</p>
+            <img src="images/arrow2.png" alt="Arrow Icon" class="arrow" />
+          </a>
+        </div>
       </div>
       <ul class="bottom-menu ">
         <li class="bottom-menu__item active">
           <a href="synopsis.html" class="bottom-menu__link ">Synopsis</a>
           <ul class="bottom-submenu ">
-            <li class="bottom-submenu__item" >
-              <a href="synopsis-trailer.html" class="bottom-submenu__link">Watch Now</a>
-            </li>
             <li class="bottom-submenu__item">
               <a href="synopsis-storyline.html" class="bottom-submenu__link">Storyline</a>
             </li>
@@ -75,12 +78,15 @@
             <li class="bottom-submenu__item">
               <a href="charlie-graffer.html" class="bottom-submenu__link">Graffer</a>
             </li>
-            <li class="bottom-submenu__item">
-              <a href="davidigor-firstad.html" class="bottom-submenu__link">First AD</a>
-            </li>
-            <li class="bottom-submenu__item">
-              <a href="molly-secondad.html" class="bottom-submenu__link">Second AD</a>
-            </li>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="davidigor-firstad.html" class="bottom-submenu__link"
+              >Production Support</a>
+          </li>
+          <li class="bottom-submenu__item">
+            <a href="molly-secondad.html" class="bottom-submenu__link"
+              >Art Department Support</a>
+          </li>
           </ul>
         </li>
         <li class="bottom-menu__item">
@@ -103,15 +109,32 @@
 
         <!-- Main heading -->
         <div class="title_box">
-            <h1 class="synopsis_title">Synapse 2066</h1> 
+          <h1>Synopsis</h1> 
+        </div>
+
+        <!-- Description -->
+        <div class="description_storyline">
+          <p>Welcome to the world of Synapse! Scroll down for more information.</p>
         </div>
 
         <!-- Body -->
+         <div class="trailer_box">
+          <div class="tr">
+            <div class="link_YT">
+              <p>Watch the trailer below or on: </p>
+              <a href="https://youtu.be/Du9rKfrybeo?si=2nUhCeWiMwe7EXKe" class="btn_primary">YouTube
+                <img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
+              </a> 
+            </div>
+            <video class="trailer" id="trailer_video" poster="images/trailer_vid_cover.png" controls src="images/trailer.mp4">
+            </video>            
+          </div>
+         </div>
         <div class="content">
-            <div class="content_side poster">
+            <div class="content_side leftS poster">
                 <img class="poster_img" src="images/poster_light.jpeg" alt="Film Poster (Light Version)">
             </div>
-            <div class="content_side film_info">
+            <div class="content_side rightS film_info">
                 <div class="movie_facts">
                     <div class="film_info_box ">
                         <p class="info_type ">Year:</p>
@@ -152,11 +175,11 @@
                     <p class="contact_type">Contact:</p>
                     <div class="info">
 
-                        <a href="" class="contact_links">
+                        <a href="https://www.instagram.com/synapse_film/" class="contact_links">
                             <p>Instagram</p><img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
                         </a>
-                        <a href="" class="contact_links">
-                            <p>email</p>
+                        <a href="#" class="contact_links " id="emailSyn">
+                            <span class="email"></span>
                             <img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
                         </a>
                     </div>
@@ -172,7 +195,7 @@
             <h2>Next</h2>
             <div class="underlined"></div>
             <div class="related_page">
-                <button class="btn_secondary nextPage" ><a href="/synopsis-trailer.html">Trailer<img class="icon" src="/images/arrow2.png" alt="Arrow right"></a></button>
+                <button class="btn_secondary nextPage" ><a href="/synopsis-storyline.html">Storyline<img class="icon" src="/images/arrow2.png" alt="Arrow right"></a></button>
 
             </div>
         </div>
@@ -180,5 +203,11 @@
 
 <!-- <script src="/Javascript/synopsis.js"></script> -->
 <script src="Javascript/sidebar.js" defer></script>
+<script>
+  // email
+  document.getElementById('emailSyn').addEventListener('click', function(){
+      window.location.href = 'mailto:' + 'synapse2066' + '@gmail.com';
+  })
+</script>
 </body>
 </html>

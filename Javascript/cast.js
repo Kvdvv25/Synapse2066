@@ -79,3 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
+
+// email
+document.getElementById('email').addEventListener('click', function(){
+    window.location.href = 'mailto:' + 'synapse2066' + '@gmail.com';
+})

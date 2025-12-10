@@ -84,7 +84,7 @@ a {
   font-weight: 300;
 }
 .btn_primary {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -107,7 +107,7 @@ a {
 }
 
 .btn_secondary {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -128,7 +128,7 @@ a {
 }
 
 .btn_icon {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -385,4 +385,4 @@ body {
   .text .button {
     padding: 10px 20px;
   }
-}/*# sourceMappingURL=homepage.css.map */
+}

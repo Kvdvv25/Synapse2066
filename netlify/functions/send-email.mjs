@@ -76,13 +76,28 @@ export const handler = async function (event){
             from: `'Event Team' <${process.env.EMAIL_USER}>`,
             to: email,
             subject: 'Reservation Confirmation',
-            html: `<h2>Hello ${name}, </h2>
-            <p>Thank you for your reservation!</p>
-            <p><strong>Tickets reserved:</strong>${numberOfTickets}</p>
-            <p><strong>Event date:</strong>12/12/2025</p>
-            <p><strong>Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
-            <a href=''>Website link</a>
-            <p>We're excited to see you soon!</p>`
+            html: `
+                <!DOCTYPE html>
+                    <html lang="en">
+                        <body style="margin:0; padding:0;">
+                        <h2 style="margin:0; font-size:24px;">Hello ${name}, </h2>
+                        <p>Thank you for your reservation!</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;";><strong style="margin-right:10px;">Tickets reserved:</strong>${numberOfTickets}</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="margin-right:10px;">Event date:</strong>12/12/2025</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="margin-right:10px;">Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
+                        <br>
+                        <div style="width:100%; display: flex; align-items:center; margin-bottom:18px; ">
+                            <p style="padding-right: 5px;">Watch the trailer on YouTube: 
+                                <a href='https://youtu.be/Du9rKfrybeo?si=2nUhCeWiMwe7EXKe' style='color:black'>Synapse - Trailer</a>
+                            </p>
+                        </div>
+                        <p style="margin-right: 5px; ">For more information, photos and insights: </p>
+                        <div style="width:100%; margin-bottom:30px; ">
+                            <a href='https://synapse2066.netlify.app/' style="padding: 10px 18px; border: 1px solid black; border-radius: 30px;background-color: #b3bfbf ; text-decoration:none; color:black;">Visit Website</a>
+                        </div>
+                        <p>Best regards, <br>Team Synapse</p>
+                        </body>
+                    </html>`    
         });
 
         return {

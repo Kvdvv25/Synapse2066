@@ -84,7 +84,7 @@ a {
   font-weight: 300;
 }
 .btn_primary {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -107,7 +107,7 @@ a {
 }
 
 .btn_secondary {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -128,7 +128,7 @@ a {
 }
 
 .btn_icon {
-  font-family: "ClashDisplay-Medium";
+  font-family: "Clash Display";
   border-radius: 30px;
   font-size: 1rem;
   border: none;
@@ -257,6 +257,13 @@ body {
   right: 10px;
   top: 10px;
   transition: all ease 0.3s;
+}
+
+.press-kit .tickets-link {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .bottom-menu {
@@ -447,6 +454,9 @@ body {
   .header:has(> .show) .top-menu {
     width: 0;
     height: 40px !important;
+  }
+  .top-menu__item {
+    font-size: 1rem;
   }
 }
 * {
@@ -921,4 +931,4 @@ video:hover {
   font-family: "Clash Display";
   font-weight: 400;
   color: #b3bfbf;
-}/*# sourceMappingURL=company.css.map */
+}

@@ -77,6 +77,14 @@
     top: 10px;
     transition: all ease 0.3s;
 }
+.press-kit {
+    & .tickets-link {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
 
 // Bottom Menu
 .bottom-menu {
@@ -270,5 +278,8 @@
     .header:has(> .show) .top-menu { 
         width: 0;
         height: 40px !important;
+    }
+    .top-menu__item {
+        font-size: 1rem;
     }
 }
