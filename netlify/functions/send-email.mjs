@@ -86,8 +86,10 @@ export const handler = async function (event){
                         <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="margin-right:10px;">Event date:</strong>12/12/2025</p>
                         <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="margin-right:10px;">Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
                         <br>
-                        <div style="width:100%; display: flex; flex-direction:column; margin-bottom:5px">
-                            <p style="margin-right: 5px; ">For more information, photos and insights: </p><br>
+                        <p style="margin-right: 5px; ">For more information, photos and insights: </p><br>
+
+                        <div style="width:100%; margin-bottom:5px">
+                        
                             <a href='https://synapse2066.netlify.app/' style="padding: 10px 18px; border: 1px solid black; border-radius: 30px;background-color: #b3bfbf ; text-decoration:none; color:black;">Visit Website</a>
                             
                         </div>
