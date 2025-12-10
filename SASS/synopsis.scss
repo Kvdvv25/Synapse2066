@@ -664,3 +664,27 @@ body {
             width: 200px;
         }
     }
+
+    //email
+
+    .email{
+        display: flex;
+        align-items: center;
+        @include Fredoka;
+        font-size: $fs-body;
+
+        @media (max-width: 768px) {
+            @include font-size($fs-body-tablet);
+        }
+        
+        @media (max-width: 480px) {
+            @include font-size($fs-body-mobile);
+        }
+    }
+.email::before{
+    content: 'synapse2066';
+}
+
+.email::after{
+    content: '@gmail.com';
+}

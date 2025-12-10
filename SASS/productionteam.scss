@@ -494,3 +494,12 @@ body {
         -webkit-text-size-adjust: 100%;
     }
 }
+
+//email
+.email::before{
+    content: 'synapse2066';
+}
+
+.email::after{
+    content: '@gmail.com';
+}

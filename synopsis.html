@@ -169,8 +169,8 @@
                         <a href="https://www.instagram.com/synapse_film/" class="contact_links">
                             <p>Instagram</p><img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
                         </a>
-                        <a href="mailto:synapse2066@gmail<!--.example-->.com" class="contact_links">
-                            <p>Email</p>
+                        <a href="#" class="contact_links " id="emailSyn">
+                            <span class="email"></span>
                             <img class="icon" src="/images/icons/arrow_topright.svg" alt="Arrow top right">
                         </a>
                     </div>
@@ -194,5 +194,11 @@
 
 <!-- <script src="/Javascript/synopsis.js"></script> -->
 <script src="Javascript/sidebar.js" defer></script>
+<script>
+  // email
+  document.getElementById('emailSyn').addEventListener('click', function(){
+      window.location.href = 'mailto:' + 'synapse2066' + '@gmail.com';
+  })
+</script>
 </body>
 </html>
