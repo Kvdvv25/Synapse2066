@@ -802,10 +802,31 @@ p {
     margin: 0;
   }
 }
+@media (max-width: 1207px) {
+  .left {
+    width: 40vw;
+  }
+}
+@media (max-width: 1000px) {
+  .left {
+    width: 100%;
+  }
+}
 
 video {
   width: 100%;
   border-radius: 8px;
+  background-color: black;
+}
+@media (max-width: 1207px) {
+  video {
+    height: 40vh;
+  }
+}
+@media (max-width: 320px) {
+  video {
+    height: 30vh;
+  }
 }
 
 video:hover {
@@ -839,6 +860,11 @@ video:hover {
 @media (max-width: 480px) {
   .right h2 {
     font-size: 1.3rem;
+  }
+}
+@media (max-width: 1207px) {
+  .right {
+    width: 50%;
   }
 }
 @media (max-width: 1024px) {

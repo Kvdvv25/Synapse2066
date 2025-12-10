@@ -334,11 +334,27 @@ body {
             width: 100%;
             margin: 0;
         }
+        @media (max-width: 1207px) {
+            width: 40vw ;
+        }
+
+        @media (max-width: 1000px) {
+            width: 100% ;
+        }
     }
 
     video{
         width: 100%;
         border-radius: 8px;
+        background-color: black;
+
+        @media (max-width: 1207px) {
+            height: 40vh ;
+        }
+
+        @media (max-width: 320px) {
+            height: 30vh ;
+        }
     }
 
     video:hover{
@@ -371,6 +387,12 @@ body {
             @media (max-width: 480px) {
                 font-size: $fs-h2-tablet;
             }
+        }
+
+
+        @media (max-width: 1207px) {
+            width: 50%;
+            // padding: 1.5vw;
         }
 
         @media (max-width: 1024px) {
