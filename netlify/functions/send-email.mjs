@@ -76,13 +76,21 @@ export const handler = async function (event){
             from: `'Event Team' <${process.env.EMAIL_USER}>`,
             to: email,
             subject: 'Reservation Confirmation',
-            html: `<h2>Hello ${name}, </h2>
-            <p>Thank you for your reservation!</p>
-            <p><strong>Tickets reserved:</strong>${numberOfTickets}</p>
-            <p><strong>Event date:</strong>12/12/2025</p>
-            <p><strong>Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
-            <a href=''>Website link</a>
-            <p>We're excited to see you soon!</p>`
+            html: `
+                <!DOCTYPE html>
+                    <html lang="en">
+                        <body style="margin:0; padding:0; background-color:#151f20; color:#ffffff;">
+                        <h2 style="margin:0; font-size:24px; color:#333333;">Hello ${name}, </h2>
+                        <p>Thank you for your reservation!</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;";><strong style="color: #b3bfbf">Tickets reserved:</strong>${numberOfTickets}</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="color: #b3bfbf">Event date:</strong>12/12/2025</p>
+                        <p style="margin:0; font-size:16px; line-height:1.5;"><strong style="color: #b3bfbf">Event location:</strong>SAE House, 297 Kingsland Rd, London E8 4DD</p>
+                        <a href='https://synapse2066.netlify.app/' style="color: #b3bfbf; padding: 1vh 5vh; border: 1px solid #b3bfbf ">Explore our Website</a>
+                        <p style="margin:0; font-size:16px; line-height:1.5;">We're excited to see you soon!</p>
+
+
+                        </body>
+                    </html>`    
         });
 
         return {
