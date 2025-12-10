@@ -9,13 +9,13 @@ let isScrolling = false;
 const content = [
   {
     title: "Corporation",
-    text: "Learn more about Synapse`s Corporation",
+    text: "Learn more about Synapse's Corporation",
     button: "Explore the Corporation →",
     link: "company.html",
   },
   {
     title: "Cast",
-    text: "Explore the film`s characters, who they are and which actors bring them to life",
+    text: "Explore the film's characters, who they are and which actors bring them to life",
     button: "Explore the Characters →",
     link: "cast.html",
   },
@@ -32,8 +32,8 @@ const content = [
     link: "gallery.html",
   },
   {
-    title: "Synopsis",
-    text: "Learn more about Synapse`s storyline",
+    title: "About the Film",
+    text: "Learn more about Synapse's storyline",
     button: "Learn about the film →",
     link: "synopsis.html",
   },
