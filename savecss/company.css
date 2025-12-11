@@ -846,6 +846,7 @@ video:hover {
 .right p {
   text-align: left;
   line-height: normal;
+  text-align: left;
 }
 .right h2 {
   color: #fff;
@@ -953,7 +954,7 @@ video:hover {
   font-family: "Clash Display";
   font-weight: 400;
   color: #b3bfbf;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 .hide {
