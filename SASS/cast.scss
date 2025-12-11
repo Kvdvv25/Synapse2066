@@ -40,11 +40,11 @@ body {
     @include overflow(hidden);
     padding: 25px;
     display: flex;
-    flex-direction: column;
+    @include column;
     z-index: 100;
     
     @media (max-width: 1000px){
-        position: relative;
+        @include relative;
         width: 100%;
         max-width: 100%;
         min-height: 30vh;
@@ -54,7 +54,7 @@ body {
 .logo {
     margin-top: 10px;
     margin-bottom: 30px;
-    display: block;
+    @include block;
     font-family: $font-synapse;
     font-size: $fs-h1;
     color: $white;
@@ -70,14 +70,14 @@ body {
 
 // Container Layout
 .container {
-    @include display(flex);
+    @include flex;
     min-height: 100vh;
     width: 100%;
     @include relative;
     
     @media (max-width:1000px){
-        display: flex;
-        flex-direction: column;
+        @include display(flex);
+        @include column;
     }
 }
 
@@ -89,8 +89,8 @@ body {
     margin-left: 320px;
     padding: 30px;
     min-height: 100vh;
-    @include display(flex);
-    @include flex-direction(column);
+    @include flex;
+    @include column;
 
     @media (max-width: 1000px){
         margin-left: 0;
@@ -108,10 +108,10 @@ body {
     }
 }
 
-// Content wrapper to push explore section to bottom
+// Content wrapper
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
+    @include flex;
+    @include column;
     flex: 1;
     min-height: 100%;
 }
@@ -141,7 +141,7 @@ body {
             @include font-weight(400);
             color: $slate-blue;
             @include relative;
-            @include display(flex);
+            @include flex;
             @include align-items(center);
             gap: 1rem;
             z-index: 1;
@@ -180,7 +180,7 @@ body {
         }
 
         .character-grid {
-            @include display(flex);
+            @include flex;
             gap: 2.5rem;
             margin-bottom: 2rem;
             flex-wrap: wrap;
@@ -210,8 +210,8 @@ body {
     min-width: 300px;
     max-width: 450px;  
     @include relative;
-    @include display(flex);
-    @include flex-direction(column);
+    @include flex;
+    @include column;
     cursor: pointer;
     transition: transform 0.3s ease;
     
@@ -255,12 +255,12 @@ body {
 
     .character-info {
         @include ClashDisplay;
-        @include display(flex);
-        @include flex-direction(column);
+        @include flex;
+        @include column;
         gap: 0.5rem;
         
         .character-name {
-            @include display(flex);
+            @include flex;
             @include align-items(center);
             @include justify-content(space-between);
             gap: 0.5rem;
@@ -346,7 +346,7 @@ body {
 .explore-next {
     @include ClashDisplay;
     @include font-weight(500);
-    @include display(flex);
+    @include flex;
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
@@ -359,7 +359,7 @@ body {
     }
 
     .explore-text {
-        @include display(flex);
+        @include flex;
         @include align-items(center);
         @include font-size($fs-h2-tablet);
         color: $slate-blue;
@@ -384,7 +384,7 @@ body {
     }
 
     .explore-link {
-        @include display(flex);
+        @include flex;
         @include align-items(center);
         gap: 1rem;
         color: $white;

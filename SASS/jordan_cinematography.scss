@@ -40,16 +40,15 @@ body {
     left: 0;
     @include overflow(hidden);
     padding: 25px;
-    @include display(flex);
-    flex-direction: column;
-    z-index: 100;
-
-    @media (max-width: 1000px){
-        position: relative;
+    @include flex;
+    @include column;
+    @include z-hundred;
+    @media (max-width: 1000px) {
+        @include relative;
         width: 100%;
         max-width: 100%;
         min-height: 70vh;
-        background-position: center 40%;
+        background-position: center 30%;
         height: auto;
     }
 }
@@ -57,10 +56,10 @@ body {
 .logo {
     margin-top: 10px;
     margin-bottom: 30px;
-    display: block;
+    @include block;
+    color: $white;
     font-family: $font-synapse;
     font-size: $fs-h1;
-    color: $white;
 
     @media (max-width: 768px) {
         @include font-size($fs-h1-tablet);
@@ -73,14 +72,14 @@ body {
 
 // Container Layout
 .container {
-    @include display(flex);
+    @include flex;
     min-height: 100vh;
     width: 100%;
     @include relative;
     
     @media (max-width:1000px){
-        display: flex;
-        flex-direction: column;
+        @include flex;
+        @include column;
     }
 }
 
@@ -92,8 +91,8 @@ body {
     min-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    @include display(flex);
-    @include flex-direction(column);
+    @include flex;
+    @include column;
     
     @media (max-width: 1000px){
         margin-left: 0;
@@ -109,10 +108,10 @@ body {
     }
 }
 
-// Content wrapper to push explore section to bottom
+// Content wrapper
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
+    @include flex;
+    @include column;
     flex: 1;
     min-height: 100%;
 }
@@ -131,7 +130,7 @@ body {
     margin-bottom: 1.5rem;
     
     .header-info {
-        @include display(flex);
+        @include flex;
         @include align-items(center);
         padding-bottom: 1rem;
         gap: 2rem;
@@ -198,21 +197,21 @@ body {
     }
 }
 
-// Character Details - Aligned labels and values
+// Character Details
 .team-details {
-    @include display(flex);
-    @include flex-direction(column);
+    @include flex;
+    @include column;
     gap: 2rem;
     margin-bottom: 2rem;
 
     .detail-row {
-        @include display(flex);
+        @include flex;
         gap: 3rem;
         align-items: flex-start;
         
         @media (max-width: 768px) {
             gap: 1.5rem;
-            flex-direction: column;
+            @include column;
         }
 
         .detail-label {
@@ -249,8 +248,8 @@ body {
             }
 
             &.description-text {
-                @include display(flex);
-                @include flex-direction(column);
+                @include flex;
+                @include column;
                 gap: 1.5rem;
                 
                 p {
@@ -267,18 +266,18 @@ body {
     }
 }
 
-// Socials Section - Aligned with other details
+// Socials Section
 .socials-section {
     padding: 0;
     margin-bottom: 0;
 
     .socials-header {
-        @include display(flex);
+        @include flex;
         gap: 3rem;
         align-items: flex-start;
 
         @media (max-width: 768px) {
-            flex-direction: column;
+            @include column;
             gap: 1.5rem;
         }
 
@@ -301,7 +300,7 @@ body {
         }
 
         .socials-links {
-            @include display(flex);
+            @include flex;
             gap: 2rem;
             flex: 1;
             flex-wrap: wrap;
@@ -354,7 +353,7 @@ body {
 // Explore Next Section
 .explore-next {
     @include ClashDisplay;
-    @include display(flex);
+    @include flex;
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
@@ -373,7 +372,7 @@ body {
     }
 
     .explore-text {
-        @include display(flex);
+        @include flex;
         @include align-items(center);
         @include font-size($fs-body);
         color: $slate-blue;
@@ -400,7 +399,7 @@ body {
     }
 
     .explore-link {
-        @include display(flex);
+        @include flex;
         @include align-items(center);
         gap: 1rem;
         color: $white;

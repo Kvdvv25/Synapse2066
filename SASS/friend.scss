@@ -112,8 +112,8 @@ body {
 
 // Content wrapper to push explore section to bottom
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
+    @include flex;
+    @include column;
     flex: 1;
     min-height: 100%;
 }
@@ -132,7 +132,7 @@ body {
     margin-bottom: 1.5rem;
     
     .header-info {
-        @include display(flex);
+        @include flex;
         @include align-items(center);
         padding-bottom: 1rem;
         gap: 2rem;
@@ -199,21 +199,21 @@ body {
     }
 }
 
-// Character Details - Aligned labels and values
+// Character Details
 .character-details {
-    @include display(flex);
-    @include flex-direction(column);
+    @include flex;
+    @include column;
     gap: 2rem;
     margin-bottom: 2rem;
 
     .detail-row {
-        @include display(flex);
+        @include flex;
         gap: 3rem;
         align-items: flex-start;
 
         @media (max-width: 768px) {
             gap: 1.5rem;
-            flex-direction: column;
+            @include column;
         }
 
         .detail-label {
@@ -250,8 +250,8 @@ body {
             }
 
             &.description-text {
-                @include display(flex);
-                @include flex-direction(column);
+                @include flex;
+                @include column;
                 gap: 1.5rem;
 
                 p {
@@ -320,12 +320,12 @@ body {
     margin-bottom: 0;
 
     .socials-header {
-        @include display(flex);
+        @include flex;
         gap: 3rem;
         align-items: flex-start;
 
         @media (max-width: 768px) {
-            flex-direction: column;
+            @include column;
             gap: 1.5rem;
         }
 
@@ -347,7 +347,7 @@ body {
         }
 
         .socials-links {
-            @include display(flex);
+            @include flex;
             gap: 2rem;
             flex: 1;
             flex-wrap: wrap;
@@ -400,7 +400,7 @@ body {
 // Explore Next Section
 .explore-next {
     @include ClashDisplay;
-    @include display(flex);
+    @include flex;
     @include justify-content(space-between);
     @include align-items(center);
     gap: 2rem;
@@ -415,12 +415,12 @@ body {
     @media (max-width: 768px) {
         gap: 1rem;
         padding-top: 1.5rem;
-        flex-direction: column;
+        @include column;
         align-items: flex-start;
     }
 
     .explore-text {
-        @include display(flex);
+        @include flex;
         @include align-items(center);
         @include font-size($fs-body);
         color: $slate-blue;
