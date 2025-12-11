@@ -1182,6 +1182,7 @@ a {
   text-align: center;
   padding: 2vw 0;
   cursor: pointer;
+  background-color: #151515;
 }
 @media (max-width: 1389px) {
   .festival_div {

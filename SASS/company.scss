@@ -370,8 +370,9 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
+        
         p{
+            text-align: left;
             line-height: normal;
         }
 
@@ -396,7 +397,7 @@ body {
         }
 
         @media (max-width: 1024px) {
-            width: 40%;
+            width: 60%;
             padding: 1.5vw;
         }
 
@@ -461,18 +462,16 @@ body {
 
     .info_box{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         margin-top: 2vh;
-    }
-
-    .info{
-        width: 50%;
-        margin-top: 0.5vh;
     }
 
     .info_type{
         @include ClashDisplay;
         @include heading_style;
         color: $slate-blue;
+        margin-right: 5px;
     }
+
+    .hide{opacity: 0;}
