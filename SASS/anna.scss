@@ -25,7 +25,7 @@ body {
     }
 }
 
-//Sidebar - Fixed percentage width instead of viewport units
+//Sidebar
 .header {
     transition: all ease 0.3s;
     width: 50%;
@@ -40,8 +40,8 @@ body {
     @include overflow(hidden);
     padding: 25px;
     @include display(flex);
-    @include flex-direction(column);
-    @include z-index(100);
+    @include column;
+    @include z-hundred;
 
     @media (max-width: 1000px) {
         @include relative;
@@ -56,7 +56,7 @@ body {
 .logo {
     margin-top: 10px;
     margin-bottom: 30px;
-    display: block;
+    @include block;
     font-family: $font-synapse;
     font-size: $fs-h1;
     color: $white;
@@ -79,7 +79,7 @@ body {
 
     @media (max-width: 1000px) {
         display: flex;
-        flex-direction: column;
+        @include column;
     }
 }
 
@@ -92,7 +92,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     @include display(flex);
-    @include flex-direction(column);
+    @include column;
 
     @media (max-width: 1000px) {
         margin-left: 0;
@@ -112,7 +112,7 @@ body {
 
 .content-wrapper {
     @include display(flex);
-    @include flex-direction(column);
+    @include column;
     flex: 1;
     min-height: 100%;
 }
@@ -198,7 +198,7 @@ body {
 // Character Details
 .character-details {
     @include display(flex);
-    @include flex-direction(column);
+    @include column;
     gap: 2rem;
     margin-bottom: 2rem;
 
@@ -209,7 +209,7 @@ body {
 
         @media (max-width: 768px) {
             gap: 1.5rem;
-            flex-direction: column;
+           @include column;
         }
 
         .detail-label {
@@ -247,7 +247,7 @@ body {
 
             &.description-text {
                 @include display(flex);
-                @include flex-direction(column);
+                @include column;
                 gap: 1.5rem;
 
                 p {
@@ -312,7 +312,7 @@ body {
     }
 }
 
-// Socials Section - Aligned with other details
+// Socials Section
 .socials-section {
     padding: 0;
     margin-bottom: 0;
@@ -323,7 +323,7 @@ body {
         align-items: flex-start;
 
         @media (max-width: 768px) {
-            flex-direction: column;
+            @include column;
             gap: 1.5rem;
         }
 

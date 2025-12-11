@@ -33,20 +33,15 @@ body {
     left: 0;
     @include overflow(hidden);
     padding: 25px;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-    
-    @media (max-width: 1200px) {
-        width: 280px;
-        max-width: 280px;
-    }
-    
+    @include flex;
+    @include column;
+    @include z-hundred;
     @media (max-width: 1000px) {
-        position: relative;
+        @include relative;
         width: 100%;
         max-width: 100%;
-        min-height: auto;
+        min-height: 70vh;
+        background-position: center 30%;
         height: auto;
     }
 }
@@ -54,15 +49,15 @@ body {
 .logo {
     margin-top: 10px;
     margin-bottom: 30px;
-    display: block;
+    @include block;
+    color: $white;
     font-family: $font-synapse;
     font-size: $fs-h1;
-    color: $white;
-    
+
     @media (max-width: 768px) {
         @include font-size($fs-h1-tablet);
     }
-    
+        
     @media (max-width: 480px) {
         @include font-size($fs-h1-mobile);
     }
@@ -70,13 +65,14 @@ body {
 
 // Container Layout
 .container {
-    @include display(flex);
+    @include flex;
     min-height: 100vh;
     width: 100%;
     @include relative;
     
-    @media (max-width: 1000px) {
-        @include flex-direction(column);
+    @media (max-width:1000px){
+        @include flex;
+        @include column;
     }
 }
 
