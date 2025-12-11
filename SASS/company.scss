@@ -373,6 +373,7 @@ body {
 
         p{
             line-height: normal;
+            text-align: left;
         }
 
         h2{color: $white;
@@ -461,18 +462,16 @@ body {
 
     .info_box{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         margin-top: 2vh;
-    }
-
-    .info{
-        width: 50%;
-        margin-top: 0.5vh;
     }
 
     .info_type{
         @include ClashDisplay;
         @include heading_style;
         color: $slate-blue;
+        margin-right: 7px;
     }
+
+    .hide{opacity: 0;}

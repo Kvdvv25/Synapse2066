@@ -845,6 +845,7 @@ video:hover {
 }
 .right p {
   line-height: normal;
+  text-align: left;
 }
 .right h2 {
   color: #fff;
@@ -942,14 +943,9 @@ video:hover {
 
 .info_box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 2vh;
-}
-
-.info {
-  width: 50%;
-  margin-top: 0.5vh;
 }
 
 .info_type {
@@ -957,4 +953,9 @@ video:hover {
   font-family: "Clash Display";
   font-weight: 400;
   color: #b3bfbf;
+  margin-right: 7px;
+}
+
+.hide {
+  opacity: 0;
 }/*# sourceMappingURL=company.css.map */
